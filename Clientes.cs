@@ -28,13 +28,14 @@ namespace ContabSys
 
         MySqlCommand command;
 
-        private void InserirClientes()
+        private void LerDadosClientesDataGrid()
         {
 
-            //     string Query = "insert into clientes (Nome, Nif,Morada,Email,Tlm,Tlf,CodOutroSoftware,Obs) " +
-            // "values('" + this.tbNome.Text + "','" + this.tbNif.Text + "','" + this.tbMorada.Text + "','" + this.tbEmail.Text + "','" + this.tbTlm.Text + "','"
-            // + this.tbTlf.Text + "''" + this.tbCodOutroSoft.Text + "','" + this.tbobs.Text + "');";
-          
+            string selectQuery = "SELECT * FROM clientes";
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection);
+            adapter.Fill(table);
+            dgvClientes.DataSource = table;
 
 
         }
@@ -54,13 +55,17 @@ namespace ContabSys
             string insertQuery = "INSERT INTO clientes (Nome,Nif,Morada,Email,Tlm,Tlf,CodOutroSoftware,Obs) VALUES('" +tbNome.Text+ "','" +tbNif.Text+ "','" +tbMorada.Text+ "','" +tbEmail.Text+ "','" +tbTlm.Text+ "','" +tbTlf.Text+ "','" +tbCodOutroSoft.Text+ "','" +tbobs.Text+ "');";
             executeMyQuery(insertQuery);
 
+            LerDadosClientesDataGrid();
+
 
 
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-       
+            string updateQuery = "UPDATE clientes SET Nome='" + tbNome.Text + "',Nif='" + tbNif.Text + "',Morada='" + tbMorada.Text + "',Email='" + tbEmail.Text + "',Tlm='" + tbTlm.Text + "',Tlf='" + tbTlf.Text + "',CodOutroSoftware='" + tbCodOutroSoft.Text + "',Obs='" + tbobs.Text + "' WHERE ID ="+int.Parse(tbId.Text);
+            executeMyQuery(updateQuery);
+            LerDadosClientesDataGrid();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -76,12 +81,7 @@ namespace ContabSys
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Valores Datagrid     dgvClientes
-            string selectQuery = "SELECT * FROM clientes";
-            DataTable table = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection);
-            adapter.Fill(table);
-            dgvClientes.DataSource = table;
+            LerDadosClientesDataGrid();
         }
 
         private void dgvClientes_MouseClick(object sender, MouseEventArgs e)
