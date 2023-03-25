@@ -42,12 +42,9 @@ namespace ContabSys
 
 
 
-  
-
-
                 private void Clientes_Load(object sender, EventArgs e)
         {
-
+            LerDadosClientesDataGrid();
         }
 
         private void btnGravar_Click(object sender, EventArgs e)
@@ -56,7 +53,6 @@ namespace ContabSys
             executeMyQuery(insertQuery);
 
             LerDadosClientesDataGrid();
-
 
 
         }
@@ -184,12 +180,7 @@ namespace ContabSys
         private void button2_Click(object sender, EventArgs e)
         {
 
-            //if (tbsearchid.Text == null)
-            //{
-            //    MessageBox.Show("Tem de inserir o codigo do cliente", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    tbsearchid.Focus();
-            //    return;
-            //}
+          
             if (tbsearchid.Text == "")
             {
                 MessageBox.Show("Inserir Codigo do Cliente", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);

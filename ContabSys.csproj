@@ -81,6 +81,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addLancamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addLancamentos.Designer.cs">
+      <DependentUpon>addLancamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addRecebimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addRecebimentos.Designer.cs">
+      <DependentUpon>addRecebimentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addRecepcaoSafts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addRecepcaoSafts.Designer.cs">
+      <DependentUpon>addRecepcaoSafts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addrecpcaodocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addrecpcaodocumentos.Designer.cs">
+      <DependentUpon>addrecpcaodocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addseleccaoEarquivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addseleccaoEarquivo.Designer.cs">
+      <DependentUpon>addseleccaoEarquivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,8 +135,23 @@
     <Compile Include="INICIO.Designer.cs">
       <DependentUpon>INICIO.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListagemClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListagemClientes.Designer.cs">
+      <DependentUpon>ListagemClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="addRecebimentos.resx">
+      <DependentUpon>addRecebimentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addrecpcaodocumentos.resx">
+      <DependentUpon>addrecpcaodocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addseleccaoEarquivo.resx">
+      <DependentUpon>addseleccaoEarquivo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="INICIO.resx">
       <DependentUpon>INICIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListagemClientes.resx">
+      <DependentUpon>ListagemClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

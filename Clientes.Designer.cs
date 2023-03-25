@@ -36,11 +36,13 @@ namespace ContabSys
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -49,7 +51,9 @@ namespace ContabSys
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.tbsearchid = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -78,10 +82,6 @@ namespace ContabSys
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbNif = new System.Windows.Forms.TextBox();
             this.tbNome = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.tbsearchid = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -96,7 +96,7 @@ namespace ContabSys
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1316, 76);
+            this.panel1.Size = new System.Drawing.Size(1586, 44);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -104,9 +104,9 @@ namespace ContabSys
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 76);
+            this.panel2.Location = new System.Drawing.Point(0, 44);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1316, 644);
+            this.panel2.Size = new System.Drawing.Size(1586, 676);
             this.panel2.TabIndex = 1;
             // 
             // panel4
@@ -116,7 +116,7 @@ namespace ContabSys
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(473, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(843, 644);
+            this.panel4.Size = new System.Drawing.Size(1113, 676);
             this.panel4.TabIndex = 3;
             // 
             // dgvClientes
@@ -125,11 +125,12 @@ namespace ContabSys
             this.dgvClientes.AllowUserToDeleteRows = false;
             this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(158, 29);
+            this.dgvClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvClientes.Location = new System.Drawing.Point(137, 0);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(669, 589);
+            this.dgvClientes.Size = new System.Drawing.Size(976, 676);
             this.dgvClientes.TabIndex = 1;
             this.dgvClientes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvClientes_MouseClick);
             // 
@@ -144,7 +145,7 @@ namespace ContabSys
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(137, 644);
+            this.panel5.Size = new System.Drawing.Size(137, 676);
             this.panel5.TabIndex = 0;
             // 
             // btnRemover
@@ -166,6 +167,16 @@ namespace ContabSys
             this.btnNovo.Text = "btnNovo";
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 426);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 44);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "btnEditar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnEditar
             // 
@@ -203,7 +214,7 @@ namespace ContabSys
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(473, 644);
+            this.panel3.Size = new System.Drawing.Size(473, 676);
             this.panel3.TabIndex = 3;
             // 
             // groupBox2
@@ -230,12 +241,22 @@ namespace ContabSys
             this.groupBox2.Controls.Add(this.textBox17);
             this.groupBox2.Controls.Add(this.textBox18);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 381);
+            this.groupBox2.Location = new System.Drawing.Point(0, 399);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(473, 263);
+            this.groupBox2.Size = new System.Drawing.Size(473, 277);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pesquisar";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(193, 229);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(45, 22);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "btnEditar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label10
             // 
@@ -309,6 +330,16 @@ namespace ContabSys
             this.label17.TabIndex = 18;
             this.label17.Text = "Nome:";
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(17, 232);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(68, 13);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "ID SEARCH:";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -317,6 +348,13 @@ namespace ContabSys
             this.label18.Size = new System.Drawing.Size(21, 13);
             this.label18.TabIndex = 11;
             this.label18.Text = "ID:";
+            // 
+            // tbsearchid
+            // 
+            this.tbsearchid.Location = new System.Drawing.Point(94, 229);
+            this.tbsearchid.Name = "tbsearchid";
+            this.tbsearchid.Size = new System.Drawing.Size(93, 20);
+            this.tbsearchid.TabIndex = 9;
             // 
             // textBox10
             // 
@@ -404,7 +442,7 @@ namespace ContabSys
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(473, 380);
+            this.groupBox1.Size = new System.Drawing.Size(473, 401);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editar \\ Adicionar";
@@ -412,7 +450,7 @@ namespace ContabSys
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(207, 26);
+            this.label8.Location = new System.Drawing.Point(207, 36);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 13);
             this.label8.TabIndex = 1;
@@ -421,7 +459,7 @@ namespace ContabSys
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(31, 136);
+            this.label7.Location = new System.Drawing.Point(31, 146);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(24, 13);
             this.label7.TabIndex = 1;
@@ -430,7 +468,7 @@ namespace ContabSys
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(244, 135);
+            this.label6.Location = new System.Drawing.Point(244, 145);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(22, 13);
             this.label6.TabIndex = 1;
@@ -439,7 +477,7 @@ namespace ContabSys
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 109);
+            this.label5.Location = new System.Drawing.Point(23, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 1;
@@ -448,7 +486,7 @@ namespace ContabSys
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 255);
+            this.label9.Location = new System.Drawing.Point(17, 265);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(29, 13);
             this.label9.TabIndex = 1;
@@ -457,7 +495,7 @@ namespace ContabSys
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 167);
+            this.label4.Location = new System.Drawing.Point(12, 177);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 1;
@@ -466,7 +504,7 @@ namespace ContabSys
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 82);
+            this.label3.Location = new System.Drawing.Point(32, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 1;
@@ -475,7 +513,7 @@ namespace ContabSys
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 57);
+            this.label2.Location = new System.Drawing.Point(17, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 1;
@@ -484,7 +522,7 @@ namespace ContabSys
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 26);
+            this.label1.Location = new System.Drawing.Point(31, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(21, 13);
             this.label1.TabIndex = 1;
@@ -492,28 +530,28 @@ namespace ContabSys
             // 
             // tbId
             // 
-            this.tbId.Location = new System.Drawing.Point(61, 23);
+            this.tbId.Location = new System.Drawing.Point(61, 33);
             this.tbId.Name = "tbId";
             this.tbId.Size = new System.Drawing.Size(133, 20);
             this.tbId.TabIndex = 0;
             // 
             // tbCodOutroSoft
             // 
-            this.tbCodOutroSoft.Location = new System.Drawing.Point(293, 23);
+            this.tbCodOutroSoft.Location = new System.Drawing.Point(293, 33);
             this.tbCodOutroSoft.Name = "tbCodOutroSoft";
             this.tbCodOutroSoft.Size = new System.Drawing.Size(162, 20);
             this.tbCodOutroSoft.TabIndex = 0;
             // 
             // tbTlf
             // 
-            this.tbTlf.Location = new System.Drawing.Point(274, 132);
+            this.tbTlf.Location = new System.Drawing.Point(274, 142);
             this.tbTlf.Name = "tbTlf";
             this.tbTlf.Size = new System.Drawing.Size(181, 20);
             this.tbTlf.TabIndex = 0;
             // 
             // tbobs
             // 
-            this.tbobs.Location = new System.Drawing.Point(61, 255);
+            this.tbobs.Location = new System.Drawing.Point(61, 265);
             this.tbobs.Multiline = true;
             this.tbobs.Name = "tbobs";
             this.tbobs.Size = new System.Drawing.Size(394, 106);
@@ -521,7 +559,7 @@ namespace ContabSys
             // 
             // tbMorada
             // 
-            this.tbMorada.Location = new System.Drawing.Point(61, 160);
+            this.tbMorada.Location = new System.Drawing.Point(61, 170);
             this.tbMorada.Multiline = true;
             this.tbMorada.Name = "tbMorada";
             this.tbMorada.Size = new System.Drawing.Size(394, 89);
@@ -529,74 +567,37 @@ namespace ContabSys
             // 
             // tbTlm
             // 
-            this.tbTlm.Location = new System.Drawing.Point(61, 133);
+            this.tbTlm.Location = new System.Drawing.Point(61, 143);
             this.tbTlm.Name = "tbTlm";
             this.tbTlm.Size = new System.Drawing.Size(177, 20);
             this.tbTlm.TabIndex = 0;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(61, 106);
+            this.tbEmail.Location = new System.Drawing.Point(61, 116);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(394, 20);
             this.tbEmail.TabIndex = 0;
             // 
             // tbNif
             // 
-            this.tbNif.Location = new System.Drawing.Point(61, 79);
+            this.tbNif.Location = new System.Drawing.Point(61, 89);
             this.tbNif.Name = "tbNif";
             this.tbNif.Size = new System.Drawing.Size(394, 20);
             this.tbNif.TabIndex = 0;
             // 
             // tbNome
             // 
-            this.tbNome.Location = new System.Drawing.Point(61, 52);
+            this.tbNome.Location = new System.Drawing.Point(61, 62);
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(394, 20);
             this.tbNome.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(6, 426);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 44);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "btnEditar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(193, 229);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(45, 22);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "btnEditar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // tbsearchid
-            // 
-            this.tbsearchid.Location = new System.Drawing.Point(94, 229);
-            this.tbsearchid.Name = "tbsearchid";
-            this.tbsearchid.Size = new System.Drawing.Size(93, 20);
-            this.tbsearchid.TabIndex = 9;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(17, 232);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(68, 13);
-            this.label19.TabIndex = 11;
-            this.label19.Text = "ID SEARCH:";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1316, 720);
+            this.ClientSize = new System.Drawing.Size(1586, 720);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Clientes";
