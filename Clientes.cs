@@ -70,7 +70,13 @@ namespace ContabSys
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            // Botao remover
+
+            string udeleteQuery = "DELETE FROM clientes WHERE ID =" + int.Parse(tbId.Text);
+            executeMyQuery(udeleteQuery);
+            LerDadosClientesDataGrid();
+
+
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -117,6 +123,37 @@ namespace ContabSys
 
         }
 
+
+        public void PesquisarporID()
+        {
+            MySqlDataReader mdr;
+            string selectID = "SELECT * FROM clientes WHERE ID =" + tbsearchid.Text;
+
+            command = new MySqlCommand(selectID, connection);
+            openConnection();
+            mdr = command.ExecuteReader();
+
+            if (mdr.Read())
+            {
+                tbNome.Text = mdr.GetString("Nome");
+                tbNif.Text = mdr.GetString("Nif");
+                tbMorada.Text = mdr.GetString("Morada");
+                tbEmail.Text = mdr.GetString("Email");
+                tbTlm.Text = mdr.GetString("Tlm");
+
+                tbTlf.Text = mdr.GetString("Tlf");
+                tbCodOutroSoft.Text = mdr.GetString("CodOutroSoftware");
+                tbobs.Text = mdr.GetString("Obs");
+
+            }
+            else
+            {
+                MessageBox.Show("Utilizador Não Encontrado");
+            }
+            closeConnection();
+
+        }
+
         public void executeMyQuery(string query)
         {
             try
@@ -144,8 +181,40 @@ namespace ContabSys
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            //if (tbsearchid.Text == null)
+            //{
+            //    MessageBox.Show("Tem de inserir o codigo do cliente", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    tbsearchid.Focus();
+            //    return;
+            //}
+            if (tbsearchid.Text == "")
+            {
+                MessageBox.Show("Inserir Codigo do Cliente", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbsearchid.Focus();
+                return;
+
+            }
+            try
+            {
+                PesquisarporID();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro : " + ex.Message);
+            }
+
 
         }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
 
 

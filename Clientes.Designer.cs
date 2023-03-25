@@ -79,6 +79,9 @@ namespace ContabSys
             this.tbNif = new System.Windows.Forms.TextBox();
             this.tbNome = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tbsearchid = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -146,11 +149,11 @@ namespace ContabSys
             // 
             // btnRemover
             // 
-            this.btnRemover.Location = new System.Drawing.Point(23, 592);
+            this.btnRemover.Location = new System.Drawing.Point(19, 535);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(91, 40);
             this.btnRemover.TabIndex = 0;
-            this.btnRemover.Text = "btnRemover";
+            this.btnRemover.Text = "REMOVER";
             this.btnRemover.UseVisualStyleBackColor = true;
             this.btnRemover.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -179,7 +182,7 @@ namespace ContabSys
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(118, 52);
             this.btnUpdate.TabIndex = 0;
-            this.btnUpdate.Text = "btnUpdate";
+            this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -189,7 +192,7 @@ namespace ContabSys
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(118, 52);
             this.btnGravar.TabIndex = 0;
-            this.btnGravar.Text = "btnGravar";
+            this.btnGravar.Text = "GRAVAR";
             this.btnGravar.UseVisualStyleBackColor = true;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
@@ -205,6 +208,7 @@ namespace ContabSys
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label12);
@@ -213,7 +217,9 @@ namespace ContabSys
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.label19);
             this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.tbsearchid);
             this.groupBox2.Controls.Add(this.textBox10);
             this.groupBox2.Controls.Add(this.textBox11);
             this.groupBox2.Controls.Add(this.textBox12);
@@ -224,9 +230,9 @@ namespace ContabSys
             this.groupBox2.Controls.Add(this.textBox17);
             this.groupBox2.Controls.Add(this.textBox18);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 392);
+            this.groupBox2.Location = new System.Drawing.Point(0, 381);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(473, 252);
+            this.groupBox2.Size = new System.Drawing.Size(473, 263);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pesquisar";
@@ -316,7 +322,7 @@ namespace ContabSys
             // 
             this.textBox10.Location = new System.Drawing.Point(51, 31);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(133, 20);
+            this.textBox10.Size = new System.Drawing.Size(93, 20);
             this.textBox10.TabIndex = 9;
             // 
             // textBox11
@@ -553,11 +559,38 @@ namespace ContabSys
             // 
             this.button1.Location = new System.Drawing.Point(6, 426);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 52);
+            this.button1.Size = new System.Drawing.Size(104, 44);
             this.button1.TabIndex = 0;
             this.button1.Text = "btnEditar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(193, 229);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(45, 22);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "btnEditar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // tbsearchid
+            // 
+            this.tbsearchid.Location = new System.Drawing.Point(94, 229);
+            this.tbsearchid.Name = "tbsearchid";
+            this.tbsearchid.Size = new System.Drawing.Size(93, 20);
+            this.tbsearchid.TabIndex = 9;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(17, 232);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(68, 13);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "ID SEARCH:";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // Clientes
             // 
@@ -634,5 +667,8 @@ namespace ContabSys
         private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox tbsearchid;
     }
 }
