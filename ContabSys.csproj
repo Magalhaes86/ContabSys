@@ -147,16 +147,34 @@
     <Compile Include="ListagemClientes.Designer.cs">
       <DependentUpon>ListagemClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListagemClientesLancamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListagemClientesLancamentos.Designer.cs">
+      <DependentUpon>ListagemClientesLancamentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="listagemClientesSeleccaoEArguivos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="listagemClientesSeleccaoEArguivos.Designer.cs">
       <DependentUpon>listagemClientesSeleccaoEArguivos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListClientesRecepcaosaft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListClientesRecepcaosaft.Designer.cs">
+      <DependentUpon>ListClientesRecepcaosaft.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="addLancamentos.resx">
+      <DependentUpon>addLancamentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addRecebimentos.resx">
       <DependentUpon>addRecebimentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addRecepcaoSafts.resx">
+      <DependentUpon>addRecepcaoSafts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="addrecpcaodocumentos.resx">
       <DependentUpon>addrecpcaodocumentos.cs</DependentUpon>
@@ -182,8 +200,14 @@
     <EmbeddedResource Include="ListagemClientes.resx">
       <DependentUpon>ListagemClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListagemClientesLancamentos.resx">
+      <DependentUpon>ListagemClientesLancamentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="listagemClientesSeleccaoEArguivos.resx">
       <DependentUpon>listagemClientesSeleccaoEArguivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListClientesRecepcaosaft.resx">
+      <DependentUpon>ListClientesRecepcaosaft.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

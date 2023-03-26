@@ -630,6 +630,7 @@ namespace ContabSys
             this.button9.TabIndex = 0;
             this.button9.Text = "Editar";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -639,6 +640,7 @@ namespace ContabSys
             this.button10.TabIndex = 0;
             this.button10.Text = "Novo";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel11
             // 
@@ -734,6 +736,7 @@ namespace ContabSys
             this.button12.TabIndex = 0;
             this.button12.Text = "Editar";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button13
             // 
@@ -743,6 +746,7 @@ namespace ContabSys
             this.button13.TabIndex = 0;
             this.button13.Text = "Novo";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // panel14
             // 

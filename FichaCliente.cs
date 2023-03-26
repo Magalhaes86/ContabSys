@@ -45,15 +45,45 @@ namespace ContabSys
 
             frmrececaodocumentos.tbidcliente.Text = this.tbId.Text;
             frmrececaodocumentos.tbnomecliente.Text = this.tbNome.Text;
+            frmrececaodocumentos.tbnif.Text = this.tbNif.Text;
             //      frmrececaodocumentos.tbobscliente.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
 
             frmrececaodocumentos.ShowDialog();
         }
 
 
+        public void RefreshALLDataGrid()
+        {
+            RefreshDataGridSelecaoEArguivo();
+            RefreshDataGridRecepcaoDocumentos();
+            RefreshDataGridaddLancamentos();
+            RefreshDataGridaddRecepcaoSafts();
+
+        }
+        
 
 
+             public void RefreshDataGridaddRecepcaoSafts()
+        {
+            string selectQuery = "SELECT * FROM recepcaosaft WHERE CodCliente =" + int.Parse(tbId.Text);
 
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection);
+            adapter.Fill(table);
+            dataGridView4.DataSource = table;
+
+        }
+
+        public void RefreshDataGridaddLancamentos()
+        {
+            string selectQuery = "SELECT * FROM lancamentos WHERE CodCliente =" + int.Parse(tbId.Text);
+
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection);
+            adapter.Fill(table);
+            dataGridView3.DataSource = table;
+
+        }
 
         public void RefreshDataGridRecepcaoDocumentos()
         {
@@ -118,6 +148,7 @@ namespace ContabSys
 
             frmraddseleccaoEarquivo.tbidcliente.Text = this.tbId.Text;
             frmraddseleccaoEarquivo.tbnomecliente.Text = this.tbNome.Text;
+            frmraddseleccaoEarquivo.tbnif.Text = this.tbNif.Text;
             //      frmrececaodocumentos.tbobscliente.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
 
             frmraddseleccaoEarquivo.ShowDialog();
@@ -152,9 +183,61 @@ namespace ContabSys
 
         private void button21_Click(object sender, EventArgs e)
         {
-            // Atualizar os datagrid
-           RefreshDataGridSelecaoEArguivo();
-           RefreshDataGridRecepcaoDocumentos();
+            // Atualizar os datagrid este comando é para ficar no load, para já nao pode pq obriga a ter um ID do cliente 
+            RefreshALLDataGrid();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+           
+
+                  addLancamentos frmraddaddLancamentos = new addLancamentos();
+
+            frmraddaddLancamentos.tbidcliente.Text = this.tbId.Text;
+            frmraddaddLancamentos.tbnomecliente.Text = this.tbNome.Text;
+            frmraddaddLancamentos.tbnif.Text = this.tbNif.Text;
+            //      frmrececaodocumentos.tbobscliente.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+
+            frmraddaddLancamentos.ShowDialog();
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            addLancamentos frmraddaddLancamentos = new addLancamentos();
+            frmraddaddLancamentos.tbcodcliente.Text = this.dataGridView3.CurrentRow.Cells[0].Value.ToString();
+            frmraddaddLancamentos.tbidcliente.Text = this.dataGridView3.CurrentRow.Cells[1].Value.ToString();
+            frmraddaddLancamentos.dateTimePicker1.Text = this.dataGridView3.CurrentRow.Cells[2].Value.ToString();
+            frmraddaddLancamentos.tbobs.Text = this.dataGridView3.CurrentRow.Cells[3].Value.ToString();
+            frmraddaddLancamentos.tbnomecliente.Text = this.tbNome.Text;
+            frmraddaddLancamentos.tbnif.Text = this.tbNif.Text;
+            frmraddaddLancamentos.ShowDialog();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
+
+            addRecepcaoSafts frmraddRecepcaoSafts = new addRecepcaoSafts();
+
+            frmraddRecepcaoSafts.tbidcliente.Text = this.tbId.Text;
+            frmraddRecepcaoSafts.tbnomecliente.Text = this.tbNome.Text;
+            frmraddRecepcaoSafts.tbnif.Text = this.tbNif.Text;
+            //      frmrececaodocumentos.tbobscliente.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+
+            frmraddRecepcaoSafts.ShowDialog();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            addRecepcaoSafts frmraddRecepcaoSafts = new addRecepcaoSafts();
+            frmraddRecepcaoSafts.tbcodcliente.Text = this.dataGridView3.CurrentRow.Cells[0].Value.ToString();
+            frmraddRecepcaoSafts.tbidcliente.Text = this.dataGridView3.CurrentRow.Cells[1].Value.ToString();
+            frmraddRecepcaoSafts.dateTimePicker1.Text = this.dataGridView3.CurrentRow.Cells[2].Value.ToString();
+            frmraddRecepcaoSafts.tbobs.Text = this.dataGridView3.CurrentRow.Cells[3].Value.ToString();
+            frmraddRecepcaoSafts.tbnomecliente.Text = this.tbNome.Text;
+            frmraddRecepcaoSafts.tbnif.Text = this.tbNif.Text;
+            frmraddRecepcaoSafts.ShowDialog();
         }
     }
 }
