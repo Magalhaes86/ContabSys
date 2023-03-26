@@ -28,7 +28,7 @@ namespace ContabSys
 
         private void addrecpcaodocumentos_Load(object sender, EventArgs e)
         {
-
+         
         }
 
 
@@ -80,8 +80,69 @@ namespace ContabSys
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            string insertQuery = "INSERT INTO clientes (CodCliente,Data,Obs) VALUES('" + tbidcliente.Text + "','" + dateTimePicker1.Text + "','" + tbobs.Text + "');";
+            string insertQuery = "INSERT INTO recepcaodocumentos (CodCliente,Data,Obs) VALUES('" + tbidcliente.Text + "','" + dateTimePicker1.Text + "','" + tbobs.Text + "');";
             executeMyQuery(insertQuery);
+        }
+
+        private void btnUPDATE_Click(object sender, EventArgs e)
+        {
+            string updateQuery = "UPDATE recepcaodocumentos SET CodCliente='" + tbidcliente.Text + "',Data='" + dateTimePicker1.Text + "',Obs='" + tbobs.Text + "' WHERE ID =" + int.Parse(tbcodcliente.Text);
+            executeMyQuery(updateQuery);
+            
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+           
+
+            DialogResult dialogResult = MessageBox.Show("Tem a certeza que pretende ELIMINAR o registo?", " !! ELIMINAR REGISTO DA BASE DE DADOS !!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string udeleteQuery = "DELETE FROM recepcaodocumentos WHERE ID =" + int.Parse(tbcodcliente.Text);
+                executeMyQuery(udeleteQuery);
+
+
+            }
+
+            else if (dialogResult == DialogResult.No)
+            {
+                //caso pretenda fazer outra coisa qualuqer.
+                btncancelar.Focus();
+            }
+
+
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Pretende fazer um lançamento para um novo Cliente ?", "Novo Lançamento", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                tbcodcliente.Text = "";
+                tbidcliente.Text = "";
+                tbnomecliente.Text = "";
+                tbnif.Text = "";
+                tbobs.Text = "";
+                frmclientesaddrecpcaodocumentos frmclienteslistcli = new frmclientesaddrecpcaodocumentos();
+                frmclienteslistcli.ShowDialog();
+
+
+            }
+
+            else if (dialogResult == DialogResult.No)
+            {
+                //caso pretenda fazer outra coisa qualuqer.
+                btncancelar.Focus();
+            }
+        
+
+        
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

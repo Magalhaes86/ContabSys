@@ -71,6 +71,42 @@ namespace ContabSys
 
             Close();
             }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //if (String.IsNullOrEmpty(textBox1.Text))
+            //{
+            //    MessageBox.Show("Escolha na listagem os dados a Exportar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    //dataGridView1.Rows.Clear();
+            //}
+            //else
+            //{
+
+            FichaCliente fc = (FichaCliente)Application.OpenForms["FichaCliente"];
+            fc.tbId.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            fc.tbNome.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            fc.tbNif.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+
+
+            fc.tbEmail.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            fc.tbTlm.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            fc.tbTlf.Text = this.dataGridView1.CurrentRow.Cells[6].Value.ToString();
+
+            fc.tbCodOutroSoft.Text = this.dataGridView1.CurrentRow.Cells[7].Value.ToString();
+
+            //  fc.add2.Enabled = true;
+
+            //  fc.btnUpdate.Enabled = true;
+            //    fr.textcodsage.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            //  fr.textNomeCliente.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+
+            //  fc.ObterDadosCabecalho();
+            //  fc.ObterDadosLinhas();
+
+
+
+            Close();
         }
+    }
     }
 

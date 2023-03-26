@@ -129,6 +129,12 @@
     <Compile Include="FichaCliente.Designer.cs">
       <DependentUpon>FichaCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmclientesaddrecpcaodocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmclientesaddrecpcaodocumentos.Designer.cs">
+      <DependentUpon>frmclientesaddrecpcaodocumentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="INICIO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,12 @@
     </Compile>
     <Compile Include="ListagemClientes.Designer.cs">
       <DependentUpon>ListagemClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listagemClientesSeleccaoEArguivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listagemClientesSeleccaoEArguivos.Designer.cs">
+      <DependentUpon>listagemClientesSeleccaoEArguivos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -161,11 +173,17 @@
     <EmbeddedResource Include="FichaCliente.resx">
       <DependentUpon>FichaCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmclientesaddrecpcaodocumentos.resx">
+      <DependentUpon>frmclientesaddrecpcaodocumentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="INICIO.resx">
       <DependentUpon>INICIO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListagemClientes.resx">
       <DependentUpon>ListagemClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listagemClientesSeleccaoEArguivos.resx">
+      <DependentUpon>listagemClientesSeleccaoEArguivos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

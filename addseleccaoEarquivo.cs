@@ -77,5 +77,66 @@ namespace ContabSys
 
         }
 
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+           
+
+            DialogResult dialogResult = MessageBox.Show("Pretende fazer um lançamento para um novo Cliente ?", "Novo Lançamento", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                tbcodcliente.Text = "";
+                tbidcliente.Text = "";
+                tbnomecliente.Text = "";
+                tbnif.Text = "";
+                tbobs.Text = "";
+                listagemClientesSeleccaoEArguivos frmclienteslistcli = new listagemClientesSeleccaoEArguivos();
+                frmclienteslistcli.ShowDialog();
+
+
+            }
+
+            else if (dialogResult == DialogResult.No)
+            {
+                //caso pretenda fazer outra coisa qualuqer.
+                btncancelar.Focus();
+            }
+
+        }
+
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            string insertQuery = "INSERT INTO selecaoearquivo (CodCliente,Data,Obs) VALUES('" + tbidcliente.Text + "','" + dateTimePicker1.Text + "','" + tbobs.Text + "');";
+            executeMyQuery(insertQuery);
+        }
+
+        private void btnUPDATE_Click(object sender, EventArgs e)
+        {
+            string updateQuery = "UPDATE selecaoearquivo SET CodCliente='" + tbidcliente.Text + "',Data='" + dateTimePicker1.Text + "',Obs='" + tbobs.Text + "' WHERE ID =" + int.Parse(tbcodcliente.Text);
+            executeMyQuery(updateQuery);
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Tem a certeza que pretende ELIMINAR o registo?", " !! ELIMINAR REGISTO DA BASE DE DADOS !!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string udeleteQuery = "DELETE FROM selecaoearquivo WHERE ID =" + int.Parse(tbcodcliente.Text);
+                executeMyQuery(udeleteQuery);
+
+
+            }
+
+            else if (dialogResult == DialogResult.No)
+            {
+                //caso pretenda fazer outra coisa qualuqer.
+                btncancelar.Focus();
+            }
+
+        }
     }
 }
