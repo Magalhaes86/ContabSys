@@ -64,6 +64,7 @@ namespace ContabSys
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Name = "ListClientesRecepcaosaft";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListClientesRecepcaosaft";
             this.Load += new System.EventHandler(this.ListClientesRecepcaosaft_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

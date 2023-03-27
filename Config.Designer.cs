@@ -32,7 +32,9 @@ namespace ContabSys
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnsavesettings = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tbpassword = new System.Windows.Forms.TextBox();
             this.tbuser = new System.Windows.Forms.TextBox();
             this.tbporta = new System.Windows.Forms.TextBox();
@@ -44,8 +46,6 @@ namespace ContabSys
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -90,6 +90,16 @@ namespace ContabSys
             this.panel3.Size = new System.Drawing.Size(570, 476);
             this.panel3.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(232, 294);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 30);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnsavesettings
             // 
             this.btnsavesettings.Location = new System.Drawing.Point(36, 290);
@@ -99,6 +109,13 @@ namespace ContabSys
             this.btnsavesettings.Text = "Guardar";
             this.btnsavesettings.UseVisualStyleBackColor = true;
             this.btnsavesettings.Click += new System.EventHandler(this.btnsavesettings_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(213, 232);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(282, 20);
+            this.textBox1.TabIndex = 1;
             // 
             // tbpassword
             // 
@@ -191,23 +208,6 @@ namespace ContabSys
             this.panel2.Size = new System.Drawing.Size(1089, 83);
             this.panel2.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(232, 294);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 30);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(213, 232);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(282, 20);
-            this.textBox1.TabIndex = 1;
-            // 
             // Config
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,6 +215,7 @@ namespace ContabSys
             this.ClientSize = new System.Drawing.Size(1089, 559);
             this.Controls.Add(this.panel1);
             this.Name = "Config";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Config";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

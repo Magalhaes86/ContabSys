@@ -26,13 +26,13 @@ namespace ContabSys
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            string insertQuery = "INSERT INTO recepcaosaft (CodCliente,Data,Obs) VALUES('" + tbidcliente.Text + "','" + dateTimePicker1.Text + "','" + tbobs.Text + "');";
+            string insertQuery = "INSERT INTO recepcaosaft (CodCliente,Data,Obs) VALUES('" + tbidcliente.Text + "','" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "','" + tbobs.Text + "');";
             executeMyQuery(insertQuery);
         }
 
         private void btnUPDATE_Click(object sender, EventArgs e)
         {
-            string updateQuery = "UPDATE recepcaosaft SET CodCliente='" + tbidcliente.Text + "',Data='" + dateTimePicker1.Text + "',Obs='" + tbobs.Text + "' WHERE ID =" + int.Parse(tbcodcliente.Text);
+            string updateQuery = "UPDATE recepcaosaft SET CodCliente='" + tbidcliente.Text + "',Data='" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "',Obs='" + tbobs.Text + "' WHERE ID =" + int.Parse(tbcodcliente.Text);
             executeMyQuery(updateQuery);
         }
 

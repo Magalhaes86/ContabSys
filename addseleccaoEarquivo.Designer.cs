@@ -238,6 +238,7 @@ namespace ContabSys
             this.Controls.Add(this.btnGravar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "addseleccaoEarquivo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Selecção e Arquivo";
             this.Load += new System.EventHandler(this.addseleccaoEarquivo_Load);
             this.ResumeLayout(false);

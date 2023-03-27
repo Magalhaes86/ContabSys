@@ -75,6 +75,7 @@ namespace ContabSys
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "listagemClientesSeleccaoEArguivos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "listagemClientesSeleccaoEArguivos";
             this.Load += new System.EventHandler(this.listagemClientesSeleccaoEArguivos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

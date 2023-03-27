@@ -239,6 +239,7 @@ namespace ContabSys
             this.Controls.Add(this.btnGravar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "addrecpcaodocumentos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recepção de Documentos";
             this.Load += new System.EventHandler(this.addrecpcaodocumentos_Load);
             this.ResumeLayout(false);

@@ -601,6 +601,7 @@ namespace ContabSys
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Clientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Clientes_Load);
             this.panel2.ResumeLayout(false);

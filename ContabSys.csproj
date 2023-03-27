@@ -159,6 +159,12 @@
     <Compile Include="listagemClientesSeleccaoEArguivos.Designer.cs">
       <DependentUpon>listagemClientesSeleccaoEArguivos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListClientesRecebimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListClientesRecebimentos.Designer.cs">
+      <DependentUpon>ListClientesRecebimentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListClientesRecepcaosaft.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     <EmbeddedResource Include="listagemClientesSeleccaoEArguivos.resx">
       <DependentUpon>listagemClientesSeleccaoEArguivos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListClientesRecebimentos.resx">
+      <DependentUpon>ListClientesRecebimentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListClientesRecepcaosaft.resx">
       <DependentUpon>ListClientesRecepcaosaft.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +226,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -231,6 +241,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-icons-magnifying-glass-symbol-magnifying-glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgbin-cleaning-computer-icons-tool-spade-cleaner-others-w7xjSvWY22K3VJMzYcVvG5tAR.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
