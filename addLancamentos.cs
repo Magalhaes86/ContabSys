@@ -41,11 +41,11 @@ namespace ContabSys
 
                 if (command.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Query Executada");
+                    MessageBox.Show("Registo Inserido com sucesso");
                 }
                 else
                 {
-                    MessageBox.Show("Query Não Executada");
+                    MessageBox.Show("Erro ao inserir Registo");
                 }
             }
             catch (Exception ex)
@@ -109,7 +109,12 @@ namespace ContabSys
             executeMyQuery(insertQuery);
             btnnovo.Visible = true;
             btnGravar.Visible = false;
-         
+
+
+            FichaCliente FichaCliente = (FichaCliente)Application.OpenForms["FichaCliente"];
+      
+            FichaCliente.RefreshDataGridaddLancamentos();
+
 
         }
 
@@ -119,6 +124,10 @@ namespace ContabSys
             executeMyQuery(updateQuery);
             btnUPDATE.Visible = false;
             btnnovo.Visible = true;
+
+            FichaCliente FichaCliente = (FichaCliente)Application.OpenForms["FichaCliente"];
+
+            FichaCliente.RefreshDataGridaddLancamentos();
         }
 
         private void btncancelar_Click(object sender, EventArgs e)

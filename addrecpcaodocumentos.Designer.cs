@@ -47,6 +47,7 @@ namespace ContabSys
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnUPDATE = new System.Windows.Forms.Button();
+            this.btnnovo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -169,7 +170,7 @@ namespace ContabSys
             this.btnRemover.BackColor = System.Drawing.Color.Maroon;
             this.btnRemover.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.btnRemover.ForeColor = System.Drawing.Color.White;
-            this.btnRemover.Location = new System.Drawing.Point(518, 248);
+            this.btnRemover.Location = new System.Drawing.Point(518, 233);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(74, 33);
             this.btnRemover.TabIndex = 5;
@@ -181,9 +182,9 @@ namespace ContabSys
             // 
             this.btnEditar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnEditar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnEditar.Location = new System.Drawing.Point(194, 223);
+            this.btnEditar.Location = new System.Drawing.Point(341, 180);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(243, 43);
+            this.btnEditar.Size = new System.Drawing.Size(142, 57);
             this.btnEditar.TabIndex = 6;
             this.btnEditar.Text = "Fazer Lançamento para outra entidade";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -206,20 +207,33 @@ namespace ContabSys
             // 
             this.btnUPDATE.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.btnUPDATE.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUPDATE.Location = new System.Drawing.Point(330, 182);
+            this.btnUPDATE.Location = new System.Drawing.Point(213, 184);
             this.btnUPDATE.Name = "btnUPDATE";
-            this.btnUPDATE.Size = new System.Drawing.Size(92, 33);
+            this.btnUPDATE.Size = new System.Drawing.Size(92, 29);
             this.btnUPDATE.TabIndex = 6;
             this.btnUPDATE.Text = "Update";
             this.btnUPDATE.UseVisualStyleBackColor = false;
             this.btnUPDATE.Click += new System.EventHandler(this.btnUPDATE_Click);
+            // 
+            // btnnovo
+            // 
+            this.btnnovo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnnovo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.btnnovo.Location = new System.Drawing.Point(214, 182);
+            this.btnnovo.Name = "btnnovo";
+            this.btnnovo.Size = new System.Drawing.Size(92, 33);
+            this.btnnovo.TabIndex = 56;
+            this.btnnovo.Text = "Novo";
+            this.btnnovo.UseVisualStyleBackColor = false;
+            this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click_1);
             // 
             // addrecpcaodocumentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(615, 293);
+            this.ClientSize = new System.Drawing.Size(615, 267);
+            this.Controls.Add(this.btnnovo);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.tbnif);
             this.Controls.Add(this.tbnomecliente);
@@ -265,5 +279,6 @@ namespace ContabSys
         internal System.Windows.Forms.Button btnRemover;
         internal System.Windows.Forms.Button btnGravar;
         internal System.Windows.Forms.Button btnUPDATE;
+        internal System.Windows.Forms.Button btnnovo;
     }
 }

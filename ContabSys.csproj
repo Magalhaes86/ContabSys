@@ -251,5 +251,20 @@
   <ItemGroup>
     <None Include="Resources\imgbin-cleaning-computer-icons-tool-spade-cleaner-others-w7xjSvWY22K3VJMzYcVvG5tAR.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-close-closed-cross-delete-remove-wrong-x-basic-web-ui-elements-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\on-off-icon-15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize-box-blue-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\207-2078731_minimize-maximize-icon-png-window-minimize-button-white.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,6 +29,7 @@ namespace ContabSys
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addRecebimentos));
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tbnif = new System.Windows.Forms.TextBox();
             this.tbnomecliente = new System.Windows.Forms.TextBox();
@@ -48,6 +49,7 @@ namespace ContabSys
             this.btnGravar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.tbvalor = new System.Windows.Forms.TextBox();
+            this.btnnovo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -170,7 +172,7 @@ namespace ContabSys
             this.btnRemover.BackColor = System.Drawing.Color.Maroon;
             this.btnRemover.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.btnRemover.ForeColor = System.Drawing.Color.White;
-            this.btnRemover.Location = new System.Drawing.Point(514, 249);
+            this.btnRemover.Location = new System.Drawing.Point(514, 233);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(74, 33);
             this.btnRemover.TabIndex = 55;
@@ -182,9 +184,9 @@ namespace ContabSys
             // 
             this.btnUPDATE.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.btnUPDATE.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUPDATE.Location = new System.Drawing.Point(326, 183);
+            this.btnUPDATE.Location = new System.Drawing.Point(209, 185);
             this.btnUPDATE.Name = "btnUPDATE";
-            this.btnUPDATE.Size = new System.Drawing.Size(92, 33);
+            this.btnUPDATE.Size = new System.Drawing.Size(92, 29);
             this.btnUPDATE.TabIndex = 56;
             this.btnUPDATE.Text = "Update";
             this.btnUPDATE.UseVisualStyleBackColor = false;
@@ -194,9 +196,9 @@ namespace ContabSys
             // 
             this.btnEditar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnEditar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnEditar.Location = new System.Drawing.Point(209, 239);
+            this.btnEditar.Location = new System.Drawing.Point(343, 182);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(243, 43);
+            this.btnEditar.Size = new System.Drawing.Size(131, 61);
             this.btnEditar.TabIndex = 57;
             this.btnEditar.Text = "Fazer Lançamento para outra entidade";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -231,11 +233,24 @@ namespace ContabSys
             this.tbvalor.Size = new System.Drawing.Size(127, 20);
             this.tbvalor.TabIndex = 71;
             // 
+            // btnnovo
+            // 
+            this.btnnovo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnnovo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.btnnovo.Location = new System.Drawing.Point(209, 181);
+            this.btnnovo.Name = "btnnovo";
+            this.btnnovo.Size = new System.Drawing.Size(92, 36);
+            this.btnnovo.TabIndex = 72;
+            this.btnnovo.Text = "Novo";
+            this.btnnovo.UseVisualStyleBackColor = false;
+            this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
+            // 
             // addRecebimentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(645, 331);
+            this.ClientSize = new System.Drawing.Size(645, 277);
+            this.Controls.Add(this.btnnovo);
             this.Controls.Add(this.tbvalor);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.tbnif);
@@ -255,9 +270,10 @@ namespace ContabSys
             this.Controls.Add(this.btnUPDATE);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGravar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "addRecebimentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "addRecebimentos";
+            this.Text = "Recebimentos";
             this.Load += new System.EventHandler(this.addRecebimentos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -285,5 +301,6 @@ namespace ContabSys
         internal System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.Label label7;
         internal System.Windows.Forms.TextBox tbvalor;
+        internal System.Windows.Forms.Button btnnovo;
     }
 }

@@ -47,7 +47,8 @@ namespace ContabSys
             frmrececaodocumentos.tbnomecliente.Text = this.tbNome.Text;
             frmrececaodocumentos.tbnif.Text = this.tbNif.Text;
             //      frmrececaodocumentos.tbobscliente.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
-
+            frmrececaodocumentos.btnUPDATE.Visible = false;
+            frmrececaodocumentos.btnnovo.Visible = false;
             frmrececaodocumentos.ShowDialog();
         }
 
@@ -136,6 +137,11 @@ namespace ContabSys
             frmrececaodocumentos.tbobs.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
             frmrececaodocumentos.tbnomecliente.Text = this.tbNome.Text;
             frmrececaodocumentos.tbnif.Text = this.tbNif.Text;
+
+            frmrececaodocumentos.btnGravar.Visible = false;
+            frmrececaodocumentos.btnnovo.Visible = false;
+
+
             frmrececaodocumentos.ShowDialog();
 
         }
@@ -163,6 +169,9 @@ namespace ContabSys
             frmraddseleccaoEarquivo.tbnif.Text = this.tbNif.Text;
             //      frmrececaodocumentos.tbobscliente.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
 
+            frmraddseleccaoEarquivo.btnUPDATE.Visible = false;
+            frmraddseleccaoEarquivo.btnnovo.Visible = false;
+
             frmraddseleccaoEarquivo.ShowDialog();
         }
 
@@ -184,7 +193,11 @@ namespace ContabSys
             frmraddseleccaoEarquivo.tbnomecliente.Text = this.tbNome.Text;
 
             frmraddseleccaoEarquivo.tbnif.Text = this.tbNif.Text;
-            
+
+            frmraddseleccaoEarquivo.btnGravar.Visible = false;
+            frmraddseleccaoEarquivo.btnnovo.Visible = false;
+
+
             frmraddseleccaoEarquivo.ShowDialog();
         }
 
@@ -239,7 +252,8 @@ namespace ContabSys
             frmraddRecepcaoSafts.tbnomecliente.Text = this.tbNome.Text;
             frmraddRecepcaoSafts.tbnif.Text = this.tbNif.Text;
             //      frmrececaodocumentos.tbobscliente.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
-
+            frmraddRecepcaoSafts.btnUPDATE.Visible = false;
+            frmraddRecepcaoSafts.btnnovo.Visible = false;
             frmraddRecepcaoSafts.ShowDialog();
         }
 
@@ -252,6 +266,10 @@ namespace ContabSys
             frmraddRecepcaoSafts.tbobs.Text = this.dataGridView4.CurrentRow.Cells[3].Value.ToString();
             frmraddRecepcaoSafts.tbnomecliente.Text = this.tbNome.Text;
             frmraddRecepcaoSafts.tbnif.Text = this.tbNif.Text;
+
+            frmraddRecepcaoSafts.btnGravar.Visible = false;
+            frmraddRecepcaoSafts.btnnovo.Visible = false;
+
             frmraddRecepcaoSafts.ShowDialog();
         }
 
@@ -263,6 +281,8 @@ namespace ContabSys
             frmaddRecebimentos.tbnomecliente.Text = this.tbNome.Text;
             frmaddRecebimentos.tbnif.Text = this.tbNif.Text;
             //      frmrececaodocumentos.tbobscliente.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frmaddRecebimentos.btnUPDATE.Visible = false;
+            frmaddRecebimentos.btnnovo.Visible = false;
 
             frmaddRecebimentos.ShowDialog();
         }
@@ -277,6 +297,10 @@ namespace ContabSys
             frmaddRecebimentos.tbobs.Text = this.dataGridView5.CurrentRow.Cells[4].Value.ToString();
             frmaddRecebimentos.tbnomecliente.Text = this.tbNome.Text;
             frmaddRecebimentos.tbnif.Text = this.tbNif.Text;
+
+            frmaddRecebimentos.btnGravar.Visible = false;
+            frmaddRecebimentos.btnnovo.Visible = false;
+
             frmaddRecebimentos.ShowDialog();
         }
 
@@ -288,6 +312,12 @@ namespace ContabSys
         private void button22_MouseLeave(object sender, EventArgs e)
         {
             label20.Visible = false;
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            ListagemClientes frmclientes = new ListagemClientes();
+            frmclientes.ShowDialog();
         }
     }
 }

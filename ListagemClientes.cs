@@ -57,7 +57,7 @@ namespace ContabSys
             fc.tbTlf.Text = this.dataGridView1.CurrentRow.Cells[6].Value.ToString();
 
             fc.tbCodOutroSoft.Text = this.dataGridView1.CurrentRow.Cells[7].Value.ToString();
-         
+
             //  fc.add2.Enabled = true;
 
             //  fc.btnUpdate.Enabled = true;
@@ -66,7 +66,9 @@ namespace ContabSys
 
             //  fc.ObterDadosCabecalho();
             //  fc.ObterDadosLinhas();
+            FichaCliente FichaCliente = (FichaCliente)Application.OpenForms["FichaCliente"];
 
+            FichaCliente.RefreshALLDataGrid();
 
 
             Close();
@@ -93,7 +95,9 @@ namespace ContabSys
             fc.tbTlf.Text = this.dataGridView1.CurrentRow.Cells[6].Value.ToString();
 
             fc.tbCodOutroSoft.Text = this.dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            FichaCliente FichaCliente = (FichaCliente)Application.OpenForms["FichaCliente"];
 
+            FichaCliente.RefreshALLDataGrid();
             //  fc.add2.Enabled = true;
 
             //  fc.btnUpdate.Enabled = true;

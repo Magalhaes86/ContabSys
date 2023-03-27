@@ -63,6 +63,16 @@ namespace ContabSys.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _207_2078731_minimize_maximize_icon_png_window_minimize_button_white {
+            get {
+                object obj = ResourceManager.GetObject("207-2078731_minimize-maximize-icon-png-window-minimize-button-white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap folder {
             get {
                 object obj = ResourceManager.GetObject("folder", resourceCulture);
@@ -77,6 +87,47 @@ namespace ContabSys.Properties {
             get {
                 object obj = ResourceManager.GetObject("imgbin-cleaning-computer-icons-tool-spade-cleaner-others-w7xjSvWY22K3VJMzYcVvG5tA" +
                         "R", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimize_128 {
+            get {
+                object obj = ResourceManager.GetObject("Minimize-128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimize_box_blue_256 {
+            get {
+                object obj = ResourceManager.GetObject("Minimize-box-blue-256", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap on_off_icon_15 {
+            get {
+                object obj = ResourceManager.GetObject("on-off-icon-15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_close_closed_cross_delete_remove_wrong_x_basic_web_ui_elements_icon {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-close-closed-cross-delete-remove-wrong-x-basic-web-ui-elements-ic" +
+                        "on", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

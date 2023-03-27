@@ -189,7 +189,7 @@ namespace ContabSys
             // 
             this.btnUPDATE.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.btnUPDATE.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUPDATE.Location = new System.Drawing.Point(63, 241);
+            this.btnUPDATE.Location = new System.Drawing.Point(196, 201);
             this.btnUPDATE.Name = "btnUPDATE";
             this.btnUPDATE.Size = new System.Drawing.Size(92, 33);
             this.btnUPDATE.TabIndex = 39;
@@ -226,7 +226,7 @@ namespace ContabSys
             // 
             this.btnnovo.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnnovo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnnovo.Location = new System.Drawing.Point(196, 238);
+            this.btnnovo.Location = new System.Drawing.Point(196, 201);
             this.btnnovo.Name = "btnnovo";
             this.btnnovo.Size = new System.Drawing.Size(92, 36);
             this.btnnovo.TabIndex = 54;
@@ -238,7 +238,7 @@ namespace ContabSys
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 286);
+            this.ClientSize = new System.Drawing.Size(609, 295);
             this.Controls.Add(this.btnnovo);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.tbnif);

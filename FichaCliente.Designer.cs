@@ -56,6 +56,7 @@ namespace ContabSys
             this.btnEditar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button17 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -118,13 +119,13 @@ namespace ContabSys
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -146,7 +147,6 @@ namespace ContabSys
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -198,6 +198,7 @@ namespace ContabSys
             this.button22.Size = new System.Drawing.Size(35, 24);
             this.button22.TabIndex = 7452;
             this.button22.UseVisualStyleBackColor = false;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             this.button22.MouseLeave += new System.EventHandler(this.button22_MouseLeave);
             this.button22.MouseHover += new System.EventHandler(this.button22_MouseHover);
             // 
@@ -418,6 +419,21 @@ namespace ContabSys
             this.panel5.Size = new System.Drawing.Size(755, 545);
             this.panel5.TabIndex = 0;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(755, 545);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.button17);
@@ -481,7 +497,7 @@ namespace ContabSys
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(761, 568);
+            this.tabPage2.Size = new System.Drawing.Size(761, 604);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Selecção e Arquivo";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -492,7 +508,7 @@ namespace ContabSys
             this.panel7.Controls.Add(this.button19);
             this.panel7.Controls.Add(this.button20);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(3, 505);
+            this.panel7.Location = new System.Drawing.Point(3, 541);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(755, 60);
             this.panel7.TabIndex = 1;
@@ -532,7 +548,7 @@ namespace ContabSys
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(3, 56);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(755, 509);
+            this.panel8.Size = new System.Drawing.Size(755, 545);
             this.panel8.TabIndex = 2;
             // 
             // dataGridView2
@@ -545,7 +561,7 @@ namespace ContabSys
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(755, 509);
+            this.dataGridView2.Size = new System.Drawing.Size(755, 545);
             this.dataGridView2.TabIndex = 1;
             // 
             // panel9
@@ -611,7 +627,7 @@ namespace ContabSys
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(761, 568);
+            this.tabPage3.Size = new System.Drawing.Size(761, 604);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Lançamentos";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -622,7 +638,7 @@ namespace ContabSys
             this.panel10.Controls.Add(this.button9);
             this.panel10.Controls.Add(this.button10);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(3, 505);
+            this.panel10.Location = new System.Drawing.Point(3, 541);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(755, 60);
             this.panel10.TabIndex = 1;
@@ -662,7 +678,7 @@ namespace ContabSys
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(3, 56);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(755, 509);
+            this.panel11.Size = new System.Drawing.Size(755, 545);
             this.panel11.TabIndex = 2;
             // 
             // dataGridView3
@@ -675,7 +691,7 @@ namespace ContabSys
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(755, 509);
+            this.dataGridView3.Size = new System.Drawing.Size(755, 545);
             this.dataGridView3.TabIndex = 2;
             // 
             // panel12
@@ -730,7 +746,7 @@ namespace ContabSys
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(761, 568);
+            this.tabPage4.Size = new System.Drawing.Size(761, 604);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Recepão de Safts";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -741,7 +757,7 @@ namespace ContabSys
             this.panel13.Controls.Add(this.button12);
             this.panel13.Controls.Add(this.button13);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel13.Location = new System.Drawing.Point(3, 505);
+            this.panel13.Location = new System.Drawing.Point(3, 541);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(755, 60);
             this.panel13.TabIndex = 1;
@@ -781,7 +797,7 @@ namespace ContabSys
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel14.Location = new System.Drawing.Point(3, 56);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(755, 509);
+            this.panel14.Size = new System.Drawing.Size(755, 545);
             this.panel14.TabIndex = 2;
             // 
             // dataGridView4
@@ -794,7 +810,7 @@ namespace ContabSys
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView4.Size = new System.Drawing.Size(755, 509);
+            this.dataGridView4.Size = new System.Drawing.Size(755, 545);
             this.dataGridView4.TabIndex = 3;
             // 
             // panel15
@@ -849,7 +865,7 @@ namespace ContabSys
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(761, 568);
+            this.tabPage5.Size = new System.Drawing.Size(761, 604);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Recebimentos";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -860,7 +876,7 @@ namespace ContabSys
             this.panel16.Controls.Add(this.button15);
             this.panel16.Controls.Add(this.button16);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel16.Location = new System.Drawing.Point(3, 505);
+            this.panel16.Location = new System.Drawing.Point(3, 541);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(755, 60);
             this.panel16.TabIndex = 1;
@@ -900,7 +916,7 @@ namespace ContabSys
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel17.Location = new System.Drawing.Point(3, 56);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(755, 509);
+            this.panel17.Size = new System.Drawing.Size(755, 545);
             this.panel17.TabIndex = 2;
             // 
             // dataGridView5
@@ -913,7 +929,7 @@ namespace ContabSys
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.ReadOnly = true;
             this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView5.Size = new System.Drawing.Size(755, 509);
+            this.dataGridView5.Size = new System.Drawing.Size(755, 545);
             this.dataGridView5.TabIndex = 3;
             // 
             // panel18
@@ -1017,21 +1033,6 @@ namespace ContabSys
             this.button5.Text = "button2";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(755, 545);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // FichaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1050,6 +1051,7 @@ namespace ContabSys
             this.tabPage1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -1076,7 +1078,6 @@ namespace ContabSys
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

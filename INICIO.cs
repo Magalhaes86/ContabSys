@@ -266,6 +266,44 @@ namespace ContabSys
         {
             label16.Visible = false;
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tbcod.Text = "";
+            tbcodoutrosoft.Text = "";
+            tbnome.Text = "";
+            tbnif.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox1.Text = "";
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button6_MouseHover(object sender, EventArgs e)
+        {
+            label10.Visible = true;
+        }
+
+        private void button6_MouseLeave(object sender, EventArgs e)
+        {
+            label10.Visible = false;
+        }
+
+        private void button5_MouseHover(object sender, EventArgs e)
+        {
+            label11.Visible = true;
+        }
+
+        private void button5_MouseLeave(object sender, EventArgs e)
+        {
+            label11.Visible = false;
+        }
     }
     }
 
