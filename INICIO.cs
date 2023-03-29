@@ -17,8 +17,9 @@ namespace ContabSys
             InitializeComponent();
         }
 
-        MySqlConnection connection = new MySqlConnection(@"server=localhost;database=ContabSysDB;port=3308;userid=root;password=xd");
+        MySqlConnection connection = new MySqlConnection(@"server="+Properties.Settings.Default.server + ";database="+Properties.Settings.Default.basedados+";port="+Properties.Settings.Default.porta+";userid="+Properties.Settings.Default.username+";password="+Properties.Settings.Default.password);
 
+      //  MySqlConnection connection = new MySqlConnection(@"server=localhost;database=ContabSysDB;port=3308;userid=root;password=xd");
 
         MySqlCommand command;
 
@@ -28,6 +29,8 @@ namespace ContabSys
         {
             
         }
+
+      
 
         private void btnCriarCliente_Click(object sender, EventArgs e)
         {
@@ -303,6 +306,23 @@ namespace ContabSys
         private void button5_MouseLeave(object sender, EventArgs e)
         {
             label11.Visible = false;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Tem a certeza que pretende Encerrar a Aplicação?", " !! ENCERRAR APLICAÇÃO !!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                Application.Exit();
+
+            }
+
+            else if (dialogResult == DialogResult.No)
+            {
+                //caso pretenda fazer outra coisa qualuqer.
+                tbcod.Focus();
+            }
         }
     }
     }

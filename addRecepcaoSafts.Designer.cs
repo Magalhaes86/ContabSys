@@ -43,11 +43,12 @@ namespace ContabSys
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btncancelar = new System.Windows.Forms.Button();
-            this.btnRemover = new System.Windows.Forms.Button();
             this.btnUPDATE = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnnovo = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.lbldelete = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -154,7 +155,7 @@ namespace ContabSys
             // 
             // btncancelar
             // 
-            this.btncancelar.BackColor = System.Drawing.Color.Tomato;
+            this.btncancelar.BackColor = System.Drawing.Color.RosyBrown;
             this.btncancelar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.btncancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btncancelar.Location = new System.Drawing.Point(517, 202);
@@ -164,74 +165,99 @@ namespace ContabSys
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = false;
             this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
-            // 
-            // btnRemover
-            // 
-            this.btnRemover.BackColor = System.Drawing.Color.Maroon;
-            this.btnRemover.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnRemover.ForeColor = System.Drawing.Color.White;
-            this.btnRemover.Location = new System.Drawing.Point(516, 254);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(74, 33);
-            this.btnRemover.TabIndex = 38;
-            this.btnRemover.Text = "Remover";
-            this.btnRemover.UseVisualStyleBackColor = false;
-            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
+            this.btncancelar.MouseLeave += new System.EventHandler(this.btncancelar_MouseLeave);
+            this.btncancelar.MouseHover += new System.EventHandler(this.btncancelar_MouseHover);
             // 
             // btnUPDATE
             // 
-            this.btnUPDATE.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.btnUPDATE.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnUPDATE.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUPDATE.Location = new System.Drawing.Point(211, 200);
+            this.btnUPDATE.Location = new System.Drawing.Point(210, 199);
             this.btnUPDATE.Name = "btnUPDATE";
             this.btnUPDATE.Size = new System.Drawing.Size(92, 29);
             this.btnUPDATE.TabIndex = 39;
             this.btnUPDATE.Text = "Update";
             this.btnUPDATE.UseVisualStyleBackColor = false;
             this.btnUPDATE.Click += new System.EventHandler(this.btnUPDATE_Click);
+            this.btnUPDATE.MouseLeave += new System.EventHandler(this.btnUPDATE_MouseLeave);
+            this.btnUPDATE.MouseHover += new System.EventHandler(this.btnUPDATE_MouseHover);
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnEditar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnEditar.Location = new System.Drawing.Point(348, 199);
+            this.btnEditar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEditar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnEditar.Location = new System.Drawing.Point(339, 200);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(122, 71);
+            this.btnEditar.Size = new System.Drawing.Size(125, 51);
             this.btnEditar.TabIndex = 40;
             this.btnEditar.Text = "Fazer Lançamento para outra entidade";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.btnEditar.MouseLeave += new System.EventHandler(this.btnEditar_MouseLeave);
+            this.btnEditar.MouseHover += new System.EventHandler(this.btnEditar_MouseHover);
             // 
             // btnGravar
             // 
-            this.btnGravar.BackColor = System.Drawing.Color.Green;
+            this.btnGravar.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGravar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGravar.ForeColor = System.Drawing.Color.White;
-            this.btnGravar.Location = new System.Drawing.Point(211, 198);
+            this.btnGravar.ForeColor = System.Drawing.Color.Black;
+            this.btnGravar.Location = new System.Drawing.Point(210, 199);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(92, 33);
             this.btnGravar.TabIndex = 41;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = false;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
+            this.btnGravar.MouseLeave += new System.EventHandler(this.btnGravar_MouseLeave);
+            this.btnGravar.MouseHover += new System.EventHandler(this.btnGravar_MouseHover);
             // 
             // btnnovo
             // 
-            this.btnnovo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnnovo.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnnovo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnnovo.Location = new System.Drawing.Point(211, 199);
+            this.btnnovo.Location = new System.Drawing.Point(210, 199);
             this.btnnovo.Name = "btnnovo";
             this.btnnovo.Size = new System.Drawing.Size(92, 36);
             this.btnnovo.TabIndex = 55;
             this.btnnovo.Text = "Novo";
             this.btnnovo.UseVisualStyleBackColor = false;
             this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
+            this.btnnovo.MouseLeave += new System.EventHandler(this.btnnovo_MouseLeave);
+            this.btnnovo.MouseHover += new System.EventHandler(this.btnnovo_MouseHover);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BackgroundImage = global::ContabSys.Properties.Resources.delete_icon_png_16;
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDelete.Location = new System.Drawing.Point(543, 248);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(47, 44);
+            this.btnDelete.TabIndex = 56;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
+            this.btnDelete.MouseLeave += new System.EventHandler(this.btnDelete_MouseLeave);
+            this.btnDelete.MouseHover += new System.EventHandler(this.btnDelete_MouseHover);
+            // 
+            // lbldelete
+            // 
+            this.lbldelete.AutoSize = true;
+            this.lbldelete.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldelete.Location = new System.Drawing.Point(428, 263);
+            this.lbldelete.Name = "lbldelete";
+            this.lbldelete.Size = new System.Drawing.Size(109, 15);
+            this.lbldelete.TabIndex = 75;
+            this.lbldelete.Text = "Eliminar o Registo";
+            this.lbldelete.Visible = false;
             // 
             // addRecepcaoSafts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 295);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(611, 298);
+            this.Controls.Add(this.lbldelete);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnnovo);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.tbnif);
@@ -246,7 +272,6 @@ namespace ContabSys
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btncancelar);
-            this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.btnUPDATE);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGravar);
@@ -275,10 +300,11 @@ namespace ContabSys
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Button btncancelar;
-        internal System.Windows.Forms.Button btnRemover;
         internal System.Windows.Forms.Button btnUPDATE;
         private System.Windows.Forms.Button btnEditar;
         internal System.Windows.Forms.Button btnGravar;
         internal System.Windows.Forms.Button btnnovo;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label lbldelete;
     }
 }

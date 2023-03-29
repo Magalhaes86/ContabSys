@@ -8,7 +8,7 @@ using System.IO;
 using MySql.Data.MySqlClient;
 using System.Data;
 using MySql.Data;
-
+using System.Drawing;
 
 namespace ContabSys
 {
@@ -21,10 +21,9 @@ namespace ContabSys
      
         }
 
-        //  MySqlConnection connection = new MySqlConnection("datasource= " + Properties.Settings.Default.server + ";" + "database=" + Properties.Settings.Default.basedados + ";" + "port=" + Properties.Settings.Default.porta + ";" + "username=" + Properties.Settings.Default.username + ";" + "password=" + Properties.Settings.Default.password);
+        //   MySqlConnection connection = new MySqlConnection(@"server=localhost;database=ContabSysDB;port=3308;userid=root;password=xd");
+        MySqlConnection connection = new MySqlConnection(@"server=" + Properties.Settings.Default.server + ";database=" + Properties.Settings.Default.basedados + ";port=" + Properties.Settings.Default.porta + ";userid=" + Properties.Settings.Default.username + ";password=" + Properties.Settings.Default.password);
 
-        MySqlConnection connection = new MySqlConnection(@"server=localhost;database=ContabSysDB;port=3308;userid=root;password=xd");
-   
 
         MySqlCommand command;
 
@@ -40,40 +39,52 @@ namespace ContabSys
 
         }
 
+        public void limparPesquisa()
+        {
+      
+            textBox10.Text = "";
+            textBox11.Text = "";
+            textBox18.Text = "";
+            textBox17.Text = "";
+            textBox16.Text = "";
+            textBox15.Text = "";
+            textBox12.Text = "";
+            textBox14.Text = "";
+            textBox13.Text = "";
+        }
 
+        public void limpartudo()
+        {
+            tbId.Text = "";
+tbCodOutroSoft.Text = "";
+            tbNome.Text = "";
+            tbNif.Text = "";
+            tbEmail.Text = "";
+            tbTlm.Text = "";
+            tbTlf.Text = "";
+            tbMorada.Text = "";
+            tbobs.Text = "";
+            textBox10.Text = "";
+            textBox11.Text = "";
+            textBox18.Text = "";
+            textBox17.Text = "";
+            textBox16.Text = "";
+            textBox15.Text = "";
+            textBox12.Text = "";
+            textBox14.Text = "";
+            textBox13.Text = "";
+        }
 
                 private void Clientes_Load(object sender, EventArgs e)
         {
             LerDadosClientesDataGrid();
         }
 
-        private void btnGravar_Click(object sender, EventArgs e)
-        {
-            string insertQuery = "INSERT INTO clientes (Nome,Nif,Morada,Email,Tlm,Tlf,CodOutroSoftware,Obs) VALUES('" +tbNome.Text+ "','" +tbNif.Text+ "','" +tbMorada.Text+ "','" +tbEmail.Text+ "','" +tbTlm.Text+ "','" +tbTlf.Text+ "','" +tbCodOutroSoft.Text+ "','" +tbobs.Text+ "');";
-            executeMyQuery(insertQuery);
+      
 
-            LerDadosClientesDataGrid();
+       
 
-
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            string updateQuery = "UPDATE clientes SET Nome='" + tbNome.Text + "',Nif='" + tbNif.Text + "',Morada='" + tbMorada.Text + "',Email='" + tbEmail.Text + "',Tlm='" + tbTlm.Text + "',Tlf='" + tbTlf.Text + "',CodOutroSoftware='" + tbCodOutroSoft.Text + "',Obs='" + tbobs.Text + "' WHERE ID ="+int.Parse(tbId.Text);
-            executeMyQuery(updateQuery);
-            LerDadosClientesDataGrid();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            // Botao remover
-
-            string udeleteQuery = "DELETE FROM clientes WHERE ID =" + int.Parse(tbId.Text);
-            executeMyQuery(udeleteQuery);
-            LerDadosClientesDataGrid();
-
-
-        }
+      
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
@@ -122,31 +133,31 @@ namespace ContabSys
 
         public void PesquisarporID()
         {
-            MySqlDataReader mdr;
-            string selectID = "SELECT * FROM clientes WHERE ID =" + tbsearchid.Text;
+            //MySqlDataReader mdr;
+            //string selectID = "SELECT * FROM clientes WHERE ID =" + tbsearchid.Text;
 
-            command = new MySqlCommand(selectID, connection);
-            openConnection();
-            mdr = command.ExecuteReader();
+            //command = new MySqlCommand(selectID, connection);
+            //openConnection();
+            //mdr = command.ExecuteReader();
 
-            if (mdr.Read())
-            {
-                tbNome.Text = mdr.GetString("Nome");
-                tbNif.Text = mdr.GetString("Nif");
-                tbMorada.Text = mdr.GetString("Morada");
-                tbEmail.Text = mdr.GetString("Email");
-                tbTlm.Text = mdr.GetString("Tlm");
+            //if (mdr.Read())
+            //{
+            //    tbNome.Text = mdr.GetString("Nome");
+            //    tbNif.Text = mdr.GetString("Nif");
+            //    tbMorada.Text = mdr.GetString("Morada");
+            //    tbEmail.Text = mdr.GetString("Email");
+            //    tbTlm.Text = mdr.GetString("Tlm");
 
-                tbTlf.Text = mdr.GetString("Tlf");
-                tbCodOutroSoft.Text = mdr.GetString("CodOutroSoftware");
-                tbobs.Text = mdr.GetString("Obs");
+            //    tbTlf.Text = mdr.GetString("Tlf");
+            //    tbCodOutroSoft.Text = mdr.GetString("CodOutroSoftware");
+            //    tbobs.Text = mdr.GetString("Obs");
 
-            }
-            else
-            {
-                MessageBox.Show("Utilizador Não Encontrado");
-            }
-            closeConnection();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Utilizador Não Encontrado");
+            //}
+            //closeConnection();
 
         }
 
@@ -181,22 +192,22 @@ namespace ContabSys
         {
 
           
-            if (tbsearchid.Text == "")
-            {
-                MessageBox.Show("Inserir Codigo do Cliente", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                tbsearchid.Focus();
-                return;
+            //if (tbsearchid.Text == "")
+            //{
+            //    MessageBox.Show("Inserir Codigo do Cliente", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    tbsearchid.Focus();
+            //    return;
 
-            }
-            try
-            {
-                PesquisarporID();
+            //}
+            //try
+            //{
+            //    PesquisarporID();
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro : " + ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Erro : " + ex.Message);
+            //}
 
 
         }
@@ -204,6 +215,145 @@ namespace ContabSys
         private void label19_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnNovo_MouseHover(object sender, EventArgs e)
+        {
+            btnNovo.BackColor = SystemColors.ActiveCaption;
+        }
+
+        private void btnNovo_MouseLeave(object sender, EventArgs e)
+        {
+            btnNovo.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void btnDelete_MouseHover(object sender, EventArgs e)
+        {
+            lbldelete.Visible = true;
+        }
+
+        private void btnDelete_MouseLeave(object sender, EventArgs e)
+        {
+            lbldelete.Visible = false;
+        }
+
+        private void btnUpdate_MouseHover(object sender, EventArgs e)
+        {
+            btnUpdate.BackColor = System.Drawing.Color.Cornsilk;
+        }
+
+        private void btnUpdate_MouseLeave(object sender, EventArgs e)
+        {
+            btnUpdate.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void btnGravar_MouseHover(object sender, EventArgs e)
+        {
+            btnGravar.BackColor = System.Drawing.Color.Green;
+            btnGravar.ForeColor = SystemColors.HighlightText;
+        }
+
+        private void btnGravar_MouseLeave(object sender, EventArgs e)
+        {
+            btnGravar.BackColor = SystemColors.ButtonFace;
+            btnGravar.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Tem a certeza que pretende ELIMINAR o registo?", " !! ELIMINAR REGISTO DA BASE DE DADOS !!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string udeleteQuery = "DELETE FROM clientes WHERE ID =" + int.Parse(tbId.Text);
+                executeMyQuery(udeleteQuery);
+                LerDadosClientesDataGrid();
+
+
+            }
+
+            else if (dialogResult == DialogResult.No)
+            {
+                //caso pretenda fazer outra coisa qualuqer.
+                textBox10.Focus();
+            }
+        }
+
+        private void btnNovo_Click_1(object sender, EventArgs e)
+        {
+            limpartudo();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            limparPesquisa();
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Tem a certeza que pretende ELIMINAR o registo?", " !! ELIMINAR REGISTO DA BASE DE DADOS !!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string udeleteQuery = "DELETE FROM clientes WHERE ID =" + int.Parse(tbId.Text);
+                executeMyQuery(udeleteQuery);
+                LerDadosClientesDataGrid();
+
+
+            }
+
+            else if (dialogResult == DialogResult.No)
+            {
+                //caso pretenda fazer outra coisa qualuqer.
+                textBox10.Focus();
+            }
+        }
+
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            string insertQuery = "INSERT INTO clientes (Nome,Nif,Morada,Email,Tlm,Tlf,CodOutroSoftware,Obs) VALUES('" + tbNome.Text + "','" + tbNif.Text + "','" + tbMorada.Text + "','" + tbEmail.Text + "','" + tbTlm.Text + "','" + tbTlf.Text + "','" + tbCodOutroSoft.Text + "','" + tbobs.Text + "');";
+            executeMyQuery(insertQuery);
+
+            LerDadosClientesDataGrid();
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+            DialogResult dialogResult = MessageBox.Show("Tem a certeza que pretende ATUALIZAR os dados do Cliente?", " !! ATUALIZAR CLIENTE !!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                string updateQuery = "UPDATE clientes SET Nome='" + tbNome.Text + "',Nif='" + tbNif.Text + "',Morada='" + tbMorada.Text + "',Email='" + tbEmail.Text + "',Tlm='" + tbTlm.Text + "',Tlf='" + tbTlf.Text + "',CodOutroSoftware='" + tbCodOutroSoft.Text + "',Obs='" + tbobs.Text + "' WHERE ID =" + int.Parse(tbId.Text);
+                executeMyQuery(updateQuery);
+                LerDadosClientesDataGrid();
+
+            }
+
+            else if (dialogResult == DialogResult.No)
+            {
+                //caso pretenda fazer outra coisa qualuqer.
+                textBox10.Focus();
+            }
+
+
+          
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Pretende sair sem fazer alterações?", " !! Sair sem Alterações !!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                Close();
+
+            }
+
+            else if (dialogResult == DialogResult.No)
+            {
+                //caso pretenda fazer outra coisa qualuqer.
+                textBox10.Focus();
+            }
         }
     }
 }

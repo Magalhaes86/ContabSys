@@ -29,6 +29,7 @@ namespace ContabSys
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(listagemClientesSeleccaoEArguivos));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -74,9 +75,10 @@ namespace ContabSys
             this.ClientSize = new System.Drawing.Size(711, 669);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "listagemClientesSeleccaoEArguivos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "listagemClientesSeleccaoEArguivos";
+            this.Text = "Listagem de Clientes";
             this.Load += new System.EventHandler(this.listagemClientesSeleccaoEArguivos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);

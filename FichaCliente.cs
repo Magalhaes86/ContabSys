@@ -8,6 +8,7 @@ using System.IO;
 using MySql.Data.MySqlClient;
 using System.Data;
 using MySql.Data;
+using System.Drawing;
 
 namespace ContabSys
 {
@@ -20,7 +21,8 @@ namespace ContabSys
 
 
 
-        MySqlConnection connection = new MySqlConnection(@"server=localhost;database=ContabSysDB;port=3308;userid=root;password=xd");
+        //MySqlConnection connection = new MySqlConnection(@"server=localhost;database=ContabSysDB;port=3308;userid=root;password=xd");
+        MySqlConnection connection = new MySqlConnection(@"server=" + Properties.Settings.Default.server + ";database=" + Properties.Settings.Default.basedados + ";port=" + Properties.Settings.Default.porta + ";userid=" + Properties.Settings.Default.username + ";password=" + Properties.Settings.Default.password);
 
 
         MySqlCommand command;
@@ -318,6 +320,228 @@ namespace ContabSys
         {
             ListagemClientes frmclientes = new ListagemClientes();
             frmclientes.ShowDialog();
+        }
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmTesteEmail frmTesteEmail = new frmTesteEmail();
+            string a = "Caro ";
+            string b = tbNome.Text + ",";
+            string c = "Vimos por este meio informar que está em falta a entrega da documentação";
+            string f = "Solicitamos a entrega dos mesmos com maior brevidade possível";
+            string d = a + b + "\r\n" + c + "\r\n" + f;
+            frmTesteEmail.txtAssuntoTitulo.Text = "Documentos em Falta";
+            frmTesteEmail.txtEnviarPara.Text = tbEmail.Text;
+            frmTesteEmail.txtMensagem.Text = d;
+            frmTesteEmail.ShowDialog();
+        
+            
+            
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            frmTesteEmail frmTesteEmail = new frmTesteEmail();
+            string a = "Caro ";
+            string b = tbNome.Text + ",";
+            string c = "Vimos por este meio informar que está em falta o envio do Ficheiro Saft";
+            string f = "Solicitamos o envio com maior brevidade possível";
+            string d = a + b + "\r\n" + c + "\r\n" + f;
+            frmTesteEmail.txtAssuntoTitulo.Text = "Ficheiro Saft em Falta";
+            frmTesteEmail.txtEnviarPara.Text = tbEmail.Text;
+            frmTesteEmail.txtMensagem.Text = d;
+            frmTesteEmail.ShowDialog();
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            frmTesteEmail frmTesteEmail = new frmTesteEmail();
+            string a = "Caro ";
+            string b = tbNome.Text + ",";
+            string c = "Vimos por este meio informar que se encontram valores por liquidar";
+            string f = "Solicitamos a regularização com maior brevidade possível";
+            string d = a + b + "\r\n" + c + "\r\n" + f;
+            frmTesteEmail.txtAssuntoTitulo.Text = "Valores Por liquidar";
+            frmTesteEmail.txtEnviarPara.Text = tbEmail.Text;
+            frmTesteEmail.txtMensagem.Text = d;
+            frmTesteEmail.ShowDialog();
+        }
+
+        private void button2_MouseHover(object sender, EventArgs e)
+        {
+            button2.BackColor = SystemColors.ActiveCaption;
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            button2.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void btnEditar_MouseHover(object sender, EventArgs e)
+        {
+            btnEditar.BackColor = System.Drawing.Color.Cornsilk;
+        }
+
+        private void btnEditar_MouseLeave(object sender, EventArgs e)
+        {
+            btnEditar.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void button4_MouseHover(object sender, EventArgs e)
+        {
+            button4.BackColor = SystemColors.ActiveCaption;
+        }
+
+        private void button4_MouseLeave(object sender, EventArgs e)
+        {
+            button4.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void button17_Click_1(object sender, EventArgs e)
+        {
+            RefreshDataGridRecepcaoDocumentos();
+        }
+
+        private void button21_Click_1(object sender, EventArgs e)
+        {
+            RefreshDataGridSelecaoEArguivo();
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            RefreshDataGridaddLancamentos();
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            RefreshDataGridaddRecepcaoSafts();
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            RefreshDataGridRecebimentos();
+
+        }
+
+        private void button16_MouseHover(object sender, EventArgs e)
+        {
+            button16.BackColor = SystemColors.ActiveCaption;
+        }
+
+        private void button16_MouseLeave(object sender, EventArgs e)
+        {
+            button16.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void button15_MouseHover(object sender, EventArgs e)
+        {
+            button15.BackColor = System.Drawing.Color.Cornsilk;
+        }
+
+        private void button15_MouseLeave(object sender, EventArgs e)
+        {
+            button15.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void button24_MouseHover(object sender, EventArgs e)
+        {
+            button24.BackColor = SystemColors.ActiveCaption;
+        }
+
+        private void button24_MouseLeave(object sender, EventArgs e)
+        {
+            button24.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void button20_MouseHover(object sender, EventArgs e)
+        {
+            button20.BackColor = SystemColors.ActiveCaption;
+        }
+
+        private void button20_MouseLeave(object sender, EventArgs e)
+        {
+            button20.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void button10_MouseHover(object sender, EventArgs e)
+        {
+            button10.BackColor = SystemColors.ActiveCaption;
+        }
+
+        private void button10_MouseLeave(object sender, EventArgs e)
+        {
+            button10.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void button13_MouseHover(object sender, EventArgs e)
+        {
+            button13.BackColor = SystemColors.ActiveCaption;
+        }
+
+        private void button13_MouseLeave(object sender, EventArgs e)
+        {
+            button13.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void button19_MouseHover(object sender, EventArgs e)
+        {
+            button19.BackColor = System.Drawing.Color.Cornsilk;
+        }
+
+        private void button9_MouseHover(object sender, EventArgs e)
+        {
+            button9.BackColor = System.Drawing.Color.Cornsilk;
+        }
+
+        private void button12_MouseHover(object sender, EventArgs e)
+        {
+            button12.BackColor = System.Drawing.Color.Cornsilk;
+        }
+
+        private void button19_MouseLeave(object sender, EventArgs e)
+        {
+            button19.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void button9_MouseLeave(object sender, EventArgs e)
+        {
+            button9.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void button12_MouseLeave(object sender, EventArgs e)
+        {
+            button12.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void button23_MouseHover(object sender, EventArgs e)
+        {
+            button23.BackColor = SystemColors.ActiveCaption;
+        }
+
+        private void button25_MouseHover(object sender, EventArgs e)
+        {
+            button25.BackColor = SystemColors.ActiveCaption;
+        }
+
+        private void button26_MouseHover(object sender, EventArgs e)
+        {
+            button26.BackColor = SystemColors.ActiveCaption;
+        }
+
+        private void button23_MouseLeave(object sender, EventArgs e)
+        {
+            button23.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void button25_MouseLeave(object sender, EventArgs e)
+        {
+            button25.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void button26_MouseLeave(object sender, EventArgs e)
+        {
+            button26.BackColor = SystemColors.ButtonFace;
         }
     }
 }

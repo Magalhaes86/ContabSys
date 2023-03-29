@@ -72,5 +72,10 @@ namespace ContabSys
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void Config_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

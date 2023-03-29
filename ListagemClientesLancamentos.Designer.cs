@@ -29,11 +29,12 @@ namespace ContabSys
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListagemClientesLancamentos));
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -73,6 +74,13 @@ namespace ContabSys
             this.panel1.Size = new System.Drawing.Size(781, 90);
             this.panel1.TabIndex = 4;
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(219, 43);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(126, 20);
+            this.textBox2.TabIndex = 0;
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(65, 43);
@@ -81,13 +89,6 @@ namespace ContabSys
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(219, 43);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(126, 20);
-            this.textBox2.TabIndex = 0;
-            // 
             // ListagemClientesLancamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,9 +96,10 @@ namespace ContabSys
             this.ClientSize = new System.Drawing.Size(781, 707);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ListagemClientesLancamentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ListagemClientesLancamentos";
+            this.Text = "Listagem de Clientes";
             this.Load += new System.EventHandler(this.ListagemClientesLancamentos_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

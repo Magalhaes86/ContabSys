@@ -8,6 +8,7 @@ using System.IO;
 using MySql.Data.MySqlClient;
 using System.Data;
 using MySql.Data;
+using System.Drawing;
 
 namespace ContabSys
 {
@@ -18,7 +19,8 @@ namespace ContabSys
             InitializeComponent();
         }
 
-        MySqlConnection connection = new MySqlConnection(@"server=localhost;database=ContabSysDB;port=3308;userid=root;password=xd");
+        //    MySqlConnection connection = new MySqlConnection(@"server=localhost;database=ContabSysDB;port=3308;userid=root;password=xd");
+        MySqlConnection connection = new MySqlConnection(@"server=" + Properties.Settings.Default.server + ";database=" + Properties.Settings.Default.basedados + ";port=" + Properties.Settings.Default.porta + ";userid=" + Properties.Settings.Default.username + ";password=" + Properties.Settings.Default.password);
 
 
         MySqlCommand command;
@@ -163,5 +165,110 @@ namespace ContabSys
             tbcodcliente.Text = "";
             tbobs.Text = "";
         }
+        private void btnGravar_MouseHover(object sender, EventArgs e)
+        {
+            btnGravar.BackColor = System.Drawing.Color.Green;
+            btnGravar.ForeColor = SystemColors.HighlightText;
+
+        }
+
+        private void btnGravar_MouseLeave(object sender, EventArgs e)
+        {
+            btnGravar.BackColor = SystemColors.ButtonFace;
+            btnGravar.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void btnUPDATE_MouseHover(object sender, EventArgs e)
+        {
+            btnUPDATE.BackColor = System.Drawing.Color.Cornsilk;
+        }
+
+        private void btnUPDATE_MouseLeave(object sender, EventArgs e)
+        {
+            btnUPDATE.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void btnnovo_MouseHover(object sender, EventArgs e)
+        {
+            btnnovo.BackColor = SystemColors.ActiveCaption;
+        }
+
+        private void btnnovo_MouseLeave(object sender, EventArgs e)
+        {
+            btnnovo.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void btnEditar_MouseHover(object sender, EventArgs e)
+        {
+            btnEditar.BackColor = System.Drawing.Color.Cornsilk;
+        }
+
+        private void btnEditar_MouseLeave(object sender, EventArgs e)
+        {
+            btnEditar.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void btncancelar_MouseHover(object sender, EventArgs e)
+        {
+            btncancelar.BackColor = System.Drawing.Color.OrangeRed;
+            btncancelar.ForeColor = SystemColors.HighlightText;
+        }
+
+        private void btncancelar_MouseLeave(object sender, EventArgs e)
+        {
+            btncancelar.BackColor = SystemColors.ButtonFace;
+            btncancelar.ForeColor = System.Drawing.Color.Black;
+        }
+
+        
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Tem a certeza que pretende ELIMINAR o registo?", " !! ELIMINAR REGISTO DA BASE DE DADOS !!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string udeleteQuery = "DELETE FROM lancamentos WHERE ID =" + int.Parse(tbcodcliente.Text);
+                executeMyQuery(udeleteQuery);
+
+
+            }
+
+            else if (dialogResult == DialogResult.No)
+            {
+                //caso pretenda fazer outra coisa qualuqer.
+                btncancelar.Focus();
+            }
+
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Tem a certeza que pretende ELIMINAR o registo?", " !! ELIMINAR REGISTO DA BASE DE DADOS !!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string udeleteQuery = "DELETE FROM recepcaosaft WHERE ID =" + int.Parse(tbcodcliente.Text);
+                executeMyQuery(udeleteQuery);
+
+
+            }
+
+            else if (dialogResult == DialogResult.No)
+            {
+                //caso pretenda fazer outra coisa qualuqer.
+                btncancelar.Focus();
+            }
+        }
+    
+private void btnDelete_MouseHover(object sender, EventArgs e)
+{
+    lbldelete.Visible = true;
+}
+
+private void btnDelete_MouseLeave(object sender, EventArgs e)
+{
+    lbldelete.Visible = false;
+}
+
+       
     }
 }
