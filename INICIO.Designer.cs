@@ -29,15 +29,13 @@ namespace ContabSys
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(INICIO));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.tbnome = new System.Windows.Forms.TextBox();
             this.tbcodoutrosoft = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -54,15 +52,13 @@ namespace ContabSys
             this.tbcod = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnConfig = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tbpassword = new System.Windows.Forms.TextBox();
-            this.tbuser = new System.Windows.Forms.TextBox();
-            this.tbporta = new System.Windows.Forms.TextBox();
-            this.tbdatabase = new System.Windows.Forms.TextBox();
-            this.tbserver = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnConfig = new System.Windows.Forms.Button();
+            this.labeladmin = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -70,11 +66,8 @@ namespace ContabSys
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.tbpassword);
-            this.panel2.Controls.Add(this.tbuser);
-            this.panel2.Controls.Add(this.tbporta);
-            this.panel2.Controls.Add(this.tbdatabase);
-            this.panel2.Controls.Add(this.tbserver);
+            this.panel2.BackColor = System.Drawing.SystemColors.Window;
+            this.panel2.Controls.Add(this.labeladmin);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.button6);
@@ -82,7 +75,6 @@ namespace ContabSys
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.btnConfig);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -118,36 +110,6 @@ namespace ContabSys
             this.label10.Text = "Minimizar";
             this.label10.Visible = false;
             // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImage = global::ContabSys.Properties.Resources._207_2078731_minimize_maximize_icon_png_window_minimize_button_white;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.Location = new System.Drawing.Point(1435, 7);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(35, 35);
-            this.button6.TabIndex = 84;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            this.button6.MouseLeave += new System.EventHandler(this.button6_MouseLeave);
-            this.button6.MouseHover += new System.EventHandler(this.button6_MouseHover);
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImage = global::ContabSys.Properties.Resources.on_off_icon_15;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Location = new System.Drawing.Point(1476, 7);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(35, 35);
-            this.button5.TabIndex = 83;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
-            this.button5.MouseHover += new System.EventHandler(this.button5_MouseHover);
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -162,6 +124,7 @@ namespace ContabSys
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.tbnome);
@@ -194,22 +157,6 @@ namespace ContabSys
             this.textBox1.Size = new System.Drawing.Size(104, 20);
             this.textBox1.TabIndex = 12;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::ContabSys.Properties.Resources.imgbin_cleaning_computer_icons_tool_spade_cleaner_others_w7xjSvWY22K3VJMzYcVvG5tAR;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.Location = new System.Drawing.Point(1453, 25);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(40, 34);
-            this.button4.TabIndex = 83;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
-            this.button4.MouseHover += new System.EventHandler(this.button4_MouseHover);
             // 
             // tbnome
             // 
@@ -349,20 +296,9 @@ namespace ContabSys
             this.button1.Text = "Refresh";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(259, 13);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(212, 38);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Abrir Ficha Cliente";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(86, 13);
+            this.button2.Location = new System.Drawing.Point(103, 8);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(144, 38);
             this.button2.TabIndex = 12;
@@ -370,20 +306,11 @@ namespace ContabSys
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnConfig
-            // 
-            this.btnConfig.Location = new System.Drawing.Point(12, 12);
-            this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(38, 30);
-            this.btnConfig.TabIndex = 0;
-            this.btnConfig.Text = "button3";
-            this.btnConfig.UseVisualStyleBackColor = true;
-            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 165);
@@ -395,45 +322,78 @@ namespace ContabSys
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // tbpassword
+            // button6
             // 
-            this.tbpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbpassword.Location = new System.Drawing.Point(1105, 7);
-            this.tbpassword.Name = "tbpassword";
-            this.tbpassword.Size = new System.Drawing.Size(137, 17);
-            this.tbpassword.TabIndex = 88;
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackgroundImage = global::ContabSys.Properties.Resources._207_2078731_minimize_maximize_icon_png_window_minimize_button_white;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.Location = new System.Drawing.Point(1435, 7);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(35, 35);
+            this.button6.TabIndex = 84;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.MouseLeave += new System.EventHandler(this.button6_MouseLeave);
+            this.button6.MouseHover += new System.EventHandler(this.button6_MouseHover);
             // 
-            // tbuser
+            // button5
             // 
-            this.tbuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbuser.Location = new System.Drawing.Point(962, 7);
-            this.tbuser.Name = "tbuser";
-            this.tbuser.Size = new System.Drawing.Size(137, 17);
-            this.tbuser.TabIndex = 89;
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackgroundImage = global::ContabSys.Properties.Resources.on_off_icon_15;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Location = new System.Drawing.Point(1476, 7);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(35, 35);
+            this.button5.TabIndex = 83;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
+            this.button5.MouseHover += new System.EventHandler(this.button5_MouseHover);
             // 
-            // tbporta
+            // button4
             // 
-            this.tbporta.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbporta.Location = new System.Drawing.Point(819, 7);
-            this.tbporta.Name = "tbporta";
-            this.tbporta.Size = new System.Drawing.Size(137, 17);
-            this.tbporta.TabIndex = 90;
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = global::ContabSys.Properties.Resources.imgbin_cleaning_computer_icons_tool_spade_cleaner_others_w7xjSvWY22K3VJMzYcVvG5tAR;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.Location = new System.Drawing.Point(1453, 25);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(40, 34);
+            this.button4.TabIndex = 83;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
+            this.button4.MouseHover += new System.EventHandler(this.button4_MouseHover);
             // 
-            // tbdatabase
+            // btnConfig
             // 
-            this.tbdatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbdatabase.Location = new System.Drawing.Point(676, 7);
-            this.tbdatabase.Name = "tbdatabase";
-            this.tbdatabase.Size = new System.Drawing.Size(137, 17);
-            this.tbdatabase.TabIndex = 91;
+            this.btnConfig.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfig.BackgroundImage = global::ContabSys.Properties.Resources.rest_api_icon_24;
+            this.btnConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConfig.Location = new System.Drawing.Point(25, 7);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(43, 35);
+            this.btnConfig.TabIndex = 0;
+            this.btnConfig.UseVisualStyleBackColor = false;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            this.btnConfig.MouseLeave += new System.EventHandler(this.btnConfig_MouseLeave);
+            this.btnConfig.MouseHover += new System.EventHandler(this.btnConfig_MouseHover);
             // 
-            // tbserver
+            // labeladmin
             // 
-            this.tbserver.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbserver.Location = new System.Drawing.Point(533, 7);
-            this.tbserver.Name = "tbserver";
-            this.tbserver.Size = new System.Drawing.Size(137, 17);
-            this.tbserver.TabIndex = 92;
+            this.labeladmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labeladmin.AutoSize = true;
+            this.labeladmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeladmin.Location = new System.Drawing.Point(22, 49);
+            this.labeladmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labeladmin.Name = "labeladmin";
+            this.labeladmin.Size = new System.Drawing.Size(161, 15);
+            this.labeladmin.TabIndex = 87;
+            this.labeladmin.Text = "Painel de Administrador";
+            this.labeladmin.Visible = false;
             // 
             // INICIO
             // 
@@ -444,10 +404,11 @@ namespace ContabSys
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "INICIO";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "INICIO";
             this.Load += new System.EventHandler(this.INICIO_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -462,7 +423,6 @@ namespace ContabSys
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnConfig;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox tbcodoutrosoft;
@@ -488,11 +448,7 @@ namespace ContabSys
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox tbpassword;
-        private System.Windows.Forms.TextBox tbuser;
-        private System.Windows.Forms.TextBox tbporta;
-        private System.Windows.Forms.TextBox tbdatabase;
-        private System.Windows.Forms.TextBox tbserver;
+        private System.Windows.Forms.Label labeladmin;
     }
 }
 

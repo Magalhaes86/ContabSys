@@ -35,6 +35,7 @@ namespace ContabSys
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FichaCliente));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
+            this.button22 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -60,6 +61,7 @@ namespace ContabSys
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button17 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -73,6 +75,7 @@ namespace ContabSys
             this.panel8 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.button21 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -87,6 +90,7 @@ namespace ContabSys
             this.panel11 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.button27 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -100,6 +104,7 @@ namespace ContabSys
             this.panel14 = new System.Windows.Forms.Panel();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.button28 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -113,8 +118,11 @@ namespace ContabSys
             this.panel17 = new System.Windows.Forms.Panel();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.button29 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -124,13 +132,6 @@ namespace ContabSys
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.btnrefresh = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -165,7 +166,6 @@ namespace ContabSys
             // 
             this.panel2.Controls.Add(this.label20);
             this.panel2.Controls.Add(this.button22);
-            this.panel2.Controls.Add(this.btnrefresh);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
@@ -192,7 +192,7 @@ namespace ContabSys
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(98, 16);
+            this.label20.Location = new System.Drawing.Point(98, 8);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(111, 15);
@@ -200,9 +200,24 @@ namespace ContabSys
             this.label20.Text = "Procurar Cliente";
             this.label20.Visible = false;
             // 
+            // button22
+            // 
+            this.button22.BackColor = System.Drawing.Color.Transparent;
+            this.button22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button22.Location = new System.Drawing.Point(173, 32);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(35, 24);
+            this.button22.TabIndex = 7452;
+            this.button22.Text = "...";
+            this.button22.UseVisualStyleBackColor = false;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            this.button22.MouseLeave += new System.EventHandler(this.button22_MouseLeave);
+            this.button22.MouseHover += new System.EventHandler(this.button22_MouseHover);
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(543, 14);
+            this.button1.Location = new System.Drawing.Point(47, 95);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(42, 19);
             this.button1.TabIndex = 16;
@@ -231,7 +246,7 @@ namespace ContabSys
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(469, 68);
+            this.label5.Location = new System.Drawing.Point(469, 63);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 15;
@@ -253,7 +268,7 @@ namespace ContabSys
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(507, 65);
+            this.tbEmail.Location = new System.Drawing.Point(507, 60);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(262, 20);
             this.tbEmail.TabIndex = 12;
@@ -261,7 +276,7 @@ namespace ContabSys
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 75);
+            this.label8.Location = new System.Drawing.Point(9, 70);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 13);
             this.label8.TabIndex = 6;
@@ -270,7 +285,7 @@ namespace ContabSys
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(248, 69);
+            this.label3.Location = new System.Drawing.Point(248, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 7;
@@ -279,7 +294,7 @@ namespace ContabSys
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(233, 39);
+            this.label2.Location = new System.Drawing.Point(233, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 8;
@@ -288,7 +303,7 @@ namespace ContabSys
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(68, 45);
+            this.label1.Location = new System.Drawing.Point(68, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(21, 13);
             this.label1.TabIndex = 9;
@@ -296,28 +311,28 @@ namespace ContabSys
             // 
             // tbId
             // 
-            this.tbId.Location = new System.Drawing.Point(95, 42);
+            this.tbId.Location = new System.Drawing.Point(95, 34);
             this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(84, 20);
+            this.tbId.Size = new System.Drawing.Size(72, 20);
             this.tbId.TabIndex = 2;
             // 
             // tbCodOutroSoft
             // 
-            this.tbCodOutroSoft.Location = new System.Drawing.Point(95, 68);
+            this.tbCodOutroSoft.Location = new System.Drawing.Point(95, 63);
             this.tbCodOutroSoft.Name = "tbCodOutroSoft";
             this.tbCodOutroSoft.Size = new System.Drawing.Size(114, 20);
             this.tbCodOutroSoft.TabIndex = 3;
             // 
             // tbNif
             // 
-            this.tbNif.Location = new System.Drawing.Point(277, 66);
+            this.tbNif.Location = new System.Drawing.Point(277, 61);
             this.tbNif.Name = "tbNif";
             this.tbNif.Size = new System.Drawing.Size(186, 20);
             this.tbNif.TabIndex = 4;
             // 
             // tbNome
             // 
-            this.tbNome.Location = new System.Drawing.Point(277, 39);
+            this.tbNome.Location = new System.Drawing.Point(277, 31);
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(492, 20);
             this.tbNome.TabIndex = 5;
@@ -426,6 +441,7 @@ namespace ContabSys
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -475,6 +491,18 @@ namespace ContabSys
             this.panel4.Size = new System.Drawing.Size(755, 53);
             this.panel4.TabIndex = 0;
             // 
+            // button17
+            // 
+            this.button17.BackColor = System.Drawing.Color.Transparent;
+            this.button17.BackgroundImage = global::ContabSys.Properties.Resources.refresh;
+            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button17.Location = new System.Drawing.Point(711, 11);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(31, 29);
+            this.button17.TabIndex = 18;
+            this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click_1);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -490,6 +518,7 @@ namespace ContabSys
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(304, 20);
             this.textBox2.TabIndex = 9;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label4
             // 
@@ -506,6 +535,7 @@ namespace ContabSys
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(125, 20);
             this.textBox1.TabIndex = 7;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tabPage2
             // 
@@ -596,6 +626,7 @@ namespace ContabSys
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(0, 0);
@@ -619,6 +650,18 @@ namespace ContabSys
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(755, 53);
             this.panel9.TabIndex = 3;
+            // 
+            // button21
+            // 
+            this.button21.BackColor = System.Drawing.Color.Transparent;
+            this.button21.BackgroundImage = global::ContabSys.Properties.Resources.refresh;
+            this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button21.Location = new System.Drawing.Point(711, 13);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(31, 29);
+            this.button21.TabIndex = 18;
+            this.button21.UseVisualStyleBackColor = false;
+            this.button21.Click += new System.EventHandler(this.button21_Click_1);
             // 
             // button3
             // 
@@ -645,6 +688,7 @@ namespace ContabSys
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(304, 20);
             this.textBox11.TabIndex = 14;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // label19
             // 
@@ -661,6 +705,7 @@ namespace ContabSys
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(125, 20);
             this.textBox12.TabIndex = 12;
+            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
             // tabPage3
             // 
@@ -751,6 +796,7 @@ namespace ContabSys
             // 
             this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.Location = new System.Drawing.Point(0, 0);
@@ -774,6 +820,18 @@ namespace ContabSys
             this.panel12.Size = new System.Drawing.Size(755, 53);
             this.panel12.TabIndex = 3;
             // 
+            // button27
+            // 
+            this.button27.BackColor = System.Drawing.Color.Transparent;
+            this.button27.BackgroundImage = global::ContabSys.Properties.Resources.refresh;
+            this.button27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button27.Location = new System.Drawing.Point(711, 12);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(31, 29);
+            this.button27.TabIndex = 18;
+            this.button27.UseVisualStyleBackColor = false;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -789,6 +847,7 @@ namespace ContabSys
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(304, 20);
             this.textBox5.TabIndex = 9;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label13
             // 
@@ -805,6 +864,7 @@ namespace ContabSys
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(125, 20);
             this.textBox6.TabIndex = 7;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // tabPage4
             // 
@@ -896,6 +956,7 @@ namespace ContabSys
             // 
             this.dataGridView4.AllowUserToAddRows = false;
             this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView4.Location = new System.Drawing.Point(0, 0);
@@ -919,6 +980,18 @@ namespace ContabSys
             this.panel15.Size = new System.Drawing.Size(755, 53);
             this.panel15.TabIndex = 3;
             // 
+            // button28
+            // 
+            this.button28.BackColor = System.Drawing.Color.Transparent;
+            this.button28.BackgroundImage = global::ContabSys.Properties.Resources.refresh;
+            this.button28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button28.Location = new System.Drawing.Point(721, 12);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(31, 29);
+            this.button28.TabIndex = 18;
+            this.button28.UseVisualStyleBackColor = false;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -934,6 +1007,7 @@ namespace ContabSys
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(304, 20);
             this.textBox7.TabIndex = 9;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label15
             // 
@@ -950,6 +1024,7 @@ namespace ContabSys
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(125, 20);
             this.textBox8.TabIndex = 7;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // tabPage5
             // 
@@ -1039,6 +1114,7 @@ namespace ContabSys
             // 
             this.dataGridView5.AllowUserToAddRows = false;
             this.dataGridView5.AllowUserToDeleteRows = false;
+            this.dataGridView5.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView5.Location = new System.Drawing.Point(0, 0);
@@ -1050,10 +1126,12 @@ namespace ContabSys
             // 
             // panel18
             // 
-            this.panel18.BackColor = System.Drawing.SystemColors.Window;
+            this.panel18.BackColor = System.Drawing.SystemColors.Control;
             this.panel18.Controls.Add(this.button29);
             this.panel18.Controls.Add(this.label16);
             this.panel18.Controls.Add(this.textBox9);
+            this.panel18.Controls.Add(this.label21);
+            this.panel18.Controls.Add(this.textBox13);
             this.panel18.Controls.Add(this.label17);
             this.panel18.Controls.Add(this.textBox10);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1062,26 +1140,56 @@ namespace ContabSys
             this.panel18.Size = new System.Drawing.Size(755, 53);
             this.panel18.TabIndex = 3;
             // 
+            // button29
+            // 
+            this.button29.BackColor = System.Drawing.Color.Transparent;
+            this.button29.BackgroundImage = global::ContabSys.Properties.Resources.refresh;
+            this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button29.Location = new System.Drawing.Point(708, 10);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(31, 29);
+            this.button29.TabIndex = 18;
+            this.button29.UseVisualStyleBackColor = false;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(251, 19);
+            this.label16.Location = new System.Drawing.Point(379, 22);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(90, 13);
+            this.label16.Size = new System.Drawing.Size(32, 13);
             this.label16.TabIndex = 10;
-            this.label16.Text = "Procurar por OBS";
+            this.label16.Text = "OBS:";
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(347, 16);
+            this.textBox9.Location = new System.Drawing.Point(413, 19);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(304, 20);
+            this.textBox9.Size = new System.Drawing.Size(207, 20);
             this.textBox9.TabIndex = 9;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(221, 22);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(34, 13);
+            this.label21.TabIndex = 8;
+            this.label21.Text = "Valor:";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(255, 19);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(108, 20);
+            this.textBox13.TabIndex = 7;
+            this.textBox13.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(11, 18);
+            this.label17.Location = new System.Drawing.Point(6, 22);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(91, 13);
             this.label17.TabIndex = 8;
@@ -1089,10 +1197,11 @@ namespace ContabSys
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(111, 17);
+            this.textBox10.Location = new System.Drawing.Point(99, 19);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(125, 20);
+            this.textBox10.Size = new System.Drawing.Size(108, 20);
             this.textBox10.TabIndex = 7;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // textBox4
             // 
@@ -1150,92 +1259,6 @@ namespace ContabSys
             this.button5.TabIndex = 0;
             this.button5.Text = "button2";
             this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button22
-            // 
-            this.button22.BackColor = System.Drawing.Color.Transparent;
-            this.button22.BackgroundImage = global::ContabSys.Properties.Resources.png_transparent_computer_icons_magnifying_glass_symbol_magnifying_glass;
-            this.button22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button22.Location = new System.Drawing.Point(181, 40);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(35, 24);
-            this.button22.TabIndex = 7452;
-            this.button22.UseVisualStyleBackColor = false;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
-            this.button22.MouseLeave += new System.EventHandler(this.button22_MouseLeave);
-            this.button22.MouseHover += new System.EventHandler(this.button22_MouseHover);
-            // 
-            // btnrefresh
-            // 
-            this.btnrefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnrefresh.BackgroundImage = global::ContabSys.Properties.Resources.refresh;
-            this.btnrefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnrefresh.Location = new System.Drawing.Point(738, 6);
-            this.btnrefresh.Name = "btnrefresh";
-            this.btnrefresh.Size = new System.Drawing.Size(31, 29);
-            this.btnrefresh.TabIndex = 17;
-            this.btnrefresh.UseVisualStyleBackColor = false;
-            this.btnrefresh.Click += new System.EventHandler(this.button21_Click);
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.Transparent;
-            this.button17.BackgroundImage = global::ContabSys.Properties.Resources.refresh;
-            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button17.Location = new System.Drawing.Point(711, 11);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(31, 29);
-            this.button17.TabIndex = 18;
-            this.button17.UseVisualStyleBackColor = false;
-            this.button17.Click += new System.EventHandler(this.button17_Click_1);
-            // 
-            // button21
-            // 
-            this.button21.BackColor = System.Drawing.Color.Transparent;
-            this.button21.BackgroundImage = global::ContabSys.Properties.Resources.refresh;
-            this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button21.Location = new System.Drawing.Point(711, 13);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(31, 29);
-            this.button21.TabIndex = 18;
-            this.button21.UseVisualStyleBackColor = false;
-            this.button21.Click += new System.EventHandler(this.button21_Click_1);
-            // 
-            // button27
-            // 
-            this.button27.BackColor = System.Drawing.Color.Transparent;
-            this.button27.BackgroundImage = global::ContabSys.Properties.Resources.refresh;
-            this.button27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button27.Location = new System.Drawing.Point(711, 12);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(31, 29);
-            this.button27.TabIndex = 18;
-            this.button27.UseVisualStyleBackColor = false;
-            this.button27.Click += new System.EventHandler(this.button27_Click);
-            // 
-            // button28
-            // 
-            this.button28.BackColor = System.Drawing.Color.Transparent;
-            this.button28.BackgroundImage = global::ContabSys.Properties.Resources.refresh;
-            this.button28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button28.Location = new System.Drawing.Point(721, 12);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(31, 29);
-            this.button28.TabIndex = 18;
-            this.button28.UseVisualStyleBackColor = false;
-            this.button28.Click += new System.EventHandler(this.button28_Click);
-            // 
-            // button29
-            // 
-            this.button29.BackColor = System.Drawing.Color.Transparent;
-            this.button29.BackgroundImage = global::ContabSys.Properties.Resources.refresh;
-            this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button29.Location = new System.Drawing.Point(708, 10);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(31, 29);
-            this.button29.TabIndex = 18;
-            this.button29.UseVisualStyleBackColor = false;
-            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // FichaCliente
             // 
@@ -1371,7 +1394,6 @@ namespace ContabSys
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Button btnrefresh;
         internal System.Windows.Forms.DataGridView dataGridView3;
         internal System.Windows.Forms.DataGridView dataGridView4;
         internal System.Windows.Forms.DataGridView dataGridView5;
@@ -1387,5 +1409,7 @@ namespace ContabSys
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBox13;
     }
 }

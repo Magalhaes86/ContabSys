@@ -220,7 +220,7 @@ namespace ContabSys
 
         private void btncancelar_MouseHover(object sender, EventArgs e)
         {
-            btncancelar.BackColor = System.Drawing.Color.OrangeRed;
+            btncancelar.BackColor = System.Drawing.Color.RosyBrown;
             btncancelar.ForeColor = SystemColors.HighlightText;
         }
 

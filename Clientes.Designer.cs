@@ -29,9 +29,9 @@ namespace ContabSys
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -55,11 +55,9 @@ namespace ContabSys
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btncancelar = new System.Windows.Forms.Button();
             this.lbldelete = new System.Windows.Forms.Label();
-            this.btnrefresh = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
@@ -82,7 +80,9 @@ namespace ContabSys
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbNif = new System.Windows.Forms.TextBox();
             this.tbNome = new System.Windows.Forms.TextBox();
-            this.btncancelar = new System.Windows.Forms.Button();
+            this.btnrefresh = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -104,6 +104,7 @@ namespace ContabSys
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.textBox10);
             this.groupBox3.Controls.Add(this.label14);
@@ -131,24 +132,13 @@ namespace ContabSys
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pesquisar";
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::ContabSys.Properties.Resources.imgbin_cleaning_computer_icons_tool_spade_cleaner_others_w7xjSvWY22K3VJMzYcVvG5tAR;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(1542, 34);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(31, 29);
-            this.button2.TabIndex = 61;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(28, 37);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(77, 20);
             this.textBox10.TabIndex = 9;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // label14
             // 
@@ -192,6 +182,7 @@ namespace ContabSys
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(220, 20);
             this.textBox13.TabIndex = 6;
+            this.textBox13.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             // 
             // textBox12
             // 
@@ -199,6 +190,7 @@ namespace ContabSys
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(124, 20);
             this.textBox12.TabIndex = 7;
+            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
             // label10
             // 
@@ -224,6 +216,7 @@ namespace ContabSys
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(230, 20);
             this.textBox14.TabIndex = 5;
+            this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
             // 
             // label13
             // 
@@ -240,6 +233,7 @@ namespace ContabSys
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(90, 20);
             this.textBox11.TabIndex = 8;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // textBox18
             // 
@@ -247,6 +241,7 @@ namespace ContabSys
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(252, 20);
             this.textBox18.TabIndex = 2;
+            this.textBox18.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
             // 
             // label17
             // 
@@ -272,6 +267,7 @@ namespace ContabSys
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(111, 20);
             this.textBox17.TabIndex = 10;
+            this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
             // 
             // textBox16
             // 
@@ -279,6 +275,7 @@ namespace ContabSys
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(231, 20);
             this.textBox16.TabIndex = 3;
+            this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
             // 
             // textBox15
             // 
@@ -286,6 +283,7 @@ namespace ContabSys
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(135, 20);
             this.textBox15.TabIndex = 4;
+            this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
             // panel2
             // 
@@ -310,7 +308,8 @@ namespace ContabSys
             // 
             this.dgvClientes.AllowUserToAddRows = false;
             this.dgvClientes.AllowUserToDeleteRows = false;
-            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvClientes.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvClientes.Location = new System.Drawing.Point(0, 0);
@@ -337,7 +336,6 @@ namespace ContabSys
             this.panel5.Controls.Add(this.btnrefresh);
             this.panel5.Controls.Add(this.btnDelete);
             this.panel5.Controls.Add(this.btnNovo);
-            this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.btnEditar);
             this.panel5.Controls.Add(this.btnUpdate);
             this.panel5.Controls.Add(this.btnGravar);
@@ -346,6 +344,19 @@ namespace ContabSys
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(414, 188);
             this.panel5.TabIndex = 1;
+            // 
+            // btncancelar
+            // 
+            this.btncancelar.BackColor = System.Drawing.Color.RosyBrown;
+            this.btncancelar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.btncancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btncancelar.Location = new System.Drawing.Point(297, 72);
+            this.btncancelar.Name = "btncancelar";
+            this.btncancelar.Size = new System.Drawing.Size(85, 38);
+            this.btncancelar.TabIndex = 61;
+            this.btncancelar.Text = "Cancelar";
+            this.btncancelar.UseVisualStyleBackColor = false;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // lbldelete
             // 
@@ -357,29 +368,6 @@ namespace ContabSys
             this.lbldelete.TabIndex = 59;
             this.lbldelete.Text = "Eliminar o Registo";
             this.lbldelete.Visible = false;
-            // 
-            // btnrefresh
-            // 
-            this.btnrefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnrefresh.BackgroundImage = global::ContabSys.Properties.Resources.refresh;
-            this.btnrefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnrefresh.Location = new System.Drawing.Point(12, 72);
-            this.btnrefresh.Name = "btnrefresh";
-            this.btnrefresh.Size = new System.Drawing.Size(46, 43);
-            this.btnrefresh.TabIndex = 60;
-            this.btnrefresh.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.BackgroundImage = global::ContabSys.Properties.Resources.delete_icon_png_16;
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDelete.Location = new System.Drawing.Point(346, 132);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(47, 44);
-            this.btnDelete.TabIndex = 58;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // btnNovo
             // 
@@ -393,15 +381,6 @@ namespace ContabSys
             this.btnNovo.UseVisualStyleBackColor = false;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click_1);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(67, 132);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 44);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "btnEditar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -410,8 +389,9 @@ namespace ContabSys
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(118, 44);
             this.btnEditar.TabIndex = 0;
-            this.btnEditar.Text = "btnEditar";
+            this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnUpdate
             // 
@@ -557,6 +537,7 @@ namespace ContabSys
             // 
             // tbId
             // 
+            this.tbId.Enabled = false;
             this.tbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbId.Location = new System.Drawing.Point(50, 35);
             this.tbId.Name = "tbId";
@@ -629,18 +610,40 @@ namespace ContabSys
             this.tbNome.Size = new System.Drawing.Size(307, 21);
             this.tbNome.TabIndex = 0;
             // 
-            // btncancelar
+            // btnrefresh
             // 
-            this.btncancelar.BackColor = System.Drawing.Color.RosyBrown;
-            this.btncancelar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btncancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btncancelar.Location = new System.Drawing.Point(297, 72);
-            this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(85, 38);
-            this.btncancelar.TabIndex = 61;
-            this.btncancelar.Text = "Cancelar";
-            this.btncancelar.UseVisualStyleBackColor = false;
-            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
+            this.btnrefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnrefresh.BackgroundImage = global::ContabSys.Properties.Resources.refresh;
+            this.btnrefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnrefresh.Location = new System.Drawing.Point(12, 72);
+            this.btnrefresh.Name = "btnrefresh";
+            this.btnrefresh.Size = new System.Drawing.Size(46, 43);
+            this.btnrefresh.TabIndex = 60;
+            this.btnrefresh.UseVisualStyleBackColor = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BackgroundImage = global::ContabSys.Properties.Resources.delete_icon_png_16;
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDelete.Location = new System.Drawing.Point(346, 132);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(47, 44);
+            this.btnDelete.TabIndex = 58;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = global::ContabSys.Properties.Resources.imgbin_cleaning_computer_icons_tool_spade_cleaner_others_w7xjSvWY22K3VJMzYcVvG5tAR;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(1542, 34);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(31, 29);
+            this.button2.TabIndex = 61;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Clientes
             // 
@@ -650,6 +653,7 @@ namespace ContabSys
             this.ClientSize = new System.Drawing.Size(1586, 772);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Clientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
@@ -717,7 +721,6 @@ namespace ContabSys
         private System.Windows.Forms.Label lbldelete;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnGravar;

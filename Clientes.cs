@@ -355,6 +355,112 @@ tbCodOutroSoft.Text = "";
                 textBox10.Focus();
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+           
+
+           
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Pretende Editar o Cliente Selecionado?", " !! Editar Cliente !!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                tbId.Text = dgvClientes.CurrentRow.Cells[0].Value.ToString();
+                tbNome.Text = dgvClientes.CurrentRow.Cells[1].Value.ToString();
+                tbNif.Text = dgvClientes.CurrentRow.Cells[2].Value.ToString();
+                tbMorada.Text = dgvClientes.CurrentRow.Cells[3].Value.ToString();
+                tbEmail.Text = dgvClientes.CurrentRow.Cells[4].Value.ToString();
+                tbTlm.Text = dgvClientes.CurrentRow.Cells[5].Value.ToString();
+                tbTlf.Text = dgvClientes.CurrentRow.Cells[6].Value.ToString();
+                tbCodOutroSoft.Text = dgvClientes.CurrentRow.Cells[7].Value.ToString();
+                tbobs.Text = dgvClientes.CurrentRow.Cells[8].Value.ToString();
+
+            }
+
+            else if (dialogResult == DialogResult.No)
+            {
+                //caso pretenda fazer outra coisa qualuqer.
+                textBox10.Focus();
+            }
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dgvClientes.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dgvClientes.Columns[0].DataPropertyName + ", System.String) like '%" + textBox10.Text.Replace("'", "''") + "%'");
+            dgvClientes.DataSource = bs;
+
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dgvClientes.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dgvClientes.Columns[7].DataPropertyName + ", System.String) like '%" + textBox11.Text.Replace("'", "''") + "%'");
+            dgvClientes.DataSource = bs;
+        }
+
+        private void textBox18_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dgvClientes.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dgvClientes.Columns[1].DataPropertyName + ", System.String) like '%" + textBox18.Text.Replace("'", "''") + "%'");
+            dgvClientes.DataSource = bs;
+        }
+
+        private void textBox17_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dgvClientes.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dgvClientes.Columns[2].DataPropertyName + ", System.String) like '%" + textBox17.Text.Replace("'", "''") + "%'");
+            dgvClientes.DataSource = bs;
+        }
+
+        private void textBox16_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dgvClientes.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dgvClientes.Columns[4].DataPropertyName + ", System.String) like '%" + textBox16.Text.Replace("'", "''") + "%'");
+            dgvClientes.DataSource = bs;
+        }
+
+        private void textBox15_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dgvClientes.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dgvClientes.Columns[5].DataPropertyName + ", System.String) like '%" + textBox15.Text.Replace("'", "''") + "%'");
+            dgvClientes.DataSource = bs;
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dgvClientes.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dgvClientes.Columns[6].DataPropertyName + ", System.String) like '%" + textBox12.Text.Replace("'", "''") + "%'");
+            dgvClientes.DataSource = bs;
+        }
+
+        private void textBox14_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dgvClientes.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dgvClientes.Columns[3].DataPropertyName + ", System.String) like '%" + textBox14.Text.Replace("'", "''") + "%'");
+            dgvClientes.DataSource = bs;
+        }
+
+        private void textBox13_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dgvClientes.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dgvClientes.Columns[8].DataPropertyName + ", System.String) like '%" + textBox13.Text.Replace("'", "''") + "%'");
+            dgvClientes.DataSource = bs;
+        }
     }
 }
 

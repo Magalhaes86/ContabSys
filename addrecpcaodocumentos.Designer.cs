@@ -155,9 +155,9 @@ namespace ContabSys
             // 
             // btncancelar
             // 
-            this.btncancelar.BackColor = System.Drawing.Color.RosyBrown;
+            this.btncancelar.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btncancelar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btncancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btncancelar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btncancelar.Location = new System.Drawing.Point(519, 186);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(73, 33);

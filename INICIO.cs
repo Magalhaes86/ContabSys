@@ -172,11 +172,7 @@ namespace ContabSys
             frmclientes.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            FichaCliente frmFichaCliente = new FichaCliente();
-            frmFichaCliente.ShowDialog();
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -323,6 +319,16 @@ namespace ContabSys
                 //caso pretenda fazer outra coisa qualuqer.
                 tbcod.Focus();
             }
+        }
+
+        private void btnConfig_MouseHover(object sender, EventArgs e)
+        {
+            labeladmin.Visible = true;
+        }
+
+        private void btnConfig_MouseLeave(object sender, EventArgs e)
+        {
+            labeladmin.Visible = false;
         }
     }
     }

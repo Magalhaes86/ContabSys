@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Windows.Forms;
 using System.Net.Mail;
+using System.Drawing;
 
 namespace ContabSys
 {
@@ -54,7 +55,7 @@ namespace ContabSys
             }
             if (String.IsNullOrEmpty(txtEnviadoPor.Text))
             {
-                MessageBox.Show("Endereço de email do remetente inválido.", "Erro ");
+                MessageBox.Show("Endereço de email do remetente inválido. derifique por favor as configuraçoes de email", "Erro ");
                 return;
             }
             if (String.IsNullOrEmpty(txtAssuntoTitulo.Text))
@@ -110,6 +111,32 @@ namespace ContabSys
 
         }
 
+        private void btnEnviar_MouseHover(object sender, EventArgs e)
+        {
+            btnEnviar.BackColor = SystemColors.ActiveCaption;
+        }
+
+        private void btnCancelar_MouseHover(object sender, EventArgs e)
+        {
+            btnCancelar.BackColor = System.Drawing.Color.RosyBrown;
+            btnCancelar.ForeColor = SystemColors.HighlightText;
+        }
+
+        private void btnCancelar_MouseLeave(object sender, EventArgs e)
+        {
+            btnCancelar.BackColor = SystemColors.ButtonFace;
+            btnCancelar.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void btnEnviar_MouseLeave(object sender, EventArgs e)
+        {
+            btnEnviar.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 
 }

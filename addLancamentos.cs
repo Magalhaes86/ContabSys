@@ -212,12 +212,16 @@ namespace ContabSys
 
         private void btncancelar_MouseHover(object sender, EventArgs e)
         {
-            btncancelar.BackColor = System.Drawing.Color.OrangeRed;
+            btncancelar.BackColor = System.Drawing.Color.RosyBrown;
             btncancelar.ForeColor = SystemColors.HighlightText;
+
+            
+
         }
 
         private void btncancelar_MouseLeave(object sender, EventArgs e)
         {
+
             btncancelar.BackColor = SystemColors.ButtonFace;
             btncancelar.ForeColor = System.Drawing.Color.Black;
         }

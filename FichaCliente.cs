@@ -31,7 +31,7 @@ namespace ContabSys
         private void FichaCliente_Load(object sender, EventArgs e)
         {
 
-       
+            RefreshALLDataGrid();
 
         }
 
@@ -75,6 +75,9 @@ namespace ContabSys
             adapter.Fill(table);
             dataGridView4.DataSource = table;
 
+
+            DataGridViewColumn column = dataGridView4.Columns[3];
+            column.Width = 400;
         }
 
         public void RefreshDataGridaddLancamentos()
@@ -85,6 +88,10 @@ namespace ContabSys
             MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection);
             adapter.Fill(table);
             dataGridView3.DataSource = table;
+
+
+            DataGridViewColumn column = dataGridView3.Columns[3];
+            column.Width = 400;
 
         }
 
@@ -97,6 +104,9 @@ namespace ContabSys
             adapter.Fill(table);
             dataGridView1.DataSource = table;
 
+            DataGridViewColumn column = dataGridView1.Columns[3];
+            column.Width = 400;
+
         }
 
         public void RefreshDataGridRecebimentos()
@@ -108,6 +118,9 @@ namespace ContabSys
             adapter.Fill(table);
             dataGridView5.DataSource = table;
 
+
+            DataGridViewColumn column = dataGridView5.Columns[4];
+            column.Width = 300;
         }
 
 
@@ -119,6 +132,10 @@ namespace ContabSys
             MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection);
             adapter.Fill(table);
             dataGridView2.DataSource = table;
+
+
+            DataGridViewColumn column = dataGridView2.Columns[3];
+            column.Width = 400;
 
         }
 
@@ -208,11 +225,7 @@ namespace ContabSys
 
         }
 
-        private void button21_Click(object sender, EventArgs e)
-        {
-            // Atualizar os datagrid este comando é para ficar no load, para já nao pode pq obriga a ter um ID do cliente 
-            RefreshALLDataGrid();
-        }
+       
 
         private void button10_Click(object sender, EventArgs e)
         {
@@ -542,6 +555,94 @@ namespace ContabSys
         private void button26_MouseLeave(object sender, EventArgs e)
         {
             button26.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView1.Columns[2].DataPropertyName + ", System.String) like '%" + textBox1.Text.Replace("'", "''") + "%'");
+            dataGridView1.DataSource = bs;
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView2.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView2.Columns[2].DataPropertyName + ", System.String) like '%" + textBox12.Text.Replace("'", "''") + "%'");
+            dataGridView2.DataSource = bs;
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView3.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView3.Columns[2].DataPropertyName + ", System.String) like '%" + textBox6.Text.Replace("'", "''") + "%'");
+            dataGridView3.DataSource = bs;
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView4.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView4.Columns[2].DataPropertyName + ", System.String) like '%" + textBox8.Text.Replace("'", "''") + "%'");
+            dataGridView4.DataSource = bs;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView1.Columns[3].DataPropertyName + ", System.String) like '%" + textBox2.Text.Replace("'", "''") + "%'");
+            dataGridView1.DataSource = bs;
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView2.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView2.Columns[3].DataPropertyName + ", System.String) like '%" + textBox11.Text.Replace("'", "''") + "%'");
+            dataGridView2.DataSource = bs;
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView3.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView3.Columns[3].DataPropertyName + ", System.String) like '%" + textBox5.Text.Replace("'", "''") + "%'");
+            dataGridView3.DataSource = bs;
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView4.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView4.Columns[3].DataPropertyName + ", System.String) like '%" + textBox7.Text.Replace("'", "''") + "%'");
+            dataGridView4.DataSource = bs;
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView5.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView5.Columns[2].DataPropertyName + ", System.String) like '%" + textBox10.Text.Replace("'", "''") + "%'");
+            dataGridView5.DataSource = bs;
+        }
+
+        private void textBox13_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView5.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView5.Columns[3].DataPropertyName + ", System.String) like '%" + textBox13.Text.Replace("'", "''") + "%'");
+            dataGridView5.DataSource = bs;
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView5.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView5.Columns[4].DataPropertyName + ", System.String) like '%" + textBox9.Text.Replace("'", "''") + "%'");
+            dataGridView5.DataSource = bs;
         }
     }
 }

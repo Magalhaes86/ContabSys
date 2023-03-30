@@ -218,9 +218,9 @@ private void btnEditar_MouseLeave(object sender, EventArgs e)
 
 private void btncancelar_MouseHover(object sender, EventArgs e)
 {
-            btncancelar.BackColor = System.Drawing.Color.OrangeRed;
+            btncancelar.BackColor = System.Drawing.Color.RosyBrown;
             btncancelar.ForeColor = SystemColors.HighlightText;
-}
+        }
 
 private void btncancelar_MouseLeave(object sender, EventArgs e)
 {
