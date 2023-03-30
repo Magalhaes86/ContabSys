@@ -32,6 +32,7 @@ namespace ContabSys
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -57,6 +58,8 @@ namespace ContabSys
             this.panel5 = new System.Windows.Forms.Panel();
             this.btncancelar = new System.Windows.Forms.Button();
             this.lbldelete = new System.Windows.Forms.Label();
+            this.btnrefresh = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -80,9 +83,6 @@ namespace ContabSys
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbNif = new System.Windows.Forms.TextBox();
             this.tbNome = new System.Windows.Forms.TextBox();
-            this.btnrefresh = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -131,6 +131,18 @@ namespace ContabSys
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pesquisar";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = global::ContabSys.Properties.Resources.imgbin_cleaning_computer_icons_tool_spade_cleaner_others_w7xjSvWY22K3VJMzYcVvG5tAR;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(1542, 34);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(31, 29);
+            this.button2.TabIndex = 61;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // textBox10
             // 
@@ -308,7 +320,6 @@ namespace ContabSys
             // 
             this.dgvClientes.AllowUserToAddRows = false;
             this.dgvClientes.AllowUserToDeleteRows = false;
-            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvClientes.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -318,6 +329,7 @@ namespace ContabSys
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientes.Size = new System.Drawing.Size(1172, 695);
             this.dgvClientes.TabIndex = 2;
+            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
             // panel3
             // 
@@ -369,6 +381,29 @@ namespace ContabSys
             this.lbldelete.Text = "Eliminar o Registo";
             this.lbldelete.Visible = false;
             // 
+            // btnrefresh
+            // 
+            this.btnrefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnrefresh.BackgroundImage = global::ContabSys.Properties.Resources.refresh;
+            this.btnrefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnrefresh.Location = new System.Drawing.Point(12, 72);
+            this.btnrefresh.Name = "btnrefresh";
+            this.btnrefresh.Size = new System.Drawing.Size(46, 43);
+            this.btnrefresh.TabIndex = 60;
+            this.btnrefresh.UseVisualStyleBackColor = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BackgroundImage = global::ContabSys.Properties.Resources.delete_icon_png_16;
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDelete.Location = new System.Drawing.Point(346, 132);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(47, 44);
+            this.btnDelete.TabIndex = 58;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
+            // 
             // btnNovo
             // 
             this.btnNovo.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -384,6 +419,7 @@ namespace ContabSys
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEditar.Enabled = false;
             this.btnEditar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.btnEditar.Location = new System.Drawing.Point(264, 11);
             this.btnEditar.Name = "btnEditar";
@@ -403,11 +439,13 @@ namespace ContabSys
             this.btnUpdate.TabIndex = 0;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Visible = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnGravar
             // 
             this.btnGravar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnGravar.Enabled = false;
             this.btnGravar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.btnGravar.Location = new System.Drawing.Point(130, 11);
             this.btnGravar.Name = "btnGravar";
@@ -609,41 +647,6 @@ namespace ContabSys
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(307, 21);
             this.tbNome.TabIndex = 0;
-            // 
-            // btnrefresh
-            // 
-            this.btnrefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnrefresh.BackgroundImage = global::ContabSys.Properties.Resources.refresh;
-            this.btnrefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnrefresh.Location = new System.Drawing.Point(12, 72);
-            this.btnrefresh.Name = "btnrefresh";
-            this.btnrefresh.Size = new System.Drawing.Size(46, 43);
-            this.btnrefresh.TabIndex = 60;
-            this.btnrefresh.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.BackgroundImage = global::ContabSys.Properties.Resources.delete_icon_png_16;
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDelete.Location = new System.Drawing.Point(346, 132);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(47, 44);
-            this.btnDelete.TabIndex = 58;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::ContabSys.Properties.Resources.imgbin_cleaning_computer_icons_tool_spade_cleaner_others_w7xjSvWY22K3VJMzYcVvG5tAR;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(1542, 34);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(31, 29);
-            this.button2.TabIndex = 61;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Clientes
             // 

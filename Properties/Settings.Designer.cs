@@ -82,5 +82,65 @@ namespace ContabSys.Properties {
                 this["porta"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("smtp-mail.outlook.com")]
+        public string SmtpServer {
+            get {
+                return ((string)(this["SmtpServer"]));
+            }
+            set {
+                this["SmtpServer"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("marcosmagalhaes86@outlook.pt")]
+        public string MailAddress {
+            get {
+                return ((string)(this["MailAddress"]));
+            }
+            set {
+                this["MailAddress"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("587")]
+        public string PortaEmail {
+            get {
+                return ((string)(this["PortaEmail"]));
+            }
+            set {
+                this["PortaEmail"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("marcosmagalhaes86@outlook.pt")]
+        public string emailUser {
+            get {
+                return ((string)(this["emailUser"]));
+            }
+            set {
+                this["emailUser"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("M@galhae$020486")]
+        public string emailPassword {
+            get {
+                return ((string)(this["emailPassword"]));
+            }
+            set {
+                this["emailPassword"] = value;
+            }
+        }
     }
 }

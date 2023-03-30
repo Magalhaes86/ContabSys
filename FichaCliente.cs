@@ -457,15 +457,7 @@ namespace ContabSys
             button15.BackColor = SystemColors.ButtonFace;
         }
 
-        private void button24_MouseHover(object sender, EventArgs e)
-        {
-            button24.BackColor = SystemColors.ActiveCaption;
-        }
-
-        private void button24_MouseLeave(object sender, EventArgs e)
-        {
-            button24.BackColor = SystemColors.ButtonFace;
-        }
+ 
 
         private void button20_MouseHover(object sender, EventArgs e)
         {
@@ -527,10 +519,7 @@ namespace ContabSys
             button12.BackColor = SystemColors.ButtonFace;
         }
 
-        private void button23_MouseHover(object sender, EventArgs e)
-        {
-            button23.BackColor = SystemColors.ActiveCaption;
-        }
+     
 
         private void button25_MouseHover(object sender, EventArgs e)
         {
@@ -542,10 +531,7 @@ namespace ContabSys
             button26.BackColor = SystemColors.ActiveCaption;
         }
 
-        private void button23_MouseLeave(object sender, EventArgs e)
-        {
-            button23.BackColor = SystemColors.ButtonFace;
-        }
+  
 
         private void button25_MouseLeave(object sender, EventArgs e)
         {
@@ -643,6 +629,27 @@ namespace ContabSys
             bs.DataSource = dataGridView5.DataSource;
             bs.Filter = string.Format("CONVERT(" + this.dataGridView5.Columns[4].DataPropertyName + ", System.String) like '%" + textBox9.Text.Replace("'", "''") + "%'");
             dataGridView5.DataSource = bs;
+        }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox10.Text = "";
+            textBox13.Text = "";
+            textBox9.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox11.Text = "";
+            textBox12.Text = "";
+
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

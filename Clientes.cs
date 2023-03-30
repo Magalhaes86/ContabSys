@@ -37,6 +37,26 @@ namespace ContabSys
             dgvClientes.DataSource = table;
 
 
+            DataGridViewColumn column0 = dgvClientes.Columns[0];
+            column0.Width = 50;
+            DataGridViewColumn column1 = dgvClientes.Columns[1];
+            column1.Width = 200;
+            DataGridViewColumn column2 = dgvClientes.Columns[2];
+            column2.Width = 75;
+            DataGridViewColumn column3 = dgvClientes.Columns[3];
+            column3.Width = 200;
+            DataGridViewColumn column4 = dgvClientes.Columns[4];
+            column4.Width = 200;
+            DataGridViewColumn column5 = dgvClientes.Columns[5];
+            column5.Width = 75;
+            DataGridViewColumn column6 = dgvClientes.Columns[6];
+            column6.Width = 75;
+            DataGridViewColumn column7 = dgvClientes.Columns[7];
+            column7.Width = 98;
+            DataGridViewColumn column8 = dgvClientes.Columns[8];
+            column8.Width = 150;
+
+
         }
 
         public void limparPesquisa()
@@ -161,7 +181,8 @@ tbCodOutroSoft.Text = "";
 
         }
 
-        public void executeMyQuery(string query)
+
+        public void executeMyQueryDelete(string query)
         {
             try
             {
@@ -170,14 +191,14 @@ tbCodOutroSoft.Text = "";
 
                 if (command.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Query Executada");
+                    MessageBox.Show("Cliente Eliminado com Sucesso");
                 }
                 else
                 {
-                    MessageBox.Show("Query Não Executada");
+                    MessageBox.Show("Erro");
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -187,6 +208,62 @@ tbCodOutroSoft.Text = "";
                 closeConnection();
             }
         }
+
+
+        public void executeMyQuery(string query)
+        {
+            try
+            {
+                openConnection();
+                command = new MySqlCommand(query, connection);
+
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Cliente Guardado com Sucesso");
+                }
+                else
+                {
+                    MessageBox.Show("Erro");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                closeConnection();
+            }
+        }
+
+        public void executeMyQueryUpdate(string query)
+        {
+            try
+            {
+                openConnection();
+                command = new MySqlCommand(query, connection);
+
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Cliente Atualizado com Sucesso");
+                }
+                else
+                {
+                    MessageBox.Show("Erro");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                closeConnection();
+            }
+        }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -281,6 +358,7 @@ tbCodOutroSoft.Text = "";
         private void btnNovo_Click_1(object sender, EventArgs e)
         {
             limpartudo();
+            btnGravar.Enabled = true;
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -290,11 +368,19 @@ tbCodOutroSoft.Text = "";
 
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
+
+
+            if (string.IsNullOrEmpty(tbId.Text))
+            {
+                MessageBox.Show("Escolha o Cliente que pretende Anular");
+                return;
+            }
+
             DialogResult dialogResult = MessageBox.Show("Tem a certeza que pretende ELIMINAR o registo?", " !! ELIMINAR REGISTO DA BASE DE DADOS !!", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 string udeleteQuery = "DELETE FROM clientes WHERE ID =" + int.Parse(tbId.Text);
-                executeMyQuery(udeleteQuery);
+                executeMyQueryDelete(udeleteQuery);
                 LerDadosClientesDataGrid();
 
 
@@ -324,9 +410,11 @@ tbCodOutroSoft.Text = "";
             {
 
                 string updateQuery = "UPDATE clientes SET Nome='" + tbNome.Text + "',Nif='" + tbNif.Text + "',Morada='" + tbMorada.Text + "',Email='" + tbEmail.Text + "',Tlm='" + tbTlm.Text + "',Tlf='" + tbTlf.Text + "',CodOutroSoftware='" + tbCodOutroSoft.Text + "',Obs='" + tbobs.Text + "' WHERE ID =" + int.Parse(tbId.Text);
-                executeMyQuery(updateQuery);
+                executeMyQueryUpdate(updateQuery);
                 LerDadosClientesDataGrid();
-
+                btnUpdate.Visible = false;
+                btnGravar.Visible = true;
+                btnGravar.Enabled = false;
             }
 
             else if (dialogResult == DialogResult.No)
@@ -380,6 +468,8 @@ tbCodOutroSoft.Text = "";
                 tbCodOutroSoft.Text = dgvClientes.CurrentRow.Cells[7].Value.ToString();
                 tbobs.Text = dgvClientes.CurrentRow.Cells[8].Value.ToString();
 
+                btnUpdate.Visible = true;
+                btnGravar.Visible = false;
             }
 
             else if (dialogResult == DialogResult.No)
@@ -460,6 +550,12 @@ tbCodOutroSoft.Text = "";
             bs.DataSource = dgvClientes.DataSource;
             bs.Filter = string.Format("CONVERT(" + this.dgvClientes.Columns[8].DataPropertyName + ", System.String) like '%" + textBox13.Text.Replace("'", "''") + "%'");
             dgvClientes.DataSource = bs;
+        }
+
+        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEditar.Enabled = true;
+            btnGravar.Enabled = false;
         }
     }
 }

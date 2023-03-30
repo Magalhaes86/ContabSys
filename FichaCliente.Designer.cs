@@ -61,6 +61,7 @@ namespace ContabSys
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button30 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -68,13 +69,12 @@ namespace ContabSys
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.button31 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
@@ -83,13 +83,12 @@ namespace ContabSys
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.button32 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -104,6 +103,7 @@ namespace ContabSys
             this.panel14 = new System.Windows.Forms.Panel();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.button33 = new System.Windows.Forms.Button();
             this.button28 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -118,6 +118,7 @@ namespace ContabSys
             this.panel17 = new System.Windows.Forms.Panel();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.button34 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -182,6 +183,7 @@ namespace ContabSys
             this.panel2.Controls.Add(this.tbNif);
             this.panel2.Controls.Add(this.tbNome);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Enabled = false;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(15);
             this.panel2.Name = "panel2";
@@ -254,6 +256,7 @@ namespace ContabSys
             // 
             // tbTlf
             // 
+            this.tbTlf.Enabled = false;
             this.tbTlf.Location = new System.Drawing.Point(508, 91);
             this.tbTlf.Name = "tbTlf";
             this.tbTlf.Size = new System.Drawing.Size(261, 20);
@@ -261,6 +264,7 @@ namespace ContabSys
             // 
             // tbTlm
             // 
+            this.tbTlm.Enabled = false;
             this.tbTlm.Location = new System.Drawing.Point(277, 92);
             this.tbTlm.Name = "tbTlm";
             this.tbTlm.Size = new System.Drawing.Size(186, 20);
@@ -268,6 +272,7 @@ namespace ContabSys
             // 
             // tbEmail
             // 
+            this.tbEmail.Enabled = false;
             this.tbEmail.Location = new System.Drawing.Point(507, 60);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(262, 20);
@@ -311,6 +316,7 @@ namespace ContabSys
             // 
             // tbId
             // 
+            this.tbId.Enabled = false;
             this.tbId.Location = new System.Drawing.Point(95, 34);
             this.tbId.Name = "tbId";
             this.tbId.Size = new System.Drawing.Size(72, 20);
@@ -318,6 +324,7 @@ namespace ContabSys
             // 
             // tbCodOutroSoft
             // 
+            this.tbCodOutroSoft.Enabled = false;
             this.tbCodOutroSoft.Location = new System.Drawing.Point(95, 63);
             this.tbCodOutroSoft.Name = "tbCodOutroSoft";
             this.tbCodOutroSoft.Size = new System.Drawing.Size(114, 20);
@@ -325,6 +332,7 @@ namespace ContabSys
             // 
             // tbNif
             // 
+            this.tbNif.Enabled = false;
             this.tbNif.Location = new System.Drawing.Point(277, 61);
             this.tbNif.Name = "tbNif";
             this.tbNif.Size = new System.Drawing.Size(186, 20);
@@ -332,6 +340,7 @@ namespace ContabSys
             // 
             // tbNome
             // 
+            this.tbNome.Enabled = false;
             this.tbNome.Location = new System.Drawing.Point(277, 31);
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(492, 20);
@@ -480,6 +489,7 @@ namespace ContabSys
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Window;
+            this.panel4.Controls.Add(this.button30);
             this.panel4.Controls.Add(this.button17);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.textBox2);
@@ -490,6 +500,18 @@ namespace ContabSys
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(755, 53);
             this.panel4.TabIndex = 0;
+            // 
+            // button30
+            // 
+            this.button30.BackColor = System.Drawing.Color.Transparent;
+            this.button30.BackgroundImage = global::ContabSys.Properties.Resources.imgbin_cleaning_computer_icons_tool_spade_cleaner_others_w7xjSvWY22K3VJMzYcVvG5tAR;
+            this.button30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button30.Location = new System.Drawing.Point(668, 11);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(31, 29);
+            this.button30.TabIndex = 62;
+            this.button30.UseVisualStyleBackColor = false;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
             // 
             // button17
             // 
@@ -553,8 +575,6 @@ namespace ContabSys
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.Window;
-            this.panel7.Controls.Add(this.button23);
-            this.panel7.Controls.Add(this.button18);
             this.panel7.Controls.Add(this.button19);
             this.panel7.Controls.Add(this.button20);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -562,28 +582,6 @@ namespace ContabSys
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(755, 60);
             this.panel7.TabIndex = 1;
-            // 
-            // button23
-            // 
-            this.button23.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button23.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.button23.Location = new System.Drawing.Point(629, 15);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(92, 29);
-            this.button23.TabIndex = 4;
-            this.button23.Text = "Enviar Email";
-            this.button23.UseVisualStyleBackColor = false;
-            this.button23.MouseLeave += new System.EventHandler(this.button23_MouseLeave);
-            this.button23.MouseHover += new System.EventHandler(this.button23_MouseHover);
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(1067, 17);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(82, 27);
-            this.button18.TabIndex = 1;
-            this.button18.Text = "button2";
-            this.button18.UseVisualStyleBackColor = true;
             // 
             // button19
             // 
@@ -639,6 +637,7 @@ namespace ContabSys
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.SystemColors.Window;
+            this.panel9.Controls.Add(this.button31);
             this.panel9.Controls.Add(this.button21);
             this.panel9.Controls.Add(this.button3);
             this.panel9.Controls.Add(this.label18);
@@ -650,6 +649,17 @@ namespace ContabSys
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(755, 53);
             this.panel9.TabIndex = 3;
+            // 
+            // button31
+            // 
+            this.button31.BackColor = System.Drawing.Color.Transparent;
+            this.button31.BackgroundImage = global::ContabSys.Properties.Resources.imgbin_cleaning_computer_icons_tool_spade_cleaner_others_w7xjSvWY22K3VJMzYcVvG5tAR;
+            this.button31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button31.Location = new System.Drawing.Point(674, 13);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(31, 29);
+            this.button31.TabIndex = 63;
+            this.button31.UseVisualStyleBackColor = false;
             // 
             // button21
             // 
@@ -723,8 +733,6 @@ namespace ContabSys
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.SystemColors.Window;
-            this.panel10.Controls.Add(this.button24);
-            this.panel10.Controls.Add(this.button8);
             this.panel10.Controls.Add(this.button9);
             this.panel10.Controls.Add(this.button10);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -732,28 +740,6 @@ namespace ContabSys
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(755, 60);
             this.panel10.TabIndex = 1;
-            // 
-            // button24
-            // 
-            this.button24.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button24.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.button24.Location = new System.Drawing.Point(640, 15);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(92, 29);
-            this.button24.TabIndex = 1;
-            this.button24.Text = "Enviar Email";
-            this.button24.UseVisualStyleBackColor = false;
-            this.button24.MouseLeave += new System.EventHandler(this.button24_MouseLeave);
-            this.button24.MouseHover += new System.EventHandler(this.button24_MouseHover);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(1060, 18);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(82, 27);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "button2";
-            this.button8.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
@@ -809,6 +795,7 @@ namespace ContabSys
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.SystemColors.Window;
+            this.panel12.Controls.Add(this.button32);
             this.panel12.Controls.Add(this.button27);
             this.panel12.Controls.Add(this.label12);
             this.panel12.Controls.Add(this.textBox5);
@@ -819,6 +806,17 @@ namespace ContabSys
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(755, 53);
             this.panel12.TabIndex = 3;
+            // 
+            // button32
+            // 
+            this.button32.BackColor = System.Drawing.Color.Transparent;
+            this.button32.BackgroundImage = global::ContabSys.Properties.Resources.imgbin_cleaning_computer_icons_tool_spade_cleaner_others_w7xjSvWY22K3VJMzYcVvG5tAR;
+            this.button32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button32.Location = new System.Drawing.Point(674, 12);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(31, 29);
+            this.button32.TabIndex = 63;
+            this.button32.UseVisualStyleBackColor = false;
             // 
             // button27
             // 
@@ -969,6 +967,7 @@ namespace ContabSys
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.SystemColors.Window;
+            this.panel15.Controls.Add(this.button33);
             this.panel15.Controls.Add(this.button28);
             this.panel15.Controls.Add(this.label14);
             this.panel15.Controls.Add(this.textBox7);
@@ -979,6 +978,17 @@ namespace ContabSys
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(755, 53);
             this.panel15.TabIndex = 3;
+            // 
+            // button33
+            // 
+            this.button33.BackColor = System.Drawing.Color.Transparent;
+            this.button33.BackgroundImage = global::ContabSys.Properties.Resources.imgbin_cleaning_computer_icons_tool_spade_cleaner_others_w7xjSvWY22K3VJMzYcVvG5tAR;
+            this.button33.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button33.Location = new System.Drawing.Point(684, 12);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(31, 29);
+            this.button33.TabIndex = 63;
+            this.button33.UseVisualStyleBackColor = false;
             // 
             // button28
             // 
@@ -1126,7 +1136,8 @@ namespace ContabSys
             // 
             // panel18
             // 
-            this.panel18.BackColor = System.Drawing.SystemColors.Control;
+            this.panel18.BackColor = System.Drawing.SystemColors.Window;
+            this.panel18.Controls.Add(this.button34);
             this.panel18.Controls.Add(this.button29);
             this.panel18.Controls.Add(this.label16);
             this.panel18.Controls.Add(this.textBox9);
@@ -1139,6 +1150,17 @@ namespace ContabSys
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(755, 53);
             this.panel18.TabIndex = 3;
+            // 
+            // button34
+            // 
+            this.button34.BackColor = System.Drawing.Color.Transparent;
+            this.button34.BackgroundImage = global::ContabSys.Properties.Resources.imgbin_cleaning_computer_icons_tool_spade_cleaner_others_w7xjSvWY22K3VJMzYcVvG5tAR;
+            this.button34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button34.Location = new System.Drawing.Point(671, 10);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(31, 29);
+            this.button34.TabIndex = 63;
+            this.button34.UseVisualStyleBackColor = false;
             // 
             // button29
             // 
@@ -1330,7 +1352,6 @@ namespace ContabSys
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Panel panel11;
@@ -1385,7 +1406,6 @@ namespace ContabSys
         internal System.Windows.Forms.Label label6;
         internal System.Windows.Forms.Label label5;
         internal System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
         internal System.Windows.Forms.DataGridView dataGridView2;
@@ -1400,8 +1420,6 @@ namespace ContabSys
         private System.Windows.Forms.Label label20;
         internal System.Windows.Forms.Button button22;
         internal System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.Button button17;
@@ -1411,5 +1429,10 @@ namespace ContabSys
         private System.Windows.Forms.Button button29;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.Button button31;
+        private System.Windows.Forms.Button button32;
+        private System.Windows.Forms.Button button33;
+        private System.Windows.Forms.Button button34;
     }
 }

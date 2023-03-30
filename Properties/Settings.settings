@@ -17,5 +17,20 @@
     <Setting Name="porta" Type="System.String" Scope="User">
       <Value Profile="(Default)">3308</Value>
     </Setting>
+    <Setting Name="SmtpServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">smtp-mail.outlook.com</Value>
+    </Setting>
+    <Setting Name="MailAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">marcosmagalhaes86@outlook.pt</Value>
+    </Setting>
+    <Setting Name="PortaEmail" Type="System.String" Scope="User">
+      <Value Profile="(Default)">587</Value>
+    </Setting>
+    <Setting Name="emailUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">marcosmagalhaes86@outlook.pt</Value>
+    </Setting>
+    <Setting Name="emailPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">M@galhae$020486</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

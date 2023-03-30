@@ -86,18 +86,10 @@ namespace ContabSys
         }
 
 
-        public void CriarPasta()
-        {
-
-          
-                string Todaysdate = DateTime.Now.ToString("-dd-MM-yyyy-(hh-mm-ss)");
-                {
-                    Directory.CreateDirectory(textBox1.Text +"\\Backup"+ Todaysdate);
-               
-            }
+      
             
 
-        }
+        
 
 
         private void button3_Click(object sender, EventArgs e)
@@ -127,86 +119,43 @@ namespace ContabSys
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //selecionar diretoria \ pasta 
-            CommonOpenFileDialog dialog = new CommonOpenFileDialog();
-            dialog.IsFolderPicker = true;
-            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
-            {
-                textBox1.Text = dialog.FileName;
-                string file1 = Directory.CreateDirectory(textBox1.Text + "\\Backup\\" + DateTime.Now.ToString("ddMMyyyyhhmmss")) + "";
-                tbnovaloc.Text = file1;
-                textBox3.Text = textBox1.Text + tbnovaloc.Text;
-            }
-        }
+        // Antigo Botao Guardar
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            
-                OpenFileDialog v1 = new OpenFileDialog();
-                v1.Filter = "mysql (*.sql)|*.sql|All files (*.*)|*.*";
+        //private void button6_Click(object sender, EventArgs e)
+        //{
+        //    string constring = @"server=" + Properties.Settings.Default.server + ";database=" + Properties.Settings.Default.basedados + ";port=" + Properties.Settings.Default.porta + ";userid=" + Properties.Settings.Default.username + ";password=" + Properties.Settings.Default.password + ";convertzerodatetime=true";
 
-                if (v1.ShowDialog() == DialogResult.OK)
-                {
-                textBox4.Text = v1.FileName;
-                textBox4.Text = Path.GetFileName(v1.FileName);
-                }
-            }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            string constring = @"server=" + Properties.Settings.Default.server + ";database=" + Properties.Settings.Default.basedados + ";port=" + Properties.Settings.Default.porta + ";userid=" + Properties.Settings.Default.username + ";password=" + Properties.Settings.Default.password + ";convertzerodatetime=true";
+        //    //string file = textBox1.Text + "\\ContabSysDB.sql";
+        //    string file = textBox3.Text + "\\ContabSysDB.sql";
 
 
 
-           
-            string file2 = tbnovaloc.Text;
-            string file3= "\\ContabSysDB.sql";
-            string file = file2+ file3;
-            using (MySqlConnection conn = new MySqlConnection(constring))
-            {
-                using (MySqlCommand cmd = new MySqlCommand())
-                {
-                    using (MySqlBackup mb = new MySqlBackup(cmd))
-                    {
-                        cmd.Connection = conn;
-                        conn.Open();
-                        mb.ExportToFile(file);
-                        conn.Close();
-                    }
-                }
-            }
-        }
+        //    //string file2 = tbnovaloc.Text;
+        //    //string file3 = "ContabSysDB.sql";
+        //    //string file = file2 + file3;
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            string constring = @"server=" + Properties.Settings.Default.server + ";database=" + Properties.Settings.Default.basedados + ";port=" + Properties.Settings.Default.porta + ";userid=" + Properties.Settings.Default.username + ";password=" + Properties.Settings.Default.password + ";convertzerodatetime=true";
 
-            //string file = textBox1.Text + "\\ContabSysDB.sql";
-            string file = textBox3.Text + "\\ContabSysDB.sql";
+        //    using (MySqlConnection conn = new MySqlConnection(constring))
+        //    {
+        //        using (MySqlCommand cmd = new MySqlCommand())
+        //        {
+        //            using (MySqlBackup mb = new MySqlBackup(cmd))
+        //            {
+        //                cmd.Connection = conn;
+        //                conn.Open();
+        //                mb.ExportToFile(file);
+        //                conn.Close();
+        //            }
+        //        }
+        //    }
+        //}
+
+
        
+      
           
 
-            //string file2 = tbnovaloc.Text;
-            //string file3 = "ContabSysDB.sql";
-            //string file = file2 + file3;
-
-
-            using (MySqlConnection conn = new MySqlConnection(constring))
-            {
-                using (MySqlCommand cmd = new MySqlCommand())
-                {
-                    using (MySqlBackup mb = new MySqlBackup(cmd))
-                    {
-                        cmd.Connection = conn;
-                        conn.Open();
-                        mb.ExportToFile(file);
-                        conn.Close();
-                    }
-                }
-            }
-        }
+       
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -240,6 +189,66 @@ namespace ContabSys
             {
                 textBox4.Text = ofd.FileName;
               
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+       
+
+        private void btngravardadosemail_Click(object sender, EventArgs e)
+        {
+            try
+
+            {
+
+
+                Properties.Settings.Default.SmtpServer = tbsmtpserver.Text;
+                Properties.Settings.Default.MailAddress = tbemail.Text;
+                Properties.Settings.Default.PortaEmail = tbemailporta.Text;
+                Properties.Settings.Default.emailUser = tbemailuser.Text;
+                Properties.Settings.Default.emailPassword = tbemailpassword.Text;
+                Properties.Settings.Default.Save();
+
+            }
+
+            catch (Exception ex)
+
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void btnobteremail_Click(object sender, EventArgs e)
+        {
+            try
+
+            {
+
+                tbsmtpserver.Text = Properties.Settings.Default.SmtpServer;
+                tbemail.Text = Properties.Settings.Default.MailAddress;
+                tbemailporta.Text = Properties.Settings.Default.PortaEmail;
+                tbemailuser.Text = Properties.Settings.Default.emailUser;
+                tbemailpassword.Text = Properties.Settings.Default.emailPassword;
+            }
+
+            catch (Exception ex)
+
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

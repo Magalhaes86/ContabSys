@@ -89,22 +89,49 @@ namespace ContabSys
             dataGridView1.DataSource = table;
 
             dataGridView1.Columns[0].HeaderText = "Cod Cliente";
-            dataGridView1.Columns[1].HeaderText = "CodOutroSoftware";
-            dataGridView1.Columns[2].HeaderText = "nome";
+            dataGridView1.Columns[1].HeaderText = "Cod. O/Soft.";
+            dataGridView1.Columns[2].HeaderText = "Nome";
             dataGridView1.Columns[3].HeaderText = "Nif";
             dataGridView1.Columns[4].HeaderText = "Email";
 
             dataGridView1.Columns[5].HeaderText = "Tlm";
             dataGridView1.Columns[6].HeaderText = "Tlf";
-            dataGridView1.Columns[7].HeaderText = "recepcaodocumentos";
-            dataGridView1.Columns[8].HeaderText = "recepcaosaft";
-            dataGridView1.Columns[9].HeaderText = "selecaoearquivo";
+            dataGridView1.Columns[7].HeaderText = "Recepção Documentos";
+            dataGridView1.Columns[8].HeaderText = "Recepção Saft";
+            dataGridView1.Columns[9].HeaderText = "Seleção e Arquivo";
             
-            dataGridView1.Columns[10].HeaderText = "lancamentos";
-            dataGridView1.Columns[11].HeaderText = "recebimentos";
+            dataGridView1.Columns[10].HeaderText = "Lançamentos";
+            dataGridView1.Columns[11].HeaderText = "Recebimentos";
 
             dataGridView1.Columns[12].HeaderText = "Valor";
-          
+
+
+            DataGridViewColumn column0 = dataGridView1.Columns[0];
+            column0.Width = 90;
+            DataGridViewColumn column1 = dataGridView1.Columns[1];
+            column1.Width = 92;
+            DataGridViewColumn column2 = dataGridView1.Columns[2];
+            column2.Width = 190;
+            DataGridViewColumn column3 = dataGridView1.Columns[3];
+            column3.Width = 80;
+            DataGridViewColumn column4 = dataGridView1.Columns[4];
+            column4.Width = 180;
+            DataGridViewColumn column5 = dataGridView1.Columns[5];
+            column5.Width = 80;
+            DataGridViewColumn column6 = dataGridView1.Columns[6];
+            column6.Width = 80;
+            DataGridViewColumn column7 = dataGridView1.Columns[7];
+            column7.Width = 145;
+            DataGridViewColumn column8 = dataGridView1.Columns[8];
+            column8.Width = 125;
+            DataGridViewColumn column9 = dataGridView1.Columns[9];
+            column9.Width = 125;
+
+            DataGridViewColumn column10 = dataGridView1.Columns[10];
+            column10.Width = 100;
+            DataGridViewColumn column12 = dataGridView1.Columns[12];
+            column12.Width = 80;
+
 
         }
 
@@ -329,6 +356,16 @@ namespace ContabSys
         private void btnConfig_MouseLeave(object sender, EventArgs e)
         {
             labeladmin.Visible = false;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            LerDadosParaDataGrid();
         }
     }
     }
