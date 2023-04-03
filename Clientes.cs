@@ -4,7 +4,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
-//Add MySql Library
 using MySql.Data.MySqlClient;
 using System.Data;
 using MySql.Data;
@@ -76,7 +75,7 @@ namespace ContabSys
         public void limpartudo()
         {
             tbId.Text = "";
-tbCodOutroSoft.Text = "";
+            tbCodOutroSoft.Text = "";
             tbNome.Text = "";
             tbNif.Text = "";
             tbEmail.Text = "";
@@ -100,11 +99,6 @@ tbCodOutroSoft.Text = "";
             LerDadosClientesDataGrid();
         }
 
-      
-
-       
-
-      
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
@@ -151,36 +145,7 @@ tbCodOutroSoft.Text = "";
         }
 
 
-        public void PesquisarporID()
-        {
-            //MySqlDataReader mdr;
-            //string selectID = "SELECT * FROM clientes WHERE ID =" + tbsearchid.Text;
-
-            //command = new MySqlCommand(selectID, connection);
-            //openConnection();
-            //mdr = command.ExecuteReader();
-
-            //if (mdr.Read())
-            //{
-            //    tbNome.Text = mdr.GetString("Nome");
-            //    tbNif.Text = mdr.GetString("Nif");
-            //    tbMorada.Text = mdr.GetString("Morada");
-            //    tbEmail.Text = mdr.GetString("Email");
-            //    tbTlm.Text = mdr.GetString("Tlm");
-
-            //    tbTlf.Text = mdr.GetString("Tlf");
-            //    tbCodOutroSoft.Text = mdr.GetString("CodOutroSoftware");
-            //    tbobs.Text = mdr.GetString("Obs");
-
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Utilizador Não Encontrado");
-            //}
-            //closeConnection();
-
-        }
-
+  
 
         public void executeMyQueryDelete(string query)
         {

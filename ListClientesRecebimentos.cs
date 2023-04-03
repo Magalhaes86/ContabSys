@@ -49,13 +49,9 @@ namespace ContabSys
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            addRecebimentos fc = (addRecebimentos)Application.OpenForms["addRecebimentos"];
-            fc.tbidcliente.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            fc.tbnomecliente.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            fc.tbnif.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            fc.btnUPDATE.Visible = false;
 
-            Close();
+            
+           
         }
         private void textBox10_TextChanged(object sender, EventArgs e)
         {
@@ -141,6 +137,20 @@ namespace ContabSys
             textBox12.Text = "";
             textBox14.Text = "";
             textBox13.Text = "";
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                addRecebimentos fc = (addRecebimentos)Application.OpenForms["addRecebimentos"];
+                fc.tbidcliente.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                fc.tbnomecliente.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                fc.tbnif.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                fc.btnUPDATE.Visible = false;
+
+                Close();
+            }
         }
     }
 }

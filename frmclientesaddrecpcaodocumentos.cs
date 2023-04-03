@@ -37,28 +37,19 @@ namespace ContabSys
             dataGridView1.DataSource = table;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
-            addrecpcaodocumentos fc = (addrecpcaodocumentos)Application.OpenForms["addrecpcaodocumentos"];
-            fc.tbidcliente.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            fc.tbnomecliente.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            fc.tbnif.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
-
-
-
-        }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            addrecpcaodocumentos fc = (addrecpcaodocumentos)Application.OpenForms["addrecpcaodocumentos"];
-            fc.tbidcliente.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            fc.tbnomecliente.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            fc.tbnif.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            fc.btnUPDATE.Visible = false;
-
-            Close();
+            if (e.RowIndex >= 0)
+            {
+                addrecpcaodocumentos fc = (addrecpcaodocumentos)Application.OpenForms["addrecpcaodocumentos"];
+                fc.tbidcliente.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                fc.tbnomecliente.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                fc.tbnif.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                Close();
+            }
         }
     }
+
 }
+

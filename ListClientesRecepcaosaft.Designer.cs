@@ -71,7 +71,7 @@ namespace ContabSys
             this.dataGridView1.Size = new System.Drawing.Size(1474, 633);
             this.dataGridView1.TabIndex = 99;
             this.dataGridView1.TabStop = false;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
             // panel1
             // 

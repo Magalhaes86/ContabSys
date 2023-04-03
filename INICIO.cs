@@ -208,33 +208,27 @@ namespace ContabSys
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-             FichaCliente FichaCliente = (FichaCliente)Application.OpenForms["FichaCliente"];
-          //  FichaCliente FichaCliente = new FichaCliente();
-            FichaCliente.tbId.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            FichaCliente.ShowDialog();
 
-            
-            //     fc.tbnomecliente.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            //    fc.tbnif.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            //    fc.btnUPDATE.Visible = false;
-        }
+
+      
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-        //    FichaCliente FichaCliente = (FichaCliente)Application.OpenForms["FichaCliente"];
-            FichaCliente FichaCliente = new FichaCliente();
-            FichaCliente.tbId.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            FichaCliente.tbCodOutroSoft.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            FichaCliente.tbNome.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            FichaCliente.tbNif.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            FichaCliente.tbEmail.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            FichaCliente.tbTlm.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            FichaCliente.tbTlf.Text = this.dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            FichaCliente.RefreshALLDataGrid();
-            FichaCliente.ShowDialog();
-          
+
+            if (e.RowIndex >= 0)
+            {
+                FichaCliente FichaCliente = new FichaCliente();
+                FichaCliente.tbId.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                FichaCliente.tbCodOutroSoft.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                FichaCliente.tbNome.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                FichaCliente.tbNif.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                FichaCliente.tbEmail.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                FichaCliente.tbTlm.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                FichaCliente.tbTlf.Text = this.dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                FichaCliente.RefreshALLDataGrid();
+                FichaCliente.ShowDialog();
+
+            }    
         }
 
         private void tbcod_TextChanged(object sender, EventArgs e)
