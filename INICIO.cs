@@ -8,6 +8,8 @@ using System.IO;
 using MySql.Data.MySqlClient;
 using System.Data;
 using MySql.Data;
+using System.Drawing;
+
 namespace ContabSys
 {
     public partial class INICIO : Form
@@ -376,6 +378,16 @@ namespace ContabSys
         private void button3_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button2_MouseHover(object sender, EventArgs e)
+        {
+            button2.BackColor = SystemColors.ActiveCaption;
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            button2.BackColor = SystemColors.Window;
         }
     }
     }
