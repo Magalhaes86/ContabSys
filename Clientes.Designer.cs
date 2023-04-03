@@ -140,7 +140,7 @@ namespace ContabSys
             this.button2.Location = new System.Drawing.Point(1542, 34);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(31, 29);
-            this.button2.TabIndex = 61;
+            this.button2.TabIndex = 9;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
@@ -149,7 +149,7 @@ namespace ContabSys
             this.textBox10.Location = new System.Drawing.Point(28, 37);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(77, 20);
-            this.textBox10.TabIndex = 9;
+            this.textBox10.TabIndex = 1;
             this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // label14
@@ -193,7 +193,7 @@ namespace ContabSys
             this.textBox13.Location = new System.Drawing.Point(1316, 38);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(220, 20);
-            this.textBox13.TabIndex = 6;
+            this.textBox13.TabIndex = 8;
             this.textBox13.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             // 
             // textBox12
@@ -227,7 +227,7 @@ namespace ContabSys
             this.textBox14.Location = new System.Drawing.Point(1080, 37);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(230, 20);
-            this.textBox14.TabIndex = 5;
+            this.textBox14.TabIndex = 7;
             this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
             // 
             // label13
@@ -244,7 +244,7 @@ namespace ContabSys
             this.textBox11.Location = new System.Drawing.Point(109, 38);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(90, 20);
-            this.textBox11.TabIndex = 8;
+            this.textBox11.TabIndex = 2;
             this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // textBox18
@@ -252,7 +252,7 @@ namespace ContabSys
             this.textBox18.Location = new System.Drawing.Point(203, 37);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(252, 20);
-            this.textBox18.TabIndex = 2;
+            this.textBox18.TabIndex = 3;
             this.textBox18.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
             // 
             // label17
@@ -278,7 +278,7 @@ namespace ContabSys
             this.textBox17.Location = new System.Drawing.Point(459, 37);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(111, 20);
-            this.textBox17.TabIndex = 10;
+            this.textBox17.TabIndex = 4;
             this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
             // 
             // textBox16
@@ -286,7 +286,7 @@ namespace ContabSys
             this.textBox16.Location = new System.Drawing.Point(575, 37);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(231, 20);
-            this.textBox16.TabIndex = 3;
+            this.textBox16.TabIndex = 5;
             this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
             // 
             // textBox15
@@ -294,7 +294,7 @@ namespace ContabSys
             this.textBox15.Location = new System.Drawing.Point(811, 37);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(135, 20);
-            this.textBox15.TabIndex = 4;
+            this.textBox15.TabIndex = 6;
             this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
             // panel2
@@ -352,9 +352,9 @@ namespace ContabSys
             this.panel5.Controls.Add(this.btnUpdate);
             this.panel5.Controls.Add(this.btnGravar);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 507);
+            this.panel5.Location = new System.Drawing.Point(0, 530);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(414, 188);
+            this.panel5.Size = new System.Drawing.Size(414, 165);
             this.panel5.TabIndex = 1;
             // 
             // btncancelar
@@ -362,10 +362,11 @@ namespace ContabSys
             this.btncancelar.BackColor = System.Drawing.Color.RosyBrown;
             this.btncancelar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.btncancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btncancelar.Location = new System.Drawing.Point(297, 72);
+            this.btncancelar.Location = new System.Drawing.Point(297, 63);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(85, 38);
             this.btncancelar.TabIndex = 61;
+            this.btncancelar.TabStop = false;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = false;
             this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
@@ -374,7 +375,7 @@ namespace ContabSys
             // 
             this.lbldelete.AutoSize = true;
             this.lbldelete.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldelete.Location = new System.Drawing.Point(231, 147);
+            this.lbldelete.Location = new System.Drawing.Point(230, 124);
             this.lbldelete.Name = "lbldelete";
             this.lbldelete.Size = new System.Drawing.Size(109, 15);
             this.lbldelete.TabIndex = 59;
@@ -386,21 +387,24 @@ namespace ContabSys
             this.btnrefresh.BackColor = System.Drawing.Color.Transparent;
             this.btnrefresh.BackgroundImage = global::ContabSys.Properties.Resources.refresh;
             this.btnrefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnrefresh.Location = new System.Drawing.Point(12, 72);
+            this.btnrefresh.Location = new System.Drawing.Point(12, 65);
             this.btnrefresh.Name = "btnrefresh";
-            this.btnrefresh.Size = new System.Drawing.Size(46, 43);
+            this.btnrefresh.Size = new System.Drawing.Size(35, 33);
             this.btnrefresh.TabIndex = 60;
+            this.btnrefresh.TabStop = false;
             this.btnrefresh.UseVisualStyleBackColor = false;
+            this.btnrefresh.Click += new System.EventHandler(this.btnrefresh_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Transparent;
             this.btnDelete.BackgroundImage = global::ContabSys.Properties.Resources.delete_icon_png_16;
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDelete.Location = new System.Drawing.Point(346, 132);
+            this.btnDelete.Location = new System.Drawing.Point(345, 116);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(47, 44);
+            this.btnDelete.Size = new System.Drawing.Size(37, 30);
             this.btnDelete.TabIndex = 58;
+            this.btnDelete.TabStop = false;
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
@@ -410,8 +414,9 @@ namespace ContabSys
             this.btnNovo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.btnNovo.Location = new System.Drawing.Point(6, 11);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(118, 42);
+            this.btnNovo.Size = new System.Drawing.Size(118, 35);
             this.btnNovo.TabIndex = 0;
+            this.btnNovo.TabStop = false;
             this.btnNovo.Text = "NOVO";
             this.btnNovo.UseVisualStyleBackColor = false;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click_1);
@@ -423,8 +428,9 @@ namespace ContabSys
             this.btnEditar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.btnEditar.Location = new System.Drawing.Point(264, 11);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(118, 44);
+            this.btnEditar.Size = new System.Drawing.Size(118, 37);
             this.btnEditar.TabIndex = 0;
+            this.btnEditar.TabStop = false;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -433,11 +439,12 @@ namespace ContabSys
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnUpdate.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnUpdate.Location = new System.Drawing.Point(130, 68);
+            this.btnUpdate.Location = new System.Drawing.Point(130, 13);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(118, 42);
+            this.btnUpdate.Size = new System.Drawing.Size(118, 35);
             this.btnUpdate.TabIndex = 0;
-            this.btnUpdate.Text = "UPDATE";
+            this.btnUpdate.TabStop = false;
+            this.btnUpdate.Text = "ATUALIZAR";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Visible = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -447,10 +454,11 @@ namespace ContabSys
             this.btnGravar.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGravar.Enabled = false;
             this.btnGravar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnGravar.Location = new System.Drawing.Point(130, 11);
+            this.btnGravar.Location = new System.Drawing.Point(130, 13);
             this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(118, 42);
+            this.btnGravar.Size = new System.Drawing.Size(118, 35);
             this.btnGravar.TabIndex = 0;
+            this.btnGravar.TabStop = false;
             this.btnGravar.Text = "GRAVAR";
             this.btnGravar.UseVisualStyleBackColor = false;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
@@ -497,7 +505,7 @@ namespace ContabSys
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(41, 166);
+            this.label7.Location = new System.Drawing.Point(41, 174);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(28, 15);
             this.label7.TabIndex = 1;
@@ -507,7 +515,7 @@ namespace ContabSys
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(41, 194);
+            this.label6.Location = new System.Drawing.Point(41, 205);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(23, 15);
             this.label6.TabIndex = 1;
@@ -517,7 +525,7 @@ namespace ContabSys
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(33, 138);
+            this.label5.Location = new System.Drawing.Point(33, 143);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 15);
             this.label5.TabIndex = 1;
@@ -527,7 +535,7 @@ namespace ContabSys
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(27, 338);
+            this.label9.Location = new System.Drawing.Point(27, 359);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(32, 15);
             this.label9.TabIndex = 1;
@@ -537,7 +545,7 @@ namespace ContabSys
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(22, 226);
+            this.label4.Location = new System.Drawing.Point(22, 240);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 15);
             this.label4.TabIndex = 1;
@@ -547,7 +555,7 @@ namespace ContabSys
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(42, 111);
+            this.label3.Location = new System.Drawing.Point(42, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(25, 15);
             this.label3.TabIndex = 1;
@@ -581,6 +589,7 @@ namespace ContabSys
             this.tbId.Name = "tbId";
             this.tbId.Size = new System.Drawing.Size(94, 21);
             this.tbId.TabIndex = 0;
+            this.tbId.TabStop = false;
             // 
             // tbCodOutroSoft
             // 
@@ -588,57 +597,57 @@ namespace ContabSys
             this.tbCodOutroSoft.Location = new System.Drawing.Point(220, 35);
             this.tbCodOutroSoft.Name = "tbCodOutroSoft";
             this.tbCodOutroSoft.Size = new System.Drawing.Size(162, 21);
-            this.tbCodOutroSoft.TabIndex = 0;
+            this.tbCodOutroSoft.TabIndex = 10;
             // 
             // tbTlf
             // 
             this.tbTlf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTlf.Location = new System.Drawing.Point(76, 191);
+            this.tbTlf.Location = new System.Drawing.Point(76, 202);
             this.tbTlf.Name = "tbTlf";
             this.tbTlf.Size = new System.Drawing.Size(307, 21);
-            this.tbTlf.TabIndex = 0;
+            this.tbTlf.TabIndex = 15;
             // 
             // tbobs
             // 
             this.tbobs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbobs.Location = new System.Drawing.Point(76, 338);
+            this.tbobs.Location = new System.Drawing.Point(76, 359);
             this.tbobs.Multiline = true;
             this.tbobs.Name = "tbobs";
             this.tbobs.Size = new System.Drawing.Size(307, 150);
-            this.tbobs.TabIndex = 0;
+            this.tbobs.TabIndex = 17;
             // 
             // tbMorada
             // 
             this.tbMorada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMorada.Location = new System.Drawing.Point(76, 219);
+            this.tbMorada.Location = new System.Drawing.Point(76, 233);
             this.tbMorada.Multiline = true;
             this.tbMorada.Name = "tbMorada";
             this.tbMorada.Size = new System.Drawing.Size(307, 113);
-            this.tbMorada.TabIndex = 0;
+            this.tbMorada.TabIndex = 16;
             // 
             // tbTlm
             // 
             this.tbTlm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTlm.Location = new System.Drawing.Point(76, 163);
+            this.tbTlm.Location = new System.Drawing.Point(76, 171);
             this.tbTlm.Name = "tbTlm";
             this.tbTlm.Size = new System.Drawing.Size(307, 21);
-            this.tbTlm.TabIndex = 0;
+            this.tbTlm.TabIndex = 14;
             // 
             // tbEmail
             // 
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.Location = new System.Drawing.Point(76, 135);
+            this.tbEmail.Location = new System.Drawing.Point(76, 140);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(307, 21);
-            this.tbEmail.TabIndex = 0;
+            this.tbEmail.TabIndex = 13;
             // 
             // tbNif
             // 
             this.tbNif.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNif.Location = new System.Drawing.Point(76, 108);
+            this.tbNif.Location = new System.Drawing.Point(76, 110);
             this.tbNif.Name = "tbNif";
             this.tbNif.Size = new System.Drawing.Size(307, 21);
-            this.tbNif.TabIndex = 0;
+            this.tbNif.TabIndex = 12;
             // 
             // tbNome
             // 
@@ -646,7 +655,7 @@ namespace ContabSys
             this.tbNome.Location = new System.Drawing.Point(76, 79);
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(307, 21);
-            this.tbNome.TabIndex = 0;
+            this.tbNome.TabIndex = 11;
             // 
             // Clientes
             // 
@@ -656,6 +665,7 @@ namespace ContabSys
             this.ClientSize = new System.Drawing.Size(1586, 772);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Clientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

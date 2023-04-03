@@ -79,7 +79,8 @@ namespace ContabSys
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1474, 671);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabIndex = 90;
+            this.dataGridView1.TabStop = false;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -130,7 +131,7 @@ namespace ContabSys
             this.button2.Location = new System.Drawing.Point(1432, 38);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(31, 29);
-            this.button2.TabIndex = 61;
+            this.button2.TabIndex = 10;
             this.button2.UseVisualStyleBackColor = false;
             // 
             // textBox10
@@ -138,7 +139,7 @@ namespace ContabSys
             this.textBox10.Location = new System.Drawing.Point(10, 42);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(66, 20);
-            this.textBox10.TabIndex = 9;
+            this.textBox10.TabIndex = 1;
             // 
             // label14
             // 
@@ -181,7 +182,7 @@ namespace ContabSys
             this.textBox13.Location = new System.Drawing.Point(1206, 43);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(220, 20);
-            this.textBox13.TabIndex = 6;
+            this.textBox13.TabIndex = 9;
             // 
             // textBox12
             // 
@@ -213,7 +214,7 @@ namespace ContabSys
             this.textBox14.Location = new System.Drawing.Point(993, 42);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(210, 20);
-            this.textBox14.TabIndex = 5;
+            this.textBox14.TabIndex = 8;
             // 
             // label13
             // 
@@ -229,14 +230,14 @@ namespace ContabSys
             this.textBox11.Location = new System.Drawing.Point(79, 43);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(81, 20);
-            this.textBox11.TabIndex = 8;
+            this.textBox11.TabIndex = 2;
             // 
             // textBox18
             // 
             this.textBox18.Location = new System.Drawing.Point(162, 42);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(230, 20);
-            this.textBox18.TabIndex = 2;
+            this.textBox18.TabIndex = 3;
             // 
             // label17
             // 
@@ -261,21 +262,21 @@ namespace ContabSys
             this.textBox17.Location = new System.Drawing.Point(395, 42);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(103, 20);
-            this.textBox17.TabIndex = 10;
+            this.textBox17.TabIndex = 4;
             // 
             // textBox16
             // 
             this.textBox16.Location = new System.Drawing.Point(502, 42);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(221, 20);
-            this.textBox16.TabIndex = 3;
+            this.textBox16.TabIndex = 5;
             // 
             // textBox15
             // 
             this.textBox15.Location = new System.Drawing.Point(726, 42);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(135, 20);
-            this.textBox15.TabIndex = 4;
+            this.textBox15.TabIndex = 6;
             // 
             // frmclientesaddrecpcaodocumentos
             // 

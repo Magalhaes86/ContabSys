@@ -34,12 +34,9 @@ namespace ContabSys
             this.labeladmin = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.tbnome = new System.Windows.Forms.TextBox();
             this.tbcodoutrosoft = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -55,10 +52,13 @@ namespace ContabSys
             this.label3 = new System.Windows.Forms.Label();
             this.tbcod = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnConfig = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button17 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnConfig = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -79,7 +79,7 @@ namespace ContabSys
             this.panel2.Controls.Add(this.btnConfig);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(15);
+            this.panel2.Margin = new System.Windows.Forms.Padding(15, 20, 15, 15);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1514, 165);
             this.panel2.TabIndex = 1;
@@ -123,36 +123,6 @@ namespace ContabSys
             this.label10.Text = "Minimizar";
             this.label10.Visible = false;
             // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImage = global::ContabSys.Properties.Resources._207_2078731_minimize_maximize_icon_png_window_minimize_button_white;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.Location = new System.Drawing.Point(1435, 7);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(35, 35);
-            this.button6.TabIndex = 84;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            this.button6.MouseLeave += new System.EventHandler(this.button6_MouseLeave);
-            this.button6.MouseHover += new System.EventHandler(this.button6_MouseHover);
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImage = global::ContabSys.Properties.Resources.on_off_icon_15;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Location = new System.Drawing.Point(1476, 7);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(35, 35);
-            this.button5.TabIndex = 83;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
-            this.button5.MouseHover += new System.EventHandler(this.button5_MouseHover);
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -187,6 +157,7 @@ namespace ContabSys
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox1.Location = new System.Drawing.Point(0, 83);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(15, 20, 15, 15);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1514, 82);
             this.groupBox1.TabIndex = 15;
@@ -198,31 +169,15 @@ namespace ContabSys
             this.textBox1.Location = new System.Drawing.Point(1345, 37);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(104, 20);
-            this.textBox1.TabIndex = 12;
+            this.textBox1.TabIndex = 8;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::ContabSys.Properties.Resources.imgbin_cleaning_computer_icons_tool_spade_cleaner_others_w7xjSvWY22K3VJMzYcVvG5tAR;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.Location = new System.Drawing.Point(1453, 25);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(40, 34);
-            this.button4.TabIndex = 83;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
-            this.button4.MouseHover += new System.EventHandler(this.button4_MouseHover);
             // 
             // tbnome
             // 
             this.tbnome.Location = new System.Drawing.Point(238, 37);
             this.tbnome.Name = "tbnome";
             this.tbnome.Size = new System.Drawing.Size(366, 20);
-            this.tbnome.TabIndex = 12;
+            this.tbnome.TabIndex = 3;
             this.tbnome.TextChanged += new System.EventHandler(this.tbnome_TextChanged);
             // 
             // tbcodoutrosoft
@@ -230,7 +185,7 @@ namespace ContabSys
             this.tbcodoutrosoft.Location = new System.Drawing.Point(122, 37);
             this.tbcodoutrosoft.Name = "tbcodoutrosoft";
             this.tbcodoutrosoft.Size = new System.Drawing.Size(108, 20);
-            this.tbcodoutrosoft.TabIndex = 12;
+            this.tbcodoutrosoft.TabIndex = 2;
             this.tbcodoutrosoft.TextChanged += new System.EventHandler(this.tbcodoutrosoft_TextChanged);
             // 
             // textBox4
@@ -238,7 +193,7 @@ namespace ContabSys
             this.textBox4.Location = new System.Drawing.Point(1193, 37);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(146, 20);
-            this.textBox4.TabIndex = 10;
+            this.textBox4.TabIndex = 7;
             this.textBox4.TextChanged += new System.EventHandler(this.tbnif_TextChanged);
             // 
             // textBox3
@@ -246,7 +201,7 @@ namespace ContabSys
             this.textBox3.Location = new System.Drawing.Point(1035, 37);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(152, 20);
-            this.textBox3.TabIndex = 10;
+            this.textBox3.TabIndex = 6;
             this.textBox3.TextChanged += new System.EventHandler(this.tbnif_TextChanged);
             // 
             // textBox2
@@ -254,7 +209,7 @@ namespace ContabSys
             this.textBox2.Location = new System.Drawing.Point(762, 37);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(267, 20);
-            this.textBox2.TabIndex = 10;
+            this.textBox2.TabIndex = 5;
             this.textBox2.TextChanged += new System.EventHandler(this.tbnif_TextChanged);
             // 
             // tbnif
@@ -262,7 +217,7 @@ namespace ContabSys
             this.tbnif.Location = new System.Drawing.Point(610, 37);
             this.tbnif.Name = "tbnif";
             this.tbnif.Size = new System.Drawing.Size(146, 20);
-            this.tbnif.TabIndex = 10;
+            this.tbnif.TabIndex = 4;
             this.tbnif.TextChanged += new System.EventHandler(this.tbnif_TextChanged);
             // 
             // label8
@@ -333,7 +288,7 @@ namespace ContabSys
             this.tbcod.Location = new System.Drawing.Point(17, 37);
             this.tbcod.Name = "tbcod";
             this.tbcod.Size = new System.Drawing.Size(96, 20);
-            this.tbcod.TabIndex = 10;
+            this.tbcod.TabIndex = 1;
             this.tbcod.TextChanged += new System.EventHandler(this.tbcod_TextChanged);
             // 
             // label1
@@ -345,43 +300,22 @@ namespace ContabSys
             this.label1.TabIndex = 9;
             this.label1.Text = "Cod. Cliente";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(163, 8);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 38);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Criar Cliente";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnConfig
-            // 
-            this.btnConfig.BackColor = System.Drawing.Color.Transparent;
-            this.btnConfig.BackgroundImage = global::ContabSys.Properties.Resources.rest_api_icon_24;
-            this.btnConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConfig.Location = new System.Drawing.Point(25, 7);
-            this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(43, 35);
-            this.btnConfig.TabIndex = 0;
-            this.btnConfig.UseVisualStyleBackColor = false;
-            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
-            this.btnConfig.MouseLeave += new System.EventHandler(this.btnConfig_MouseLeave);
-            this.btnConfig.MouseHover += new System.EventHandler(this.btnConfig_MouseHover);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 165);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(15, 20, 15, 15);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1514, 619);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.TabIndex = 30;
+            this.dataGridView1.TabStop = false;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -393,9 +327,81 @@ namespace ContabSys
             this.button17.Location = new System.Drawing.Point(78, 8);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(42, 34);
-            this.button17.TabIndex = 88;
+            this.button17.TabIndex = 11;
             this.button17.UseVisualStyleBackColor = false;
             this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // button6
+            // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackgroundImage = global::ContabSys.Properties.Resources._207_2078731_minimize_maximize_icon_png_window_minimize_button_white;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.Location = new System.Drawing.Point(1435, 7);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(35, 35);
+            this.button6.TabIndex = 84;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.MouseLeave += new System.EventHandler(this.button6_MouseLeave);
+            this.button6.MouseHover += new System.EventHandler(this.button6_MouseHover);
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackgroundImage = global::ContabSys.Properties.Resources.on_off_icon_15;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Location = new System.Drawing.Point(1476, 7);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(35, 35);
+            this.button5.TabIndex = 83;
+            this.button5.TabStop = false;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
+            this.button5.MouseHover += new System.EventHandler(this.button5_MouseHover);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = global::ContabSys.Properties.Resources.imgbin_cleaning_computer_icons_tool_spade_cleaner_others_w7xjSvWY22K3VJMzYcVvG5tAR;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.Location = new System.Drawing.Point(1453, 25);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(40, 34);
+            this.button4.TabIndex = 9;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
+            this.button4.MouseHover += new System.EventHandler(this.button4_MouseHover);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(162, 7);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(125, 38);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Clientes";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnConfig
+            // 
+            this.btnConfig.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfig.BackgroundImage = global::ContabSys.Properties.Resources.rest_api_icon_24;
+            this.btnConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConfig.Location = new System.Drawing.Point(25, 7);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(43, 35);
+            this.btnConfig.TabIndex = 14;
+            this.btnConfig.UseVisualStyleBackColor = false;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            this.btnConfig.MouseLeave += new System.EventHandler(this.btnConfig_MouseLeave);
+            this.btnConfig.MouseHover += new System.EventHandler(this.btnConfig_MouseHover);
             // 
             // INICIO
             // 
@@ -411,6 +417,7 @@ namespace ContabSys
             this.Name = "INICIO";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "INICIO";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.INICIO_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

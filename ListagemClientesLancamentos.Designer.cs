@@ -80,7 +80,8 @@ namespace ContabSys
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1470, 680);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabIndex = 90;
+            this.dataGridView1.TabStop = false;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel1
@@ -130,7 +131,7 @@ namespace ContabSys
             this.button2.Location = new System.Drawing.Point(1432, 38);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(31, 29);
-            this.button2.TabIndex = 61;
+            this.button2.TabIndex = 10;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -139,7 +140,7 @@ namespace ContabSys
             this.textBox10.Location = new System.Drawing.Point(10, 42);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(66, 20);
-            this.textBox10.TabIndex = 9;
+            this.textBox10.TabIndex = 1;
             this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // label14
@@ -183,7 +184,7 @@ namespace ContabSys
             this.textBox13.Location = new System.Drawing.Point(1206, 42);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(220, 20);
-            this.textBox13.TabIndex = 6;
+            this.textBox13.TabIndex = 9;
             this.textBox13.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             // 
             // textBox12
@@ -191,7 +192,7 @@ namespace ContabSys
             this.textBox12.Location = new System.Drawing.Point(783, 42);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(124, 20);
-            this.textBox12.TabIndex = 7;
+            this.textBox12.TabIndex = 6;
             this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
             // label10
@@ -217,7 +218,7 @@ namespace ContabSys
             this.textBox14.Location = new System.Drawing.Point(911, 42);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(210, 20);
-            this.textBox14.TabIndex = 5;
+            this.textBox14.TabIndex = 7;
             this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
             // 
             // label13
@@ -268,7 +269,7 @@ namespace ContabSys
             this.textBox17.Location = new System.Drawing.Point(313, 42);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(103, 20);
-            this.textBox17.TabIndex = 10;
+            this.textBox17.TabIndex = 3;
             this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
             // 
             // textBox16
@@ -276,7 +277,7 @@ namespace ContabSys
             this.textBox16.Location = new System.Drawing.Point(420, 42);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(221, 20);
-            this.textBox16.TabIndex = 3;
+            this.textBox16.TabIndex = 4;
             this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
             // 
             // textBox15
@@ -284,7 +285,7 @@ namespace ContabSys
             this.textBox15.Location = new System.Drawing.Point(644, 42);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(135, 20);
-            this.textBox15.TabIndex = 4;
+            this.textBox15.TabIndex = 5;
             this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
             // ListagemClientesLancamentos

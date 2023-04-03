@@ -70,6 +70,7 @@ namespace ContabSys
             this.txtEnviadoPor.Name = "txtEnviadoPor";
             this.txtEnviadoPor.Size = new System.Drawing.Size(468, 21);
             this.txtEnviadoPor.TabIndex = 7;
+            this.txtEnviadoPor.TabStop = false;
             this.txtEnviadoPor.Text = "marcosmagalhaes86@outlook.pt";
             // 
             // lblRemetente
@@ -87,7 +88,7 @@ namespace ContabSys
             this.txtAssuntoTitulo.Location = new System.Drawing.Point(79, 75);
             this.txtAssuntoTitulo.Name = "txtAssuntoTitulo";
             this.txtAssuntoTitulo.Size = new System.Drawing.Size(468, 21);
-            this.txtAssuntoTitulo.TabIndex = 5;
+            this.txtAssuntoTitulo.TabIndex = 1;
             // 
             // txtEnviarPara
             // 
@@ -95,7 +96,8 @@ namespace ContabSys
             this.txtEnviarPara.Location = new System.Drawing.Point(79, 47);
             this.txtEnviarPara.Name = "txtEnviarPara";
             this.txtEnviarPara.Size = new System.Drawing.Size(468, 21);
-            this.txtEnviarPara.TabIndex = 3;
+            this.txtEnviarPara.TabIndex = 20;
+            this.txtEnviarPara.TabStop = false;
             this.txtEnviarPara.Text = "marcos.magalhaes@samsys.pt";
             // 
             // lblSubjectLine
@@ -134,7 +136,7 @@ namespace ContabSys
             this.txtMensagem.Multiline = true;
             this.txtMensagem.Name = "txtMensagem";
             this.txtMensagem.Size = new System.Drawing.Size(541, 263);
-            this.txtMensagem.TabIndex = 0;
+            this.txtMensagem.TabIndex = 2;
             // 
             // btnCancelar
             // 
@@ -145,6 +147,7 @@ namespace ContabSys
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 33);
             this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.TabStop = false;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
@@ -159,7 +162,7 @@ namespace ContabSys
             this.btnEnviar.Location = new System.Drawing.Point(23, 434);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(75, 33);
-            this.btnEnviar.TabIndex = 8;
+            this.btnEnviar.TabIndex = 3;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = false;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);

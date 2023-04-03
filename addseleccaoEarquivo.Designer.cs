@@ -53,11 +53,12 @@ namespace ContabSys
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(44, 191);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(127, 20);
-            this.dateTimePicker1.TabIndex = 36;
+            this.dateTimePicker1.Size = new System.Drawing.Size(127, 21);
+            this.dateTimePicker1.TabIndex = 2;
             // 
             // tbnif
             // 
@@ -66,6 +67,7 @@ namespace ContabSys
             this.tbnif.ReadOnly = true;
             this.tbnif.Size = new System.Drawing.Size(294, 20);
             this.tbnif.TabIndex = 31;
+            this.tbnif.TabStop = false;
             // 
             // tbnomecliente
             // 
@@ -74,6 +76,7 @@ namespace ContabSys
             this.tbnomecliente.ReadOnly = true;
             this.tbnomecliente.Size = new System.Drawing.Size(294, 20);
             this.tbnomecliente.TabIndex = 32;
+            this.tbnomecliente.TabStop = false;
             // 
             // tbobs
             // 
@@ -81,7 +84,7 @@ namespace ContabSys
             this.tbobs.Multiline = true;
             this.tbobs.Name = "tbobs";
             this.tbobs.Size = new System.Drawing.Size(541, 77);
-            this.tbobs.TabIndex = 33;
+            this.tbobs.TabIndex = 1;
             // 
             // tbcodcliente
             // 
@@ -90,6 +93,7 @@ namespace ContabSys
             this.tbcodcliente.ReadOnly = true;
             this.tbcodcliente.Size = new System.Drawing.Size(112, 20);
             this.tbcodcliente.TabIndex = 34;
+            this.tbcodcliente.TabStop = false;
             // 
             // tbidcliente
             // 
@@ -98,6 +102,7 @@ namespace ContabSys
             this.tbidcliente.ReadOnly = true;
             this.tbidcliente.Size = new System.Drawing.Size(112, 20);
             this.tbidcliente.TabIndex = 35;
+            this.tbidcliente.TabStop = false;
             // 
             // label3
             // 
@@ -158,10 +163,11 @@ namespace ContabSys
             this.btncancelar.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btncancelar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.btncancelar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btncancelar.Location = new System.Drawing.Point(512, 189);
+            this.btncancelar.Location = new System.Drawing.Point(512, 192);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(73, 33);
             this.btncancelar.TabIndex = 20;
+            this.btncancelar.TabStop = false;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = false;
             this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
@@ -172,11 +178,12 @@ namespace ContabSys
             // 
             this.btnUPDATE.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnUPDATE.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUPDATE.Location = new System.Drawing.Point(196, 191);
+            this.btnUPDATE.Location = new System.Drawing.Point(197, 190);
             this.btnUPDATE.Name = "btnUPDATE";
-            this.btnUPDATE.Size = new System.Drawing.Size(92, 29);
+            this.btnUPDATE.Size = new System.Drawing.Size(90, 32);
             this.btnUPDATE.TabIndex = 22;
-            this.btnUPDATE.Text = "Update";
+            this.btnUPDATE.TabStop = false;
+            this.btnUPDATE.Text = "Atualizar";
             this.btnUPDATE.UseVisualStyleBackColor = false;
             this.btnUPDATE.Click += new System.EventHandler(this.btnUPDATE_Click);
             this.btnUPDATE.MouseLeave += new System.EventHandler(this.btnUPDATE_MouseLeave);
@@ -186,10 +193,11 @@ namespace ContabSys
             // 
             this.btnEditar.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnEditar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnEditar.Location = new System.Drawing.Point(344, 187);
+            this.btnEditar.Location = new System.Drawing.Point(333, 191);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(125, 51);
+            this.btnEditar.Size = new System.Drawing.Size(125, 39);
             this.btnEditar.TabIndex = 23;
+            this.btnEditar.TabStop = false;
             this.btnEditar.Text = "Fazer Lançamento para outra entidade";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -205,6 +213,7 @@ namespace ContabSys
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(92, 33);
             this.btnGravar.TabIndex = 24;
+            this.btnGravar.TabStop = false;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = false;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
@@ -215,10 +224,11 @@ namespace ContabSys
             // 
             this.btnnovo.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnnovo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnnovo.Location = new System.Drawing.Point(196, 191);
+            this.btnnovo.Location = new System.Drawing.Point(197, 190);
             this.btnnovo.Name = "btnnovo";
-            this.btnnovo.Size = new System.Drawing.Size(92, 29);
+            this.btnnovo.Size = new System.Drawing.Size(92, 31);
             this.btnnovo.TabIndex = 56;
+            this.btnnovo.TabStop = false;
             this.btnnovo.Text = "Novo";
             this.btnnovo.UseVisualStyleBackColor = false;
             this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
@@ -229,7 +239,7 @@ namespace ContabSys
             // 
             this.lbldelete.AutoSize = true;
             this.lbldelete.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldelete.Location = new System.Drawing.Point(423, 248);
+            this.lbldelete.Location = new System.Drawing.Point(433, 248);
             this.lbldelete.Name = "lbldelete";
             this.lbldelete.Size = new System.Drawing.Size(109, 15);
             this.lbldelete.TabIndex = 58;
@@ -241,10 +251,11 @@ namespace ContabSys
             this.btnDelete.BackColor = System.Drawing.Color.Transparent;
             this.btnDelete.BackgroundImage = global::ContabSys.Properties.Resources.delete_icon_png_16;
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDelete.Location = new System.Drawing.Point(537, 233);
+            this.btnDelete.Location = new System.Drawing.Point(548, 241);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(47, 44);
+            this.btnDelete.Size = new System.Drawing.Size(37, 29);
             this.btnDelete.TabIndex = 57;
+            this.btnDelete.TabStop = false;
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             this.btnDelete.MouseLeave += new System.EventHandler(this.btnDelete_MouseLeave);
@@ -275,6 +286,7 @@ namespace ContabSys
             this.Controls.Add(this.btnUPDATE);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGravar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "addseleccaoEarquivo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

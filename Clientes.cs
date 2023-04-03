@@ -359,6 +359,13 @@ tbCodOutroSoft.Text = "";
         {
             limpartudo();
             btnGravar.Enabled = true;
+            btnGravar.Visible = true;
+            tbCodOutroSoft.Focus();
+
+
+            btnNovo.Enabled = false;
+        
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -384,12 +391,25 @@ tbCodOutroSoft.Text = "";
                 LerDadosClientesDataGrid();
 
 
+                btnUpdate.Visible = false;
+                btnGravar.Enabled = false;
+                btnGravar.Visible = true;
+                btnEditar.Enabled = false;
+                limpartudo();
+
+
             }
 
             else if (dialogResult == DialogResult.No)
             {
                 //caso pretenda fazer outra coisa qualuqer.
                 textBox10.Focus();
+
+                btnUpdate.Visible = false;
+                btnGravar.Enabled = false;
+                btnGravar.Visible = true;
+                btnEditar.Enabled = false;
+                limpartudo();
             }
         }
 
@@ -397,8 +417,14 @@ tbCodOutroSoft.Text = "";
         {
             string insertQuery = "INSERT INTO clientes (Nome,Nif,Morada,Email,Tlm,Tlf,CodOutroSoftware,Obs) VALUES('" + tbNome.Text + "','" + tbNif.Text + "','" + tbMorada.Text + "','" + tbEmail.Text + "','" + tbTlm.Text + "','" + tbTlf.Text + "','" + tbCodOutroSoft.Text + "','" + tbobs.Text + "');";
             executeMyQuery(insertQuery);
-
+            textBox10.Focus();
             LerDadosClientesDataGrid();
+
+
+            btnNovo.Enabled = true;
+            btnGravar.Visible = true;
+            btnGravar.Enabled = false;
+            limpartudo();
 
         }
 
@@ -415,6 +441,13 @@ tbCodOutroSoft.Text = "";
                 btnUpdate.Visible = false;
                 btnGravar.Visible = true;
                 btnGravar.Enabled = false;
+                btnEditar.Enabled = false;
+                textBox10.Focus();
+                limpartudo();
+
+
+
+
             }
 
             else if (dialogResult == DialogResult.No)
@@ -469,13 +502,23 @@ tbCodOutroSoft.Text = "";
                 tbobs.Text = dgvClientes.CurrentRow.Cells[8].Value.ToString();
 
                 btnUpdate.Visible = true;
+                btnUpdate.Enabled = true;
                 btnGravar.Visible = false;
+                tbCodOutroSoft.Focus();
+                btnEditar.Enabled = false;
+
+
             }
 
             else if (dialogResult == DialogResult.No)
             {
                 //caso pretenda fazer outra coisa qualuqer.
                 textBox10.Focus();
+                btnUpdate.Enabled = false;
+                btnUpdate.Visible = false;
+                btnUpdate.Enabled = false;
+                btnGravar.Visible = true;
+                btnEditar.Enabled = false;
             }
         }
 
@@ -556,6 +599,11 @@ tbCodOutroSoft.Text = "";
         {
             btnEditar.Enabled = true;
             btnGravar.Enabled = false;
+        }
+
+        private void btnrefresh_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -251,6 +251,13 @@ namespace ContabSys
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            CriarUtilizadorAdmin CriarUtilizadorAdmin = new CriarUtilizadorAdmin();
+            CriarUtilizadorAdmin.ShowDialog();
+        }
     }
     }
 

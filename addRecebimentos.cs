@@ -111,7 +111,20 @@ namespace ContabSys
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult dialogResult = MessageBox.Show("Tem a certeza que pretende Fechar formulário sem fazer alterações?", " !! FERCHAR SEM ALTERAÇÕES  !!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Close();
+
+
+
+            }
+
+            else if (dialogResult == DialogResult.No)
+            {
+                //caso pretenda fazer outra coisa qualuqer.
+                btncancelar.Focus();
+            }
         }
 
         private void btnRemover_Click(object sender, EventArgs e)

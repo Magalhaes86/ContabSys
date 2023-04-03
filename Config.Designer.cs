@@ -29,9 +29,11 @@ namespace ContabSys
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Config));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -41,6 +43,7 @@ namespace ContabSys
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnsavesettings = new System.Windows.Forms.Button();
             this.tbbasedados = new System.Windows.Forms.TextBox();
@@ -68,7 +71,6 @@ namespace ContabSys
             this.label13 = new System.Windows.Forms.Label();
             this.btnobteremail = new System.Windows.Forms.Button();
             this.btngravardadosemail = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -114,12 +116,21 @@ namespace ContabSys
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "RESPOSIÇÃO BASE DE DADOS";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 54);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Localização";
+            // 
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(389, 47);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(38, 23);
-            this.button7.TabIndex = 3;
+            this.button7.TabIndex = 13;
             this.button7.Text = "...";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -130,16 +141,19 @@ namespace ContabSys
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(119, 38);
             this.button5.TabIndex = 2;
+            this.button5.TabStop = false;
             this.button5.Text = "Restaurar";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox4
             // 
+            this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(85, 47);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(286, 20);
             this.textBox4.TabIndex = 1;
+            this.textBox4.TabStop = false;
             // 
             // groupBox1
             // 
@@ -160,7 +174,7 @@ namespace ContabSys
             this.button3.Location = new System.Drawing.Point(457, 47);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 35);
-            this.button3.TabIndex = 2;
+            this.button3.TabIndex = 12;
             this.button3.Text = "Backup";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -170,16 +184,18 @@ namespace ContabSys
             this.btnlocBackup.Location = new System.Drawing.Point(394, 53);
             this.btnlocBackup.Name = "btnlocBackup";
             this.btnlocBackup.Size = new System.Drawing.Size(37, 23);
-            this.btnlocBackup.TabIndex = 2;
+            this.btnlocBackup.TabIndex = 11;
             this.btnlocBackup.Text = "...";
             this.btnlocBackup.UseVisualStyleBackColor = true;
             // 
             // textBox3
             // 
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(80, 53);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(295, 20);
             this.textBox3.TabIndex = 1;
+            this.textBox3.TabStop = false;
             // 
             // label9
             // 
@@ -193,6 +209,7 @@ namespace ContabSys
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Window;
+            this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.btnsavesettings);
             this.panel3.Controls.Add(this.tbbasedados);
@@ -211,6 +228,16 @@ namespace ContabSys
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(405, 379);
             this.panel3.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(243, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(125, 30);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Criar Utilizador ";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -237,28 +264,28 @@ namespace ContabSys
             this.tbbasedados.Location = new System.Drawing.Point(119, 236);
             this.tbbasedados.Name = "tbbasedados";
             this.tbbasedados.Size = new System.Drawing.Size(199, 20);
-            this.tbbasedados.TabIndex = 1;
+            this.tbbasedados.TabIndex = 5;
             // 
             // tbpassword
             // 
             this.tbpassword.Location = new System.Drawing.Point(86, 191);
             this.tbpassword.Name = "tbpassword";
             this.tbpassword.Size = new System.Drawing.Size(282, 20);
-            this.tbpassword.TabIndex = 1;
+            this.tbpassword.TabIndex = 4;
             // 
             // tbuser
             // 
             this.tbuser.Location = new System.Drawing.Point(86, 141);
             this.tbuser.Name = "tbuser";
             this.tbuser.Size = new System.Drawing.Size(282, 20);
-            this.tbuser.TabIndex = 1;
+            this.tbuser.TabIndex = 3;
             // 
             // tbporta
             // 
             this.tbporta.Location = new System.Drawing.Point(86, 97);
             this.tbporta.Name = "tbporta";
             this.tbporta.Size = new System.Drawing.Size(282, 20);
-            this.tbporta.TabIndex = 1;
+            this.tbporta.TabIndex = 2;
             // 
             // label6
             // 
@@ -359,7 +386,7 @@ namespace ContabSys
             this.tbemailpassword.Location = new System.Drawing.Point(537, 90);
             this.tbemailpassword.Name = "tbemailpassword";
             this.tbemailpassword.Size = new System.Drawing.Size(312, 21);
-            this.tbemailpassword.TabIndex = 3;
+            this.tbemailpassword.TabIndex = 10;
             // 
             // tbemailuser
             // 
@@ -367,7 +394,7 @@ namespace ContabSys
             this.tbemailuser.Location = new System.Drawing.Point(105, 90);
             this.tbemailuser.Name = "tbemailuser";
             this.tbemailuser.Size = new System.Drawing.Size(330, 21);
-            this.tbemailuser.TabIndex = 3;
+            this.tbemailuser.TabIndex = 9;
             // 
             // tbemailporta
             // 
@@ -375,7 +402,7 @@ namespace ContabSys
             this.tbemailporta.Location = new System.Drawing.Point(951, 43);
             this.tbemailporta.Name = "tbemailporta";
             this.tbemailporta.Size = new System.Drawing.Size(95, 21);
-            this.tbemailporta.TabIndex = 3;
+            this.tbemailporta.TabIndex = 8;
             // 
             // tbemail
             // 
@@ -383,7 +410,7 @@ namespace ContabSys
             this.tbemail.Location = new System.Drawing.Point(457, 43);
             this.tbemail.Name = "tbemail";
             this.tbemail.Size = new System.Drawing.Size(436, 21);
-            this.tbemail.TabIndex = 3;
+            this.tbemail.TabIndex = 7;
             // 
             // tbsmtpserver
             // 
@@ -391,7 +418,7 @@ namespace ContabSys
             this.tbsmtpserver.Location = new System.Drawing.Point(105, 43);
             this.tbsmtpserver.Name = "tbsmtpserver";
             this.tbsmtpserver.Size = new System.Drawing.Size(269, 21);
-            this.tbsmtpserver.TabIndex = 3;
+            this.tbsmtpserver.TabIndex = 6;
             // 
             // label17
             // 
@@ -446,9 +473,9 @@ namespace ContabSys
             // btnobteremail
             // 
             this.btnobteremail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnobteremail.Location = new System.Drawing.Point(979, 90);
+            this.btnobteremail.Location = new System.Drawing.Point(951, 90);
             this.btnobteremail.Name = "btnobteremail";
-            this.btnobteremail.Size = new System.Drawing.Size(67, 42);
+            this.btnobteremail.Size = new System.Drawing.Size(95, 31);
             this.btnobteremail.TabIndex = 1;
             this.btnobteremail.Text = "Obter Dados";
             this.btnobteremail.UseVisualStyleBackColor = true;
@@ -457,7 +484,7 @@ namespace ContabSys
             // btngravardadosemail
             // 
             this.btngravardadosemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btngravardadosemail.Location = new System.Drawing.Point(870, 90);
+            this.btngravardadosemail.Location = new System.Drawing.Point(860, 90);
             this.btngravardadosemail.Name = "btngravardadosemail";
             this.btngravardadosemail.Size = new System.Drawing.Size(81, 31);
             this.btngravardadosemail.TabIndex = 0;
@@ -465,24 +492,17 @@ namespace ContabSys
             this.btngravardadosemail.UseVisualStyleBackColor = true;
             this.btngravardadosemail.Click += new System.EventHandler(this.btngravardadosemail_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 54);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Localização";
-            // 
             // Config
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1089, 578);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Config";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Config";
+            this.Text = "Configurações";
             this.Load += new System.EventHandler(this.Config_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -541,5 +561,6 @@ namespace ContabSys
         private System.Windows.Forms.Button btnobteremail;
         private System.Windows.Forms.Button btngravardadosemail;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button2;
     }
 }

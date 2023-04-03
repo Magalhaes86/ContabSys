@@ -39,8 +39,8 @@ namespace ContabSys
 
         private void btnConfig_Click(object sender, EventArgs e)
         {
-             Config frmConfig = new Config();
-            frmConfig.ShowDialog();
+            password password = new password();
+            password.ShowDialog();
         }
 
         private void INICIO_Load(object sender, EventArgs e)
@@ -366,6 +366,16 @@ namespace ContabSys
         private void button17_Click(object sender, EventArgs e)
         {
             LerDadosParaDataGrid();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
     }
