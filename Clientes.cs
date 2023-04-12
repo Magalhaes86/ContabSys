@@ -39,13 +39,13 @@ namespace ContabSys
             DataGridViewColumn column0 = dgvClientes.Columns[0];
             column0.Width = 50;
             DataGridViewColumn column1 = dgvClientes.Columns[1];
-            column1.Width = 200;
+            column1.Width = 170;
             DataGridViewColumn column2 = dgvClientes.Columns[2];
             column2.Width = 75;
             DataGridViewColumn column3 = dgvClientes.Columns[3];
-            column3.Width = 200;
+            column3.Width = 170;
             DataGridViewColumn column4 = dgvClientes.Columns[4];
-            column4.Width = 200;
+            column4.Width = 170;
             DataGridViewColumn column5 = dgvClientes.Columns[5];
             column5.Width = 75;
             DataGridViewColumn column6 = dgvClientes.Columns[6];
@@ -53,7 +53,9 @@ namespace ContabSys
             DataGridViewColumn column7 = dgvClientes.Columns[7];
             column7.Width = 98;
             DataGridViewColumn column8 = dgvClientes.Columns[8];
-            column8.Width = 150;
+            column8.Width = 100;
+            DataGridViewColumn column9 = dgvClientes.Columns[9];
+            column9.Width = 100;
 
 
         }
@@ -70,6 +72,8 @@ namespace ContabSys
             textBox12.Text = "";
             textBox14.Text = "";
             textBox13.Text = "";
+            tbnisslist.Text = "";
+            LerDadosClientesDataGrid();
         }
 
         public void limpartudo()
@@ -78,6 +82,7 @@ namespace ContabSys
             tbCodOutroSoft.Text = "";
             tbNome.Text = "";
             tbNif.Text = "";
+            tbniss.Text = "";
             tbEmail.Text = "";
             tbTlm.Text = "";
             tbTlf.Text = "";
@@ -92,6 +97,8 @@ namespace ContabSys
             textBox12.Text = "";
             textBox14.Text = "";
             textBox13.Text = "";
+            tbnisslist.Text = "";
+            LerDadosClientesDataGrid();
         }
 
                 private void Clientes_Load(object sender, EventArgs e)
@@ -123,7 +130,7 @@ namespace ContabSys
             tbTlf.Text = dgvClientes.CurrentRow.Cells[6].Value.ToString();
             tbCodOutroSoft.Text = dgvClientes.CurrentRow.Cells[7].Value.ToString();
             tbobs.Text = dgvClientes.CurrentRow.Cells[8].Value.ToString();
-           
+            tbniss.Text = dgvClientes.CurrentRow.Cells[9].Value.ToString();
         }
 
         public void openConnection()
@@ -380,7 +387,7 @@ namespace ContabSys
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            string insertQuery = "INSERT INTO clientes (Nome,Nif,Morada,Email,Tlm,Tlf,CodOutroSoftware,Obs) VALUES('" + tbNome.Text + "','" + tbNif.Text + "','" + tbMorada.Text + "','" + tbEmail.Text + "','" + tbTlm.Text + "','" + tbTlf.Text + "','" + tbCodOutroSoft.Text + "','" + tbobs.Text + "');";
+            string insertQuery = "INSERT INTO clientes (Nome,Nif,Morada,Email,Tlm,Tlf,CodOutroSoftware,Obs,NISS) VALUES('" + tbNome.Text + "','" + tbNif.Text + "','" + tbMorada.Text + "','" + tbEmail.Text + "','" + tbTlm.Text + "','" + tbTlf.Text + "','" + tbCodOutroSoft.Text + "','" + tbobs.Text + "','" + tbniss.Text + "');";
             executeMyQuery(insertQuery);
             textBox10.Focus();
             LerDadosClientesDataGrid();
@@ -400,7 +407,7 @@ namespace ContabSys
             if (dialogResult == DialogResult.Yes)
             {
 
-                string updateQuery = "UPDATE clientes SET Nome='" + tbNome.Text + "',Nif='" + tbNif.Text + "',Morada='" + tbMorada.Text + "',Email='" + tbEmail.Text + "',Tlm='" + tbTlm.Text + "',Tlf='" + tbTlf.Text + "',CodOutroSoftware='" + tbCodOutroSoft.Text + "',Obs='" + tbobs.Text + "' WHERE ID =" + int.Parse(tbId.Text);
+                string updateQuery = "UPDATE clientes SET Nome='" + tbNome.Text + "',Nif='" + tbNif.Text + "',Morada='" + tbMorada.Text + "',Email='" + tbEmail.Text + "',Tlm='" + tbTlm.Text + "',Tlf='" + tbTlf.Text + "',CodOutroSoftware='" + tbCodOutroSoft.Text + "',Obs='" + tbobs.Text + "',NISS='" + tbniss.Text + "' WHERE ID =" + int.Parse(tbId.Text);
                 executeMyQueryUpdate(updateQuery);
                 LerDadosClientesDataGrid();
                 btnUpdate.Visible = false;
@@ -465,6 +472,7 @@ namespace ContabSys
                 tbTlf.Text = dgvClientes.CurrentRow.Cells[6].Value.ToString();
                 tbCodOutroSoft.Text = dgvClientes.CurrentRow.Cells[7].Value.ToString();
                 tbobs.Text = dgvClientes.CurrentRow.Cells[8].Value.ToString();
+                tbniss.Text = dgvClientes.CurrentRow.Cells[9].Value.ToString();
 
                 btnUpdate.Visible = true;
                 btnUpdate.Enabled = true;

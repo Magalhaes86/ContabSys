@@ -146,6 +146,7 @@ namespace ContabSys
             textBox12.Text = "";
             textBox14.Text = "";
             textBox13.Text = "";
+            textBox5.Text = "";
         }
 
       
@@ -159,6 +160,14 @@ namespace ContabSys
                 fc.tbnif.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
                 Close();
             }
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView1.Columns[9].DataPropertyName + ", System.String) like '%" + textBox5.Text.Replace("'", "''") + "%'");
+            dataGridView1.DataSource = bs;
         }
     }
 }

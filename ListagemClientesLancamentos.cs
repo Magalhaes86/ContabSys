@@ -112,13 +112,7 @@ namespace ContabSys
             dataGridView1.DataSource = bs;
         }
 
-        private void textBox13_TextChanged(object sender, EventArgs e)
-        {
-            BindingSource bs = new BindingSource();
-            bs.DataSource = dataGridView1.DataSource;
-            bs.Filter = string.Format("CONVERT(" + this.dataGridView1.Columns[8].DataPropertyName + ", System.String) like '%" + textBox13.Text.Replace("'", "''") + "%'");
-            dataGridView1.DataSource = bs;
-        }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -130,7 +124,8 @@ namespace ContabSys
             textBox15.Text = "";
             textBox12.Text = "";
             textBox14.Text = "";
-            textBox13.Text = "";
+           textBox1.Text = "";
+            textBox5.Text = "";
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -147,6 +142,86 @@ namespace ContabSys
                 Close();
 
             }
+        }
+
+        private void textBox10_TextChanged_1(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView1.Columns[0].DataPropertyName + ", System.String) like '%" + textBox10.Text.Replace("'", "''") + "%'");
+            dataGridView1.DataSource = bs;
+        }
+
+        private void textBox18_TextChanged_1(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView1.Columns[1].DataPropertyName + ", System.String) like '%" + textBox18.Text.Replace("'", "''") + "%'");
+            dataGridView1.DataSource = bs;
+        }
+
+        private void textBox17_TextChanged_1(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView1.Columns[2].DataPropertyName + ", System.String) like '%" + textBox17.Text.Replace("'", "''") + "%'");
+            dataGridView1.DataSource = bs;
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView1.Columns[9].DataPropertyName + ", System.String) like '%" + textBox5.Text.Replace("'", "''") + "%'");
+            dataGridView1.DataSource = bs;
+        }
+
+        private void textBox16_TextChanged_1(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView1.Columns[4].DataPropertyName + ", System.String) like '%" + textBox16.Text.Replace("'", "''") + "%'");
+            dataGridView1.DataSource = bs;
+        }
+
+        private void textBox15_TextChanged_1(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView1.Columns[5].DataPropertyName + ", System.String) like '%" + textBox15.Text.Replace("'", "''") + "%'");
+            dataGridView1.DataSource = bs;
+        }
+
+        private void textBox12_TextChanged_1(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView1.Columns[6].DataPropertyName + ", System.String) like '%" + textBox12.Text.Replace("'", "''") + "%'");
+            dataGridView1.DataSource = bs;
+        }
+
+        private void textBox14_TextChanged_1(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView1.Columns[3].DataPropertyName + ", System.String) like '%" + textBox14.Text.Replace("'", "''") + "%'");
+            dataGridView1.DataSource = bs;
+        }
+
+        private void textBox11_TextChanged_1(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView1.Columns[7].DataPropertyName + ", System.String) like '%" + textBox11.Text.Replace("'", "''") + "%'");
+            dataGridView1.DataSource = bs;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = string.Format("CONVERT(" + this.dataGridView1.Columns[8].DataPropertyName + ", System.String) like '%" + textBox1.Text.Replace("'", "''") + "%'");
+            dataGridView1.DataSource = bs;
         }
     }
 }

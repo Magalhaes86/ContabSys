@@ -258,6 +258,87 @@ namespace ContabSys
             CriarUtilizadorAdmin CriarUtilizadorAdmin = new CriarUtilizadorAdmin();
             CriarUtilizadorAdmin.ShowDialog();
         }
+
+        public void deletecliente()
+        {
+            string selectQuery = " SET FOREIGN_KEY_CHECKS = 0; TRUNCATE table clientes;   SET FOREIGN_KEY_CHECKS = 1;";
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection);
+            adapter.Fill(table);
+
+        }
+
+        public void deletelancamentos()
+        {
+            string selectQuery = " SET FOREIGN_KEY_CHECKS = 0; TRUNCATE table lancamentos;   SET FOREIGN_KEY_CHECKS = 1;";
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection);
+            adapter.Fill(table);
+
+        }
+
+
+        public void deleterecebimentos()
+        {
+            string selectQuery = " SET FOREIGN_KEY_CHECKS = 0; TRUNCATE table recebimentos;   SET FOREIGN_KEY_CHECKS = 1;";
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection);
+            adapter.Fill(table);
+
+        }
+
+        public void deleterecepcaodocumentos()
+        {
+            string selectQuery = " SET FOREIGN_KEY_CHECKS = 0; TRUNCATE table recepcaodocumentos;   SET FOREIGN_KEY_CHECKS = 1;";
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection);
+            adapter.Fill(table);
+
+        }
+
+        public void deleterecepcaosaft()
+        {
+            string selectQuery = " SET FOREIGN_KEY_CHECKS = 0; TRUNCATE table recepcaosaft;   SET FOREIGN_KEY_CHECKS = 1;";
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection);
+            adapter.Fill(table);
+
+        }
+
+        public void deleteselecaoearquivo()
+        {
+            string selectQuery = " SET FOREIGN_KEY_CHECKS = 0; TRUNCATE table selecaoearquivo;   SET FOREIGN_KEY_CHECKS = 1;";
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection);
+            adapter.Fill(table);
+
+        }
+
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            DialogResult dialogResult = MessageBox.Show("Tem a certeza que pretende LIMPAR A BASE DE DADOS , se limpar nao poderá reverter?", " !! LIMPAR A BASE DE DADOS !!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                deletecliente();
+                deletelancamentos();
+                deleterecebimentos();
+                deleterecepcaodocumentos();
+                deleterecepcaosaft();
+                deleteselecaoearquivo();
+                MessageBox.Show("Base de dados Zerada com sucesso");
+            }
+
+            else if (dialogResult == DialogResult.No)
+            {
+                //caso pretenda fazer outra coisa qualuqer.
+                button2.Focus();
+             
+            }       
+         
+        }
     }
     }
 
