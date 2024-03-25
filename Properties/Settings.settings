@@ -12,10 +12,34 @@
       <Value Profile="(Default)">ContabSysDB</Value>
     </Setting>
     <Setting Name="server" Type="System.String" Scope="User">
-      <Value Profile="(Default)">127.0.0.1</Value>
+      <Value Profile="(Default)">localhost</Value>
     </Setting>
     <Setting Name="porta" Type="System.String" Scope="User">
       <Value Profile="(Default)">3308</Value>
+    </Setting>
+    <Setting Name="SmtpServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">smtp-mail.outlook.com</Value>
+    </Setting>
+    <Setting Name="MailAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">email@outlook.pt</Value>
+    </Setting>
+    <Setting Name="PortaEmail" Type="System.String" Scope="User">
+      <Value Profile="(Default)">587</Value>
+    </Setting>
+    <Setting Name="emailUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">email@outlook.pt</Value>
+    </Setting>
+    <Setting Name="emailPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">passwmail</Value>
+    </Setting>
+    <Setting Name="NIFEmpresa" Type="System.String" Scope="User">
+      <Value Profile="(Default)">231707681</Value>
+    </Setting>
+    <Setting Name="Aplicacao" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DiretoriaLic" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

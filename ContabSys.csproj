@@ -48,8 +48,17 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\WindowsAPICodePack-Core.1.1.1\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.32.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.8.0.32.1\lib\net48\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlBackup, Version=2.3.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MySqlBackup.NET.2.3.8\lib\net48\MySqlBackup.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -70,6 +79,7 @@
       <HintPath>packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -81,6 +91,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addLancamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addLancamentos.Designer.cs">
+      <DependentUpon>addLancamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addRecebimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addRecebimentos.Designer.cs">
+      <DependentUpon>addRecebimentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addRecepcaoSafts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addRecepcaoSafts.Designer.cs">
+      <DependentUpon>addRecepcaoSafts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addrecpcaodocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addrecpcaodocumentos.Designer.cs">
+      <DependentUpon>addrecpcaodocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addseleccaoEarquivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addseleccaoEarquivo.Designer.cs">
+      <DependentUpon>addseleccaoEarquivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,11 +133,29 @@
     <Compile Include="Config.Designer.cs">
       <DependentUpon>Config.cs</DependentUpon>
     </Compile>
+    <Compile Include="CriarUtilizadorAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CriarUtilizadorAdmin.Designer.cs">
+      <DependentUpon>CriarUtilizadorAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FichaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FichaCliente.Designer.cs">
       <DependentUpon>FichaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmclientesaddrecpcaodocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmclientesaddrecpcaodocumentos.Designer.cs">
+      <DependentUpon>frmclientesaddrecpcaodocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTesteEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTesteEmail.Designer.cs">
+      <DependentUpon>frmTesteEmail.cs</DependentUpon>
     </Compile>
     <Compile Include="INICIO.cs">
       <SubType>Form</SubType>
@@ -105,19 +163,97 @@
     <Compile Include="INICIO.Designer.cs">
       <DependentUpon>INICIO.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListagemClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListagemClientes.Designer.cs">
+      <DependentUpon>ListagemClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListagemClientesLancamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListagemClientesLancamentos.Designer.cs">
+      <DependentUpon>ListagemClientesLancamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listagemClientesSeleccaoEArguivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listagemClientesSeleccaoEArguivos.Designer.cs">
+      <DependentUpon>listagemClientesSeleccaoEArguivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListClientesRecebimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListClientesRecebimentos.Designer.cs">
+      <DependentUpon>ListClientesRecebimentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListClientesRecepcaosaft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListClientesRecepcaosaft.Designer.cs">
+      <DependentUpon>ListClientesRecepcaosaft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="password.Designer.cs">
+      <DependentUpon>password.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="addLancamentos.resx">
+      <DependentUpon>addLancamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addRecebimentos.resx">
+      <DependentUpon>addRecebimentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addRecepcaoSafts.resx">
+      <DependentUpon>addRecepcaoSafts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addrecpcaodocumentos.resx">
+      <DependentUpon>addrecpcaodocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addseleccaoEarquivo.resx">
+      <DependentUpon>addseleccaoEarquivo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Config.resx">
       <DependentUpon>Config.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CriarUtilizadorAdmin.resx">
+      <DependentUpon>CriarUtilizadorAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FichaCliente.resx">
       <DependentUpon>FichaCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmclientesaddrecpcaodocumentos.resx">
+      <DependentUpon>frmclientesaddrecpcaodocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTesteEmail.resx">
+      <DependentUpon>frmTesteEmail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="INICIO.resx">
       <DependentUpon>INICIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListagemClientes.resx">
+      <DependentUpon>ListagemClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListagemClientesLancamentos.resx">
+      <DependentUpon>ListagemClientesLancamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listagemClientesSeleccaoEArguivos.resx">
+      <DependentUpon>listagemClientesSeleccaoEArguivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListClientesRecebimentos.resx">
+      <DependentUpon>ListClientesRecebimentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListClientesRecepcaosaft.resx">
+      <DependentUpon>ListClientesRecepcaosaft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="password.resx">
+      <DependentUpon>password.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,6 +263,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -141,6 +278,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-icons-magnifying-glass-symbol-magnifying-glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgbin-cleaning-computer-icons-tool-spade-cleaner-others-w7xjSvWY22K3VJMzYcVvG5tAR.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-close-closed-cross-delete-remove-wrong-x-basic-web-ui-elements-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\on-off-icon-15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize-box-blue-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\207-2078731_minimize-maximize-icon-png-window-minimize-button-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-icon-png-16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rest-api-icon-24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-eye-icon-eye-service-people-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cli1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
