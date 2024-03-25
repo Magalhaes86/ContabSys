@@ -184,7 +184,7 @@ namespace ContabSys
             // 
             this.btnUPDATE.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnUPDATE.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUPDATE.Location = new System.Drawing.Point(197, 203);
+            this.btnUPDATE.Location = new System.Drawing.Point(255, 225);
             this.btnUPDATE.Name = "btnUPDATE";
             this.btnUPDATE.Size = new System.Drawing.Size(92, 33);
             this.btnUPDATE.TabIndex = 39;
@@ -230,7 +230,7 @@ namespace ContabSys
             // 
             this.btnnovo.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnnovo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnnovo.Location = new System.Drawing.Point(197, 203);
+            this.btnnovo.Location = new System.Drawing.Point(196, 225);
             this.btnnovo.Name = "btnnovo";
             this.btnnovo.Size = new System.Drawing.Size(92, 32);
             this.btnnovo.TabIndex = 54;

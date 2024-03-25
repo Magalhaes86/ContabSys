@@ -167,7 +167,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+               
                 tbuser.Focus();
                 Atualizar.Visible = false;
                 btngravar.Enabled = false;
@@ -228,7 +228,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+                
                 btneditar.Enabled = false;
                 tbuser.Focus();
             }
@@ -271,7 +271,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+                
                 tbuser.Focus();
                 Atualizar.Visible = false;
                 btngravar.Enabled = false;
@@ -360,7 +360,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+                 
                 btncancelar.Focus();
             }
         }

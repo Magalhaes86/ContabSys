@@ -21,16 +21,25 @@
       <Value Profile="(Default)">smtp-mail.outlook.com</Value>
     </Setting>
     <Setting Name="MailAddress" Type="System.String" Scope="User">
-      <Value Profile="(Default)">marcosmagalhaes86@outlook.pt</Value>
+      <Value Profile="(Default)">email@outlook.pt</Value>
     </Setting>
     <Setting Name="PortaEmail" Type="System.String" Scope="User">
       <Value Profile="(Default)">587</Value>
     </Setting>
     <Setting Name="emailUser" Type="System.String" Scope="User">
-      <Value Profile="(Default)">marcosmagalhaes86@outlook.pt</Value>
+      <Value Profile="(Default)">email@outlook.pt</Value>
     </Setting>
     <Setting Name="emailPassword" Type="System.String" Scope="User">
-      <Value Profile="(Default)">M@galhae$020486</Value>
+      <Value Profile="(Default)">passwmail</Value>
+    </Setting>
+    <Setting Name="NIFEmpresa" Type="System.String" Scope="User">
+      <Value Profile="(Default)">231707681</Value>
+    </Setting>
+    <Setting Name="Aplicacao" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DiretoriaLic" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

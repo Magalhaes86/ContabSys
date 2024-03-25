@@ -240,24 +240,7 @@ namespace ContabSys
         private void button2_Click(object sender, EventArgs e)
         {
 
-          
-            //if (tbsearchid.Text == "")
-            //{
-            //    MessageBox.Show("Inserir Codigo do Cliente", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    tbsearchid.Focus();
-            //    return;
-
-            //}
-            //try
-            //{
-            //    PesquisarporID();
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Erro : " + ex.Message);
-            //}
-
+           
 
         }
 
@@ -322,7 +305,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+           
                 textBox10.Focus();
             }
         }
@@ -374,7 +357,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+              
                 textBox10.Focus();
 
                 btnUpdate.Visible = false;
@@ -424,7 +407,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+              
                 textBox10.Focus();
             }
 
@@ -444,7 +427,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+                
                 textBox10.Focus();
             }
         }
@@ -485,7 +468,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+               
                 textBox10.Focus();
                 btnUpdate.Enabled = false;
                 btnUpdate.Visible = false;

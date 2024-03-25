@@ -47,7 +47,9 @@ namespace ContabSys
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.tbnisslist = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
@@ -71,6 +73,7 @@ namespace ContabSys
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -81,12 +84,9 @@ namespace ContabSys
             this.tbMorada = new System.Windows.Forms.TextBox();
             this.tbTlm = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
+            this.tbniss = new System.Windows.Forms.TextBox();
             this.tbNif = new System.Windows.Forms.TextBox();
             this.tbNome = new System.Windows.Forms.TextBox();
-            this.tbniss = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.tbnisslist = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -102,9 +102,9 @@ namespace ContabSys
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2115, 95);
+            this.panel1.Size = new System.Drawing.Size(2143, 95);
             this.panel1.TabIndex = 0;
             // 
             // groupBox3
@@ -133,10 +133,10 @@ namespace ContabSys
             this.groupBox3.Controls.Add(this.textBox15);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(2115, 95);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(2143, 95);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pesquisar";
@@ -147,7 +147,7 @@ namespace ContabSys
             this.button2.BackgroundImage = global::ContabSys.Properties.Resources.imgbin_cleaning_computer_icons_tool_spade_cleaner_others_w7xjSvWY22K3VJMzYcVvG5tAR;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Location = new System.Drawing.Point(2056, 42);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(41, 36);
             this.button2.TabIndex = 9;
@@ -157,7 +157,7 @@ namespace ContabSys
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(13, 46);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(90, 22);
             this.textBox10.TabIndex = 1;
@@ -169,7 +169,7 @@ namespace ContabSys
             this.label14.Location = new System.Drawing.Point(1857, 26);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(36, 16);
+            this.label14.Size = new System.Drawing.Size(38, 17);
             this.label14.TabIndex = 14;
             this.label14.Text = "Obs:";
             // 
@@ -179,7 +179,7 @@ namespace ContabSys
             this.label12.Location = new System.Drawing.Point(1391, 27);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(26, 16);
+            this.label12.Size = new System.Drawing.Size(28, 17);
             this.label12.TabIndex = 16;
             this.label12.Text = "Tlf:";
             // 
@@ -189,7 +189,7 @@ namespace ContabSys
             this.label15.Location = new System.Drawing.Point(1594, 27);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(55, 16);
+            this.label15.Size = new System.Drawing.Size(56, 17);
             this.label15.TabIndex = 13;
             this.label15.Text = "Morada";
             // 
@@ -199,14 +199,14 @@ namespace ContabSys
             this.label11.Location = new System.Drawing.Point(1195, 27);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(31, 16);
+            this.label11.Size = new System.Drawing.Size(31, 17);
             this.label11.TabIndex = 17;
             this.label11.Text = "Tlm";
             // 
             // textBox13
             // 
             this.textBox13.Location = new System.Drawing.Point(1799, 47);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(4);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(248, 22);
             this.textBox13.TabIndex = 10;
@@ -215,7 +215,7 @@ namespace ContabSys
             // textBox12
             // 
             this.textBox12.Location = new System.Drawing.Point(1318, 47);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(4);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(164, 22);
             this.textBox12.TabIndex = 8;
@@ -227,7 +227,7 @@ namespace ContabSys
             this.label10.Location = new System.Drawing.Point(116, 27);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 16);
+            this.label10.Size = new System.Drawing.Size(106, 17);
             this.label10.TabIndex = 19;
             this.label10.Text = "Cod Outro Soft.";
             // 
@@ -237,14 +237,14 @@ namespace ContabSys
             this.label18.Location = new System.Drawing.Point(49, 27);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(24, 16);
+            this.label18.Size = new System.Drawing.Size(25, 17);
             this.label18.TabIndex = 11;
             this.label18.Text = "ID:";
             // 
             // textBox14
             // 
             this.textBox14.Location = new System.Drawing.Point(1490, 47);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(4);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(305, 22);
             this.textBox14.TabIndex = 9;
@@ -256,14 +256,14 @@ namespace ContabSys
             this.label13.Location = new System.Drawing.Point(934, 27);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(42, 16);
+            this.label13.Size = new System.Drawing.Size(42, 17);
             this.label13.TabIndex = 15;
             this.label13.Text = "Email";
             // 
             // textBox11
             // 
             this.textBox11.Location = new System.Drawing.Point(109, 47);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(119, 22);
             this.textBox11.TabIndex = 2;
@@ -272,7 +272,7 @@ namespace ContabSys
             // textBox18
             // 
             this.textBox18.Location = new System.Drawing.Point(234, 46);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(4);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(305, 22);
             this.textBox18.TabIndex = 3;
@@ -284,9 +284,19 @@ namespace ContabSys
             this.label17.Location = new System.Drawing.Point(366, 26);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(48, 16);
+            this.label17.Size = new System.Drawing.Size(49, 17);
             this.label17.TabIndex = 18;
             this.label17.Text = "Nome:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(760, 26);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(39, 17);
+            this.label20.TabIndex = 12;
+            this.label20.Text = "NISS";
             // 
             // label16
             // 
@@ -294,14 +304,23 @@ namespace ContabSys
             this.label16.Location = new System.Drawing.Point(607, 26);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(27, 16);
+            this.label16.Size = new System.Drawing.Size(29, 17);
             this.label16.TabIndex = 12;
             this.label16.Text = "Nif:";
+            // 
+            // tbnisslist
+            // 
+            this.tbnisslist.Location = new System.Drawing.Point(700, 46);
+            this.tbnisslist.Margin = new System.Windows.Forms.Padding(4);
+            this.tbnisslist.Name = "tbnisslist";
+            this.tbnisslist.Size = new System.Drawing.Size(147, 22);
+            this.tbnisslist.TabIndex = 5;
+            this.tbnisslist.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
             // 
             // textBox17
             // 
             this.textBox17.Location = new System.Drawing.Point(547, 46);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(4);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(147, 22);
             this.textBox17.TabIndex = 4;
@@ -310,7 +329,7 @@ namespace ContabSys
             // textBox16
             // 
             this.textBox16.Location = new System.Drawing.Point(852, 47);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(4);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(272, 22);
             this.textBox16.TabIndex = 6;
@@ -319,7 +338,7 @@ namespace ContabSys
             // textBox15
             // 
             this.textBox15.Location = new System.Drawing.Point(1131, 47);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(4);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(179, 22);
             this.textBox15.TabIndex = 7;
@@ -331,9 +350,9 @@ namespace ContabSys
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 95);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2115, 855);
+            this.panel2.Size = new System.Drawing.Size(2143, 855);
             this.panel2.TabIndex = 1;
             // 
             // panel4
@@ -341,9 +360,9 @@ namespace ContabSys
             this.panel4.Controls.Add(this.dgvClientes);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(552, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1563, 855);
+            this.panel4.Size = new System.Drawing.Size(1591, 855);
             this.panel4.TabIndex = 3;
             // 
             // dgvClientes
@@ -354,11 +373,12 @@ namespace ContabSys
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvClientes.Location = new System.Drawing.Point(0, 0);
-            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
+            this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(1563, 855);
+            this.dgvClientes.Size = new System.Drawing.Size(1591, 855);
             this.dgvClientes.TabIndex = 2;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
@@ -368,7 +388,7 @@ namespace ContabSys
             this.panel3.Controls.Add(this.groupBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(552, 855);
             this.panel3.TabIndex = 3;
@@ -385,7 +405,7 @@ namespace ContabSys
             this.panel5.Controls.Add(this.btnGravar);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(0, 652);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(552, 203);
             this.panel5.TabIndex = 1;
@@ -396,7 +416,7 @@ namespace ContabSys
             this.btncancelar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.btncancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btncancelar.Location = new System.Drawing.Point(396, 78);
-            this.btncancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(113, 47);
             this.btncancelar.TabIndex = 61;
@@ -412,7 +432,7 @@ namespace ContabSys
             this.lbldelete.Location = new System.Drawing.Point(307, 153);
             this.lbldelete.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbldelete.Name = "lbldelete";
-            this.lbldelete.Size = new System.Drawing.Size(109, 15);
+            this.lbldelete.Size = new System.Drawing.Size(137, 18);
             this.lbldelete.TabIndex = 59;
             this.lbldelete.Text = "Eliminar o Registo";
             this.lbldelete.Visible = false;
@@ -423,7 +443,7 @@ namespace ContabSys
             this.btnrefresh.BackgroundImage = global::ContabSys.Properties.Resources.refresh;
             this.btnrefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnrefresh.Location = new System.Drawing.Point(16, 80);
-            this.btnrefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnrefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnrefresh.Name = "btnrefresh";
             this.btnrefresh.Size = new System.Drawing.Size(47, 41);
             this.btnrefresh.TabIndex = 60;
@@ -437,7 +457,7 @@ namespace ContabSys
             this.btnDelete.BackgroundImage = global::ContabSys.Properties.Resources.delete_icon_png_16;
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDelete.Location = new System.Drawing.Point(460, 143);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(49, 37);
             this.btnDelete.TabIndex = 58;
@@ -450,7 +470,7 @@ namespace ContabSys
             this.btnNovo.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnNovo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.btnNovo.Location = new System.Drawing.Point(8, 14);
-            this.btnNovo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNovo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(157, 43);
             this.btnNovo.TabIndex = 0;
@@ -465,7 +485,7 @@ namespace ContabSys
             this.btnEditar.Enabled = false;
             this.btnEditar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.btnEditar.Location = new System.Drawing.Point(352, 14);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(157, 46);
             this.btnEditar.TabIndex = 0;
@@ -479,7 +499,7 @@ namespace ContabSys
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnUpdate.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.Location = new System.Drawing.Point(173, 16);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(157, 43);
             this.btnUpdate.TabIndex = 0;
@@ -495,7 +515,7 @@ namespace ContabSys
             this.btnGravar.Enabled = false;
             this.btnGravar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.btnGravar.Location = new System.Drawing.Point(173, 16);
-            this.btnGravar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGravar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(157, 43);
             this.btnGravar.TabIndex = 0;
@@ -528,9 +548,9 @@ namespace ContabSys
             this.groupBox1.Controls.Add(this.tbNome);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(552, 855);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -543,7 +563,7 @@ namespace ContabSys
             this.label8.Location = new System.Drawing.Point(200, 47);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 15);
+            this.label8.Size = new System.Drawing.Size(87, 18);
             this.label8.TabIndex = 1;
             this.label8.Text = "Cod O/Soft.";
             // 
@@ -554,7 +574,7 @@ namespace ContabSys
             this.label7.Location = new System.Drawing.Point(55, 241);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(28, 15);
+            this.label7.Size = new System.Drawing.Size(33, 18);
             this.label7.TabIndex = 1;
             this.label7.Text = "Tlm";
             // 
@@ -565,7 +585,7 @@ namespace ContabSys
             this.label6.Location = new System.Drawing.Point(55, 279);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(23, 15);
+            this.label6.Size = new System.Drawing.Size(28, 18);
             this.label6.TabIndex = 1;
             this.label6.Text = "Tlf:";
             // 
@@ -576,7 +596,7 @@ namespace ContabSys
             this.label5.Location = new System.Drawing.Point(44, 203);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 15);
+            this.label5.Size = new System.Drawing.Size(45, 18);
             this.label5.TabIndex = 1;
             this.label5.Text = "Email";
             // 
@@ -587,7 +607,7 @@ namespace ContabSys
             this.label9.Location = new System.Drawing.Point(36, 458);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(32, 15);
+            this.label9.Size = new System.Drawing.Size(40, 18);
             this.label9.TabIndex = 1;
             this.label9.Text = "Obs:";
             // 
@@ -598,9 +618,20 @@ namespace ContabSys
             this.label4.Location = new System.Drawing.Point(30, 311);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 15);
+            this.label4.Size = new System.Drawing.Size(59, 18);
             this.label4.TabIndex = 1;
             this.label4.Text = "Morada";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(47, 174);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(46, 18);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "NISS:";
             // 
             // label3
             // 
@@ -609,7 +640,7 @@ namespace ContabSys
             this.label3.Location = new System.Drawing.Point(56, 139);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 15);
+            this.label3.Size = new System.Drawing.Size(30, 18);
             this.label3.TabIndex = 1;
             this.label3.Text = "Nif:";
             // 
@@ -620,7 +651,7 @@ namespace ContabSys
             this.label2.Location = new System.Drawing.Point(36, 103);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 15);
+            this.label2.Size = new System.Drawing.Size(53, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nome:";
             // 
@@ -631,7 +662,7 @@ namespace ContabSys
             this.label1.Location = new System.Drawing.Point(33, 47);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 15);
+            this.label1.Size = new System.Drawing.Size(26, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "ID:";
             // 
@@ -640,9 +671,9 @@ namespace ContabSys
             this.tbId.Enabled = false;
             this.tbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbId.Location = new System.Drawing.Point(67, 43);
-            this.tbId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbId.Margin = new System.Windows.Forms.Padding(4);
             this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(124, 21);
+            this.tbId.Size = new System.Drawing.Size(124, 24);
             this.tbId.TabIndex = 0;
             this.tbId.TabStop = false;
             // 
@@ -650,25 +681,25 @@ namespace ContabSys
             // 
             this.tbCodOutroSoft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCodOutroSoft.Location = new System.Drawing.Point(293, 43);
-            this.tbCodOutroSoft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCodOutroSoft.Margin = new System.Windows.Forms.Padding(4);
             this.tbCodOutroSoft.Name = "tbCodOutroSoft";
-            this.tbCodOutroSoft.Size = new System.Drawing.Size(215, 21);
+            this.tbCodOutroSoft.Size = new System.Drawing.Size(215, 24);
             this.tbCodOutroSoft.TabIndex = 11;
             // 
             // tbTlf
             // 
             this.tbTlf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTlf.Location = new System.Drawing.Point(101, 276);
-            this.tbTlf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbTlf.Margin = new System.Windows.Forms.Padding(4);
             this.tbTlf.Name = "tbTlf";
-            this.tbTlf.Size = new System.Drawing.Size(408, 21);
+            this.tbTlf.Size = new System.Drawing.Size(408, 24);
             this.tbTlf.TabIndex = 17;
             // 
             // tbobs
             // 
             this.tbobs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbobs.Location = new System.Drawing.Point(101, 458);
-            this.tbobs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbobs.Margin = new System.Windows.Forms.Padding(4);
             this.tbobs.Multiline = true;
             this.tbobs.Name = "tbobs";
             this.tbobs.Size = new System.Drawing.Size(408, 168);
@@ -678,7 +709,7 @@ namespace ContabSys
             // 
             this.tbMorada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMorada.Location = new System.Drawing.Point(101, 311);
-            this.tbMorada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbMorada.Margin = new System.Windows.Forms.Padding(4);
             this.tbMorada.Multiline = true;
             this.tbMorada.Name = "tbMorada";
             this.tbMorada.Size = new System.Drawing.Size(408, 138);
@@ -688,37 +719,19 @@ namespace ContabSys
             // 
             this.tbTlm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTlm.Location = new System.Drawing.Point(101, 237);
-            this.tbTlm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbTlm.Margin = new System.Windows.Forms.Padding(4);
             this.tbTlm.Name = "tbTlm";
-            this.tbTlm.Size = new System.Drawing.Size(408, 21);
+            this.tbTlm.Size = new System.Drawing.Size(408, 24);
             this.tbTlm.TabIndex = 16;
             // 
             // tbEmail
             // 
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEmail.Location = new System.Drawing.Point(101, 199);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(408, 21);
+            this.tbEmail.Size = new System.Drawing.Size(408, 24);
             this.tbEmail.TabIndex = 15;
-            // 
-            // tbNif
-            // 
-            this.tbNif.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNif.Location = new System.Drawing.Point(101, 135);
-            this.tbNif.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbNif.Name = "tbNif";
-            this.tbNif.Size = new System.Drawing.Size(408, 21);
-            this.tbNif.TabIndex = 13;
-            // 
-            // tbNome
-            // 
-            this.tbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNome.Location = new System.Drawing.Point(101, 97);
-            this.tbNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(408, 21);
-            this.tbNome.TabIndex = 12;
             // 
             // tbniss
             // 
@@ -726,53 +739,42 @@ namespace ContabSys
             this.tbniss.Location = new System.Drawing.Point(101, 170);
             this.tbniss.Margin = new System.Windows.Forms.Padding(4);
             this.tbniss.Name = "tbniss";
-            this.tbniss.Size = new System.Drawing.Size(408, 21);
+            this.tbniss.Size = new System.Drawing.Size(408, 24);
             this.tbniss.TabIndex = 14;
             // 
-            // label19
+            // tbNif
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(47, 174);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(38, 15);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "NISS:";
+            this.tbNif.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNif.Location = new System.Drawing.Point(101, 135);
+            this.tbNif.Margin = new System.Windows.Forms.Padding(4);
+            this.tbNif.Name = "tbNif";
+            this.tbNif.Size = new System.Drawing.Size(408, 24);
+            this.tbNif.TabIndex = 13;
             // 
-            // tbnisslist
+            // tbNome
             // 
-            this.tbnisslist.Location = new System.Drawing.Point(700, 46);
-            this.tbnisslist.Margin = new System.Windows.Forms.Padding(4);
-            this.tbnisslist.Name = "tbnisslist";
-            this.tbnisslist.Size = new System.Drawing.Size(147, 22);
-            this.tbnisslist.TabIndex = 5;
-            this.tbnisslist.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(760, 26);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(39, 16);
-            this.label20.TabIndex = 12;
-            this.label20.Text = "NISS";
+            this.tbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNome.Location = new System.Drawing.Point(101, 97);
+            this.tbNome.Margin = new System.Windows.Forms.Padding(4);
+            this.tbNome.Name = "tbNome";
+            this.tbNome.Size = new System.Drawing.Size(408, 24);
+            this.tbNome.TabIndex = 12;
             // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(2115, 950);
+            this.ClientSize = new System.Drawing.Size(2143, 950);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Clientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Clientes_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

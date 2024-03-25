@@ -99,7 +99,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+               
                 btncancelar.Focus();
             }
 
@@ -131,7 +131,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+                 
                 btncancelar.Focus();
             }
 
@@ -154,7 +154,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+                
                 btncancelar.Focus();
             }
 
@@ -174,7 +174,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+               
                 btncancelar.Focus();
             }
 
@@ -259,7 +259,7 @@ private void btnDelete_Click(object sender, EventArgs e)
 
     else if (dialogResult == DialogResult.No)
     {
-        //caso pretenda fazer outra coisa qualuqer.
+        
         btncancelar.Focus();
     }
 

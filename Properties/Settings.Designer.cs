@@ -12,7 +12,7 @@ namespace ContabSys.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.8.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -97,7 +97,7 @@ namespace ContabSys.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("marcosmagalhaes86@outlook.pt")]
+        [global::System.Configuration.DefaultSettingValueAttribute("email@outlook.pt")]
         public string MailAddress {
             get {
                 return ((string)(this["MailAddress"]));
@@ -121,7 +121,7 @@ namespace ContabSys.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("marcosmagalhaes86@outlook.pt")]
+        [global::System.Configuration.DefaultSettingValueAttribute("email@outlook.pt")]
         public string emailUser {
             get {
                 return ((string)(this["emailUser"]));
@@ -133,13 +133,49 @@ namespace ContabSys.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("M@galhae$020486")]
+        [global::System.Configuration.DefaultSettingValueAttribute("passwmail")]
         public string emailPassword {
             get {
                 return ((string)(this["emailPassword"]));
             }
             set {
                 this["emailPassword"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("231707681")]
+        public string NIFEmpresa {
+            get {
+                return ((string)(this["NIFEmpresa"]));
+            }
+            set {
+                this["NIFEmpresa"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Aplicacao {
+            get {
+                return ((string)(this["Aplicacao"]));
+            }
+            set {
+                this["Aplicacao"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DiretoriaLic {
+            get {
+                return ((string)(this["DiretoriaLic"]));
+            }
+            set {
+                this["DiretoriaLic"] = value;
             }
         }
     }

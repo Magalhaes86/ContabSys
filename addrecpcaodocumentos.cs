@@ -105,7 +105,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+              
                 btncancelar.Focus();
             }
 
@@ -129,7 +129,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+                
                 btncancelar.Focus();
             }
 
@@ -154,8 +154,8 @@ namespace ContabSys
             }
 
             else if (dialogResult == DialogResult.No)
-            {
-                //caso pretenda fazer outra coisa qualuqer.
+            {  
+               
                 btncancelar.Focus();
             }
         
@@ -176,7 +176,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+              
                 btncancelar.Focus();
             }
         }
@@ -277,7 +277,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+        
                 btncancelar.Focus();
             }
         }
@@ -295,7 +295,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+                
                 btncancelar.Focus();
             }
         }

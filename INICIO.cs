@@ -138,19 +138,7 @@ namespace ContabSys
 
         }
 
-        //            SELECT *
-        //FROM clientes clientes inner join
-        //     (SELECT lancamentos.Data, MAX(time) as maxt
-        //      FROM lancamentos lancamentos
-        //      GROUP BY lancamentos.CodCliente
-        //     ) 
-        //     ON lancamentos.CodCliente = clientes.ID and lancamentos.Data = maxt
-
-        //        }
-
-
-        // ON clientes.ID = lancamentos.CodCliente AND one.id2 = two.id2 JOIN
-
+      
         public void executeMyQuery(string query)
         {
             try
@@ -344,7 +332,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+       
                 tbcod.Focus();
             }
         }

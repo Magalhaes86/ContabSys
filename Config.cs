@@ -119,39 +119,6 @@ namespace ContabSys
             }
         }
 
-        // Antigo Botao Guardar
-
-        //private void button6_Click(object sender, EventArgs e)
-        //{
-        //    string constring = @"server=" + Properties.Settings.Default.server + ";database=" + Properties.Settings.Default.basedados + ";port=" + Properties.Settings.Default.porta + ";userid=" + Properties.Settings.Default.username + ";password=" + Properties.Settings.Default.password + ";convertzerodatetime=true";
-
-        //    //string file = textBox1.Text + "\\ContabSysDB.sql";
-        //    string file = textBox3.Text + "\\ContabSysDB.sql";
-
-
-
-        //    //string file2 = tbnovaloc.Text;
-        //    //string file3 = "ContabSysDB.sql";
-        //    //string file = file2 + file3;
-
-
-        //    using (MySqlConnection conn = new MySqlConnection(constring))
-        //    {
-        //        using (MySqlCommand cmd = new MySqlCommand())
-        //        {
-        //            using (MySqlBackup mb = new MySqlBackup(cmd))
-        //            {
-        //                cmd.Connection = conn;
-        //                conn.Open();
-        //                mb.ExportToFile(file);
-        //                conn.Close();
-        //            }
-        //        }
-        //    }
-        //}
-
-
-       
       
           
 
@@ -333,7 +300,7 @@ namespace ContabSys
 
             else if (dialogResult == DialogResult.No)
             {
-                //caso pretenda fazer outra coisa qualuqer.
+                
                 button2.Focus();
              
             }       
